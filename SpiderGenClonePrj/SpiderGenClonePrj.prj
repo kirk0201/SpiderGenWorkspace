@@ -577,19 +577,23 @@
             "type": 3,
             "name": "MainView.lay",
             "relType": 1,
-            "path": "Source\\"
+            "path": "Source\\",
+            "comment": "header, section, footer로 구성된 뷰"
           },
           {
             "type": 1,
             "name": "ContainerViews",
+            "comment": "MainView-section 리스트뷰에 랜더링될 Co",
             "children": [
               {
                 "type": 1,
                 "name": "MainSectionView",
+                "comment": "메인 뷰",
                 "children": [
                   {
                     "type": 1,
                     "name": "HomeView",
+                    "comment": "최상단 배너 뷰",
                     "children": [
                       {
                         "type": 2,
@@ -612,6 +616,7 @@
                   {
                     "type": 1,
                     "name": "CenterNavView",
+                    "comment": "중앙네비게이션 뷰",
                     "children": [
                       {
                         "type": 2,
@@ -634,6 +639,7 @@
                   {
                     "type": 1,
                     "name": "DetailView",
+                    "comment": "배너 뷰",
                     "children": [
                       {
                         "type": 2,
@@ -656,6 +662,7 @@
                   {
                     "type": 1,
                     "name": "DetailView2",
+                    "comment": "배너2 뷰",
                     "children": [
                       {
                         "type": 2,
@@ -678,6 +685,7 @@
                   {
                     "type": 1,
                     "name": "DetailView3",
+                    "comment": "배너3 뷰",
                     "children": [
                       {
                         "type": 2,
@@ -699,29 +707,8 @@
                   },
                   {
                     "type": 1,
-                    "name": "FooterVIew",
-                    "children": [
-                      {
-                        "type": 2,
-                        "name": "FooterView.cls",
-                        "action": 5,
-                        "relType": 1,
-                        "path": "Source\\",
-                        "comment": ""
-                      },
-                      {
-                        "type": 3,
-                        "name": "FooterView.lay",
-                        "action": 6,
-                        "relType": 1,
-                        "path": "Source\\",
-                        "comment": ""
-                      }
-                    ]
-                  },
-                  {
-                    "type": 1,
                     "name": "SlideView",
+                    "comment": "슬라이드 뷰",
                     "children": [
                       {
                         "type": 2,
@@ -809,13 +796,14 @@
                     "action": 6,
                     "relType": 1,
                     "path": "Source\\",
-                    "comment": ""
+                    "comment": "메인 뷰에 들어갈 리스트 뷰를 합치는 뷰"
                   }
                 ]
               },
               {
                 "type": 1,
                 "name": "DocSectionView",
+                "comment": "도큐먼트 뷰",
                 "children": [
                   {
                     "type": 2,
@@ -838,6 +826,7 @@
               {
                 "type": 1,
                 "name": "LoginView",
+                "comment": "로그인 뷰",
                 "children": [
                   {
                     "type": 2,
@@ -860,6 +849,7 @@
               {
                 "type": 1,
                 "name": "RegisterView",
+                "comment": "회원가입 뷰",
                 "children": [
                   {
                     "type": 2,
@@ -882,6 +872,7 @@
               {
                 "type": 1,
                 "name": "IntroduceSectionView",
+                "comment": "회사소개 뷰",
                 "children": [
                   {
                     "type": 2,
@@ -897,7 +888,7 @@
                     "action": 6,
                     "relType": 1,
                     "path": "Source\\",
-                    "comment": ""
+                    "comment": "회사소개 뷰에 들어갈 리스트 뷰를 합친 뷰"
                   },
                   {
                     "type": 1,
@@ -917,7 +908,7 @@
                         "action": 6,
                         "relType": 1,
                         "path": "Source\\",
-                        "comment": ""
+                        "comment": "상단 소개 뷰"
                       }
                     ]
                   },
@@ -939,7 +930,7 @@
                         "action": 6,
                         "relType": 1,
                         "path": "Source\\",
-                        "comment": ""
+                        "comment": "즁단 역사 뷰"
                       }
                     ]
                   },
@@ -961,7 +952,7 @@
                         "action": 6,
                         "relType": 1,
                         "path": "Source\\",
-                        "comment": ""
+                        "comment": "하단 고객 뷰"
                       }
                     ]
                   }
@@ -970,10 +961,12 @@
               {
                 "type": 1,
                 "name": "CommunityTabView",
+                "comment": "커뮤니티 뷰",
                 "children": [
                   {
                     "type": 1,
                     "name": "CommunitySectionView",
+                    "comment": "커뮤니티 탭 뷰에 보여질 뷰 모음",
                     "children": [
                       {
                         "type": 2,
@@ -989,11 +982,12 @@
                         "action": 6,
                         "relType": 1,
                         "path": "Source\\",
-                        "comment": ""
+                        "comment": "커뮤니티 첫 게시판 뷰"
                       },
                       {
                         "type": 1,
                         "name": "ListItems",
+                        "comment": "커뮤니티 첫 페이지 리스트 뷰에 들어갈 Item뷰",
                         "children": [
                           {
                             "type": 2,
@@ -1016,6 +1010,7 @@
                       {
                         "type": 1,
                         "name": "QaSectionView",
+                        "comment": "커뮤니티 첫 페이지에서 탭 뷰를 통해 이동될 두 번째 ",
                         "children": [
                           {
                             "type": 2,
@@ -1036,6 +1031,7 @@
                           {
                             "type": 1,
                             "name": "ListItems",
+                            "comment": "커뮤니티 두 번째 페이지 리스트 뷰에 들어갈 Item뷰",
                             "children": [
                               {
                                 "type": 2,
@@ -1073,7 +1069,7 @@
                     "action": 6,
                     "relType": 1,
                     "path": "Source\\",
-                    "comment": ""
+                    "comment": "커뮤니티를 탭뷰로 만들어 게시판으로 이동하기 위한 뷰"
                   }
                 ]
               }

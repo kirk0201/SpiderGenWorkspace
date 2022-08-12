@@ -3,7 +3,7 @@
 Constructor
 Do not call Function in Constructor.
 */
-class FooterView()
+class SlideItem1()
 {
 	super();
 
@@ -13,7 +13,7 @@ class FooterView()
 extends AView;
 
 
-function FooterView*init(context, evtListener)
+function SlideItem1*init(context, evtListener)
 {
 	super.init(context, evtListener);
 
@@ -21,7 +21,7 @@ function FooterView*init(context, evtListener)
 
 };
 
-function FooterView*onInitDone()
+function SlideItem1*onInitDone()
 {
 	super.onInitDone();
 
@@ -29,7 +29,7 @@ function FooterView*onInitDone()
 
 };
 
-function FooterView*onActiveDone(isFirst)
+function SlideItem1*onActiveDone(isFirst)
 {
 	super.onActiveDone(isFirst);
 
