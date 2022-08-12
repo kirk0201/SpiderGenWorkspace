@@ -1,10 +1,10 @@
 <div data-base="AView" data-class="RegisterView" class="AView-Style" style="left: 0px; top: 0px; width: 100%; height: 100%; background-color: rgb(255, 255, 255); position: relative; padding-top: 100px; margin-left: 0px; padding-bottom: 150px;" data-browser-width="1920" data-style="" data-browser-height="1500" data-class-map="{&quot;afc&quot;:[&quot;AView&quot;,&quot;AButton&quot;,&quot;ALabel&quot;,&quot;AFlexLayout&quot;,&quot;ATextField&quot;,&quot;ASelectBox&quot;,&quot;ATextArea&quot;,&quot;ARadioButton&quot;]}">
-    <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 220px; height: 51px; position: relative; left: calc(50% - 110px); top: 0px; margin-bottom: 50px;" data-center-x="true" disabled="disabled">
+    <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 220px; height: 51px; position: relative; left: calc(50% - 110px); top: 0px; margin-bottom: 50px;" data-center-x="true" disabled="disabled" data-group="상단 로고">
         <img src="Assets/Register/logo.png">
     </button>
-    <div data-base="AView" data-class="AView" class="AView-Style" style="height: auto; position: relative; left: 0px; top: 0px; max-width: 1100px; min-width: 800px; width: auto; margin-right: auto; background-color: rgba(0, 0, 0, 0); border-width: 1px; border-style: solid; border-color: rgb(205, 205, 205); padding-left: 100px; padding-right: 100px; margin-top: 0px; margin-left: auto;">
+    <div data-base="AView" data-class="AView" class="AView-Style" style="height: auto; position: relative; left: 0px; top: 0px; max-width: 1100px; min-width: 800px; width: auto; margin-right: auto; background-color: rgba(0, 0, 0, 0); border-width: 1px; border-style: solid; border-color: rgb(205, 205, 205); padding-left: 100px; padding-right: 100px; margin-top: 0px; margin-left: auto;" data-group="회원가입 Container">
         <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: calc(50% - 56px); top: 0px; font-size: 28px; font-weight: bold; margin-top: 50px; margin-bottom: 30px;" data-center-x="true">회원가입</label>
-        <div data-base="AView" data-class="AView" class="AView-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; background-color: rgba(0, 0, 0, 0); text-align: center; margin-bottom: 50px;">
+        <div data-base="AView" data-class="AView" class="AView-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; background-color: rgba(0, 0, 0, 0); text-align: center; margin-bottom: 50px;" data-group="이미지 뷰">
             <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; margin-top: 0px; background-color: rgba(0, 0, 0, 0); font-size: 14px; font-weight: bold; color: rgb(32, 153, 153);" data-newline="true" disabled="disabled">
                 <img src="Assets/Register/img1.png">
                 <br>회원정보 입력
@@ -15,11 +15,9 @@
                 <br>회원가입 완료
             </button>
         </div>
-        <div data-base="AView" data-class="AView" class="AView-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; background-color: rgba(0, 0, 0, 0); border-bottom-width: 2px; border-bottom-style: solid;">
-            <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; color: rgb(153, 153, 153); font-size: 16px; border-bottom-color: rgb(0, 0, 0); display: inline-block; padding-bottom: 10px;">필수 입력사항</label>
-            <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; font-size: 16px; display: inline; margin-left: 0px; margin-top: -4px; color: rgb(255, 0, 0); vertical-align: top;">*</label>
-        </div>
-        <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; border-bottom: 1px solid rgb(167, 167, 167);">
+        <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; color: rgb(153, 153, 153); font-size: 16px; border-bottom-color: rgb(0, 0, 0); display: inline-block; padding-bottom: 10px;">필수 입력사항</label>
+        <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; font-size: 16px; display: inline; margin-left: 0px; margin-top: -4px; color: rgb(255, 0, 0); vertical-align: top;">*</label>
+        <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; border-bottom: 1px solid rgb(167, 167, 167);" data-group="Id 레이아웃">
             <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: 170px; align-self: auto;">
                 <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: auto; height: 100%; position: relative; left: 0px; top: 0px; justify-content: center; align-items: center;">
                     <div style="position: relative; box-sizing: border-box;">
@@ -48,7 +46,7 @@
                 </div>
             </div>
         </div>
-        <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: auto; height: auto; position: relative; border-bottom: 1px solid rgb(167, 167, 167);">
+        <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: auto; height: auto; position: relative; border-bottom: 1px solid rgb(167, 167, 167);" data-group="NickName 레이아웃">
             <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: 170px; align-self: auto;">
                 <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: auto; height: 100%; position: relative; left: 0px; top: 0px; justify-content: center; align-items: center;">
                     <div style="position: relative; box-sizing: border-box;">
@@ -77,7 +75,7 @@
                 </div>
             </div>
         </div>
-        <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; margin-top: 30px; border-bottom: 1px solid rgb(167, 167, 167);">
+        <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; margin-top: 30px; border-bottom: 1px solid rgb(167, 167, 167);" data-group="Password 레이아웃">
             <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: 170px; align-self: auto;">
                 <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: auto; height: 100%; position: relative; justify-content: center; align-items: center; flex-direction: column; left: 0px;">
                     <div style="position: relative; box-sizing: border-box;">
@@ -111,7 +109,7 @@
                 <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: 300px; height: 100px; position: relative; left: 0px; top: 0px; align-items: center;"></div>
             </div>
         </div>
-        <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; border-bottom: 1px solid rgb(167, 167, 167); margin-bottom: 30px;">
+        <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; border-bottom: 1px solid rgb(167, 167, 167); margin-bottom: 30px;" data-group="Email 레이아웃">
             <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: 170px; align-self: auto;">
                 <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: auto; height: 100%; position: relative; left: 0px; top: 0px; justify-content: center; align-items: center;">
                     <div style="position: relative; box-sizing: border-box;">
@@ -146,7 +144,7 @@
             </div>
         </div>
         <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; display: block; font-size: 16px; margin-bottom: 10px;">이용약관</label>
-        <div data-base="AView" data-class="AView" class="AView-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; background-color: rgba(0, 0, 0, 0); margin-top: 0px; border-bottom: 1px solid rgb(205, 205, 205); margin-bottom: 20px; padding-bottom: 30px;">
+        <div data-base="AView" data-class="AView" class="AView-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; background-color: rgba(0, 0, 0, 0); margin-top: 0px; border-bottom: 1px solid rgb(205, 205, 205); margin-bottom: 20px; padding-bottom: 30px;" data-group="이용약관 뷰">
             <textarea data-base="ATextArea" data-class="ATextArea" class="ATextArea-Style" style="width: 100%; height: 150px; position: relative; left: 0px; top: 0px; background-color: rgba(0, 0, 0, 0); margin-bottom: 30px;">서비스 이용 약관
 제 1 장 총 칙
 제 1 조 (목적)
@@ -309,7 +307,7 @@
             <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; display: inline; color: rgb(255, 0, 0); vertical-align: top; font-size: 16px;">*</label>
         </div>
         <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; display: block; font-size: 16px; margin-bottom: 30px;">개인정보 수집 및 이용에 대한 안내</label>
-        <div data-base="AView" data-class="AView" class="AView-Style" style="width: auto; height: auto; position: relative; background-color: rgba(0, 0, 0, 0); margin-top: 0px; border-bottom: 1px solid rgb(205, 205, 205); margin-bottom: 50px; padding-bottom: 30px;">
+        <div data-base="AView" data-class="AView" class="AView-Style" style="width: auto; height: auto; position: relative; background-color: rgba(0, 0, 0, 0); margin-top: 0px; border-bottom: 1px solid rgb(205, 205, 205); margin-bottom: 50px; padding-bottom: 30px;" data-group="개인정보 수집 뷰">
             <textarea data-base="ATextArea" data-class="ATextArea" class="ATextArea-Style" style="width: 100%; height: 150px; position: relative; left: 0px; top: 0px; background-color: rgba(0, 0, 0, 0); margin-bottom: 30px;">개인정보 수집 및 이용에 대한 안내
 (주)아수소프트(이하 "회사" 라 함)는 통신비밀보호법, 전기통신사업법, 정보통신망 이용촉진 및 정보보호 등에 관한 법률 등 정보통신서비스제공자가 준수하여야 할 관련 법령상의 개인정보보호 규정을 준수하며, 관련 법령에 의거한 개인정보취급방침을 정하여 이용자 권익 보호에 최선을 다하고 있습니다. 회사의 개인정보취급방침은 다음과 같은 내용을 담고 있습니다.
 
