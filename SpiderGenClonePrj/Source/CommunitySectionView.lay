@@ -1,0 +1,97 @@
+<div data-base="AView" data-class="CommunitySectionView" class="AView-Style" style="left: 0px; top: 0px; width: 100%; height: 100%; background-color: rgb(255, 255, 255); position: relative; margin-top: 0px; margin-left: 0px; padding-top: 50px; padding-bottom: 150px;" data-browser-width="1920" data-class-map="{&quot;afc&quot;:[&quot;AView&quot;,&quot;AFlexLayout&quot;,&quot;AButton&quot;,&quot;ALabel&quot;,&quot;AListView&quot;]}" id="CommunitySectionView--communityView">
+    <div data-base="AView" data-class="AView" class="AView-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; min-width: 800px; max-width: 1100px; margin-left: auto; margin-right: auto; background-color: rgb(255, 255, 255); overflow: hidden;">
+        <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; margin-left: 0px; justify-content: flex-end; align-items: center; background-color: rgb(255, 255, 255);">
+            <div style="position: relative; box-sizing: border-box;">
+                <button data-base="AButton" data-class="AButton" class="AButton-Style noneBorder" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; background-color: rgba(0, 0, 0, 0);" data-style-down=" noneBorder" data-style=" noneBorder">
+                    <img src="Assets/Doc/home.png">
+                </button>
+            </div>
+            <div style="position: relative; box-sizing: border-box;">
+                <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px;"></label>
+            </div>
+            <div style="position: relative; box-sizing: border-box;">
+                <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; margin-left: 5px;">main</label>
+            </div>
+            <div style="position: relative; box-sizing: border-box;">
+                <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; margin-left: 5px;">&gt;</label>
+            </div>
+            <div style="position: relative; box-sizing: border-box;">
+                <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; margin-left: 5px;">커뮤니티</label>
+            </div>
+        </div>
+        <div data-base="AView" data-class="AView" class="AView-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; background-color: rgba(0, 0, 0, 0);">
+            <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; display: block; font-weight: bold; font-size: 24px; margin-top: 50px; margin-bottom: 10px;">커뮤니티</label>
+            <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; display: block; font-size: 18px; margin-bottom: 50px;">스파이더젠에 관하여 자유롭게 문의하고 토론 할 수 있는 공간입니다.</label>
+        </div>
+        <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; overflow: visible; margin-left: 0px; margin-top: 0px;">
+            <div style="position: relative; box-sizing: border-box;">
+                <div data-base="AView" data-class="AView" class="AView-Style" style="width: 100%; position: relative; left: 0px; top: 0px; height: auto; background-color: rgba(0, 0, 0, 0); cursor: default;">
+                    <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; background-color: rgb(2, 191, 191); color: rgb(255, 255, 255); font-size: 20px; border-top-left-radius: 10px; border-top-right-radius: 10px; display: block; padding: 10px;">스파이더젠으로 개발 관련</label>
+                    <div data-base="AListView" data-class="AListView" class="AListView-Style" data-selectable="true" style="width: auto; height: auto; position: relative; top: 0px; overflow: visible; cursor: pointer;" id="CommunitySectionView--communityListView1" data-listener-select="CommunitySectionView:onCommunityListViewSelect">
+                        <div class="listview-row" style="height: 100px;"></div>
+                        <div class="listview-row AListView-select" style="height: 100px;"></div>
+                        <div class="listview-row" style="height: 100px;"></div>
+                        <div class="listview-row" style="height: 100px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div style="position: relative; box-sizing: border-box;">
+                <div data-base="AView" data-class="AView" class="AView-Style" style="width: 250px; height: 100%; position: relative; left: 0px; top: 0px; min-width: 250px; background-color: rgba(0, 0, 0, 0); border-left-style: solid; border-right-style: solid; border-bottom: 1px solid rgb(205, 205, 205); border-left-color: rgba(0, 0, 0, 0); border-right-color: rgba(0, 0, 0, 0); margin-left: 10px; overflow: hidden; border-top-color: rgba(0, 0, 0, 0);">
+                    <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; background-color: rgba(25, 220, 120, 0.85); color: rgb(255, 255, 255); font-size: 20px; border-top-left-radius: 10px; border-top-right-radius: 10px; display: block; padding: 10px; text-align: center; overflow: hidden;">공지사항</label>
+                    <div data-base="AView" data-class="AView" class="AView-Style" style="width: auto; height: 100%; position: relative; left: 0px; top: 0px; background-color: rgba(0, 0, 0, 0); border-left: 1px solid rgb(205, 205, 205); border-right: 1px solid rgb(205, 205, 205); border-bottom: 1px solid rgb(205, 205, 205); padding-top: 20px;">
+                        <button data-base="AButton" data-class="AButton" class="AButton-Style noneBorder" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; background-color: rgba(0, 0, 0, 0); margin-left: 30px; line-height: 30px; cursor: pointer;" data-style=" noneBorder" data-style-down=" noneBorder">
+                            <img src="Assets/Community/community_notice.png" style="margin: 0px 10px 0px 0px;">스파이더젠 3.0 버전 출시
+                        </button>
+                        <button data-base="AButton" data-class="AButton" class="AButton-Style noneBorder" style="width: auto; height: auto; position: relative; background-color: rgba(0, 0, 0, 0); margin-left: 30px; overflow: hidden; line-height: 30px; cursor: pointer;" data-style=" noneBorder" data-style-down=" noneBorder">
+                            <img src="Assets/Community/community_notice.png" style="margin: 0px 10px 0px 0px;">스파이더젠 2.3.1 Mac OS 버전
+                        </button>
+                        <button data-base="AButton" data-class="AButton" class="AButton-Style noneBorder" style="width: auto; height: auto; position: relative; background-color: rgba(0, 0, 0, 0); margin-left: 30px; line-height: 30px; cursor: pointer;" data-style=" noneBorder" data-style-down=" noneBorder">
+                            <img src="Assets/Community/community_notice.png" style="margin: 0px 10px 0px 0px;">본사 이전 안내
+                        </button>
+                        <button data-base="AButton" data-class="AButton" class="AButton-Style noneBorder" style="width: auto; height: auto; position: relative; background-color: rgba(0, 0, 0, 0); margin-left: 30px; margin-top: 0px; line-height: 30px; cursor: pointer;" data-style=" noneBorder" data-style-down=" noneBorder">
+                            <img src="Assets/Community/community_notice.png" style="margin: 0px 10px 0px 0px;">신주발행공고
+                        </button>
+                        <button data-base="AButton" data-class="AButton" class="AButton-Style noneBorder" style="width: auto; height: auto; position: relative; background-color: rgba(0, 0, 0, 0); margin-left: 30px; line-height: 30px; cursor: pointer;" data-style=" noneBorder" data-style-down=" noneBorder">
+                            <img src="Assets/Community/community_notice.png" style="margin: 0px 10px 0px 0px;">스파이더젠 홈페이지 리뉴얼
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: auto; height: auto; position: relative; overflow: visible; margin-left: 0px; margin-top: 50px;">
+            <div style="position: relative; box-sizing: border-box;">
+                <div data-base="AView" data-class="AView" class="AView-Style" style="width: 100%; position: relative; left: 0px; top: 0px; height: auto; background-color: rgba(0, 0, 0, 0);">
+                    <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; background-color: rgb(2, 191, 191); color: rgb(255, 255, 255); font-size: 20px; border-top-left-radius: 10px; border-top-right-radius: 10px; display: block; padding: 10px;">스파이더젠 사용 관련</label>
+                    <div data-base="AListView" data-class="AListView" class="AListView-Style" data-selectable="true" style="width: auto; height: auto; position: relative; top: 0px; overflow: visible; cursor: pointer;" id="CommunitySectionView--communityListView2">
+                        <div class="listview-row" style="height: 100px;"></div>
+                        <div class="listview-row AListView-select" style="height: 100px;"></div>
+                        <div class="listview-row" style="height: 100px;"></div>
+                        <div class="listview-row" style="height: 100px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div style="position: relative; box-sizing: border-box;">
+                <div data-base="AView" data-class="AView" class="AView-Style" style="width: 250px; height: 100%; position: relative; left: 0px; top: 0px; min-width: 250px; background-color: rgba(0, 0, 0, 0); border-left-style: solid; border-right-style: solid; border-bottom: 1px solid rgb(205, 205, 205); border-left-color: rgba(0, 0, 0, 0); border-right-color: rgba(0, 0, 0, 0); margin-left: 10px; overflow: hidden; border-top-color: rgba(0, 0, 0, 0);">
+                    <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; background-color: rgba(25, 170, 220, 0.85); color: rgb(255, 255, 255); font-size: 20px; border-top-left-radius: 10px; border-top-right-radius: 10px; display: block; padding: 10px; text-align: center; overflow: hidden;">최근등록글</label>
+                    <div data-base="AView" data-class="AView" class="AView-Style" style="width: auto; height: 100%; position: relative; left: 0px; top: 0px; background-color: rgba(0, 0, 0, 0); border-left: 1px solid rgb(205, 205, 205); border-right: 1px solid rgb(205, 205, 205); border-bottom: 1px solid rgb(205, 205, 205); padding-top: 20px;">
+                        <button data-base="AButton" data-class="AButton" class="AButton-Style noneBorder" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; background-color: rgba(0, 0, 0, 0); margin-left: 30px; line-height: 30px; cursor: pointer;" data-style=" noneBorder" data-style-down=" noneBorder">
+                            <img src="Assets/Community/community_arrow.png" style="margin: 0px 10px 0px 0px;">솔루션 내 html 처리 관련 문
+                        </button>
+                        <button data-base="AButton" data-class="AButton" class="AButton-Style noneBorder" style="width: auto; height: auto; position: relative; background-color: rgba(0, 0, 0, 0); margin-left: 30px; overflow: hidden; line-height: 30px; display: block; cursor: pointer;" data-style=" noneBorder" data-style-down=" noneBorder">
+                            <img src="Assets/Community/community_arrow.png" style="margin: 0px 10px 0px 0px;">Mask 처리 함수에 대해서 문
+                        </button>
+                        <button data-base="AButton" data-class="AButton" class="AButton-Style noneBorder" style="width: auto; height: auto; position: relative; background-color: rgba(0, 0, 0, 0); margin-left: 30px; line-height: 30px; display: block; cursor: pointer;" data-style=" noneBorder" data-style-down=" noneBorder">
+                            <img src="Assets/Community/community_arrow.png" style="margin: 0px 10px 0px 0px;">컴포넌트 중에 fileuploader
+                        </button>
+                        <button data-base="AButton" data-class="AButton" class="AButton-Style noneBorder" style="width: auto; height: auto; position: relative; background-color: rgba(0, 0, 0, 0); margin-left: 30px; margin-top: 0px; line-height: 30px; display: block; cursor: pointer;" data-style=" noneBorder" data-style-down=" noneBorder">
+                            <img src="Assets/Community/community_arrow.png" style="margin: 0px 10px 0px 0px;">텍스트필드 내에서 커서 맨뒤
+                        </button>
+                        <button data-base="AButton" data-class="AButton" class="AButton-Style noneBorder" style="width: auto; height: auto; position: relative; background-color: rgba(0, 0, 0, 0); margin-left: 30px; line-height: 30px; display: block; cursor: pointer;" data-style=" noneBorder" data-style-down=" noneBorder">
+                            <img src="Assets/Community/community_arrow.png" style="margin: 0px 10px 0px 0px;">layout 위치조절 관련해서 문
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

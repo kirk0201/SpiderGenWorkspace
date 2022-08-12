@@ -1,0 +1,45 @@
+<div data-base="AView" data-class="SubSlideView2" class="AView-Style" style="left: 0px; top: 0px; width: auto; height: auto; background-color: rgb(255, 255, 255); position: relative; display: inline-block; white-space: normal; padding-top: 100px; padding-bottom: 100px;" data-browser-width="1100" data-class-map="{&quot;afc&quot;:[&quot;AView&quot;,&quot;AFlexLayout&quot;,&quot;ALabel&quot;,&quot;AButton&quot;]}" data-browser-height="600">
+    <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; min-width: 800px; max-width: 1100px; margin-left: auto; margin-right: auto; background-color: rgb(255, 255, 255);">
+        <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: auto; align-self: auto;">
+            <div data-base="AView" data-class="AView" class="AView-Style" style="width: 370px; height: 350px; position: relative; left: 0px; top: 0px; background-image: url(&quot;Assets/Main/Slide/slide2.png&quot;); background-color: rgb(255, 255, 255); background-repeat: no-repeat; background-position: center center;"></div>
+        </div>
+        <div style="position: relative; box-sizing: border-box; flex: 1 1 auto; align-self: auto;">
+            <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: auto; height: 100%; position: relative; left: 0px; top: 0px; flex-flow: column nowrap; place-content: flex-start space-between; overflow: visible; margin-left: 30px; margin-right: 30px;" id="SubSlideView2--slidePageView2">
+                <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: auto; align-self: auto;">
+                    <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; font-size: 32px; font-weight: bold;">화면별 버전관리 웹서버 배포</label>
+                </div>
+                <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: auto; align-self: auto; margin: 0px;">
+                    <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; font-size: 16px; margin-top: -44px;" name="">스파이더젠은 멀티 플랫폼 IDE로 Single Page 형태의 Web Application 개발이 가능하며, 빌드 후 웹서버에 업로드 할 수 있는 배포 시스템 (Deployment System)을 제공합니다. 또한 배포한 파일의 캐싱을 방지하여, 사용자에게 바로 업데이트가 가능한 파일별 버전관리 기능을 제공하고 있습니다.</label>
+                </div>
+                <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: auto; align-self: auto;">
+                    <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; margin-left: 0px; justify-content: space-between; overflow: visible;">
+                        <div style="position: relative; box-sizing: border-box;">
+                            <button data-base="AButton" data-class="AButton" class="AButton-Style noneBorder" style="width: 80px; height: 100%; position: relative; left: 0px; top: 0px; font-weight: bold; font-size: 16px; cursor: pointer;" data-newline="true" name="" id="SubSlideView2--firstGo" data-listener-click="SubSlideView2:onFirstGoClick" data-style=" noneBorder" data-style-down=" noneBorder">
+                                <img src="Assets/Main/Slide/slide2_1.png">
+                                <br> 클라우드
+                            </button>
+                        </div>
+                        <div style="position: relative; box-sizing: border-box;">
+                            <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: 1px; height: 100%; position: relative; left: 0px; top: 0px; border-right: 1px solid rgb(205, 205, 205);"></label>
+                        </div>
+                        <div style="position: relative; box-sizing: border-box;">
+                            <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 80px; height: 100%; position: relative; left: 0px; top: 0px; font-weight: bold; font-size: 16px;" data-newline="true">
+                                <img src="Assets/Main/Slide/slide2_2.png">
+                                <br> 웹서버배포
+                            </button>
+                        </div>
+                        <div style="position: relative; box-sizing: border-box;">
+                            <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: 1px; height: 100%; position: relative; border-right: 1px solid rgb(205, 205, 205); left: 0px; top: 0px;"></label>
+                        </div>
+                        <div style="position: relative; box-sizing: border-box;">
+                            <button data-base="AButton" data-class="AButton" class="AButton-Style noneBorder" style="width: 80px; height: 100%; position: relative; left: 0px; top: 0px; font-weight: bold; font-size: 16px; cursor: pointer;" data-newline="true" id="SubSlideView2--thirdGo" data-listener-click="SubSlideView2:onThirdGoClick" data-style=" noneBorder" data-style-down=" noneBorder">
+                                <img src="Assets/Main/Slide/slide1_3.png">
+                                <br>css스타일
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

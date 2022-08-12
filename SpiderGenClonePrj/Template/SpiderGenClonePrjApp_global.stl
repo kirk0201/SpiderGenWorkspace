@@ -1,0 +1,18 @@
+{
+  "styleName": "SpiderGenClonePrjApp_global",
+  "items": {
+    "_global_style_": "\n._global_style_\n{\n\tfont-size: 12px;\n\tfont-family: courier;\n\ttext-size-adjust: none;\n\n}\n",
+    "global_resp": "\n.global_resp\n{\n\t/* global_resp 는 body 에 추가된 클래스 입니다. */\n\n}\n\n/*가로모드*/\n@media screen and (orientation: landscape)\n{\n\t.global_resp\n\t{\n\t}\n}\n\n/*ios*/\n@supports (-webkit-overflow-scrolling: touch)\n{\n}\n\n/*tablet*/\n@media screen and (min-width:641px)\n{\n}\n",
+    "noneBorder": ".noneBorder\n{\n\tborder: 0;\n\tborder-style: none;\n\toutline: 0;\n\tbackground-color:transparent;\n}\n\n",
+    "hover": ".hover\n{\n\tcolor:rgb(050,130,200);\n\toutline: 0;\n}\n\n",
+    "mainNav_style": ".mainNav_style\n{\n\tcolor: #3282c8;\n\tborder-bottom: 3px solid #3282c8;\n\toutline:0;\n\tpointer-events: auto;\n\tcursor: pointer;\n}\n\n",
+    "download_hover": ".download_hover\n{\n\tbackground-color:rgba(250,250,250,0.3);\n}\n\n",
+    "rgbaBtn": ".rgbaBtn\n{\n\tcolor:gray;\n\tbackground-color: rgb(102, 98, 98);\n}\n\n",
+    "mainLogoBtnStyle": ".mainLogoBtnStyle\n{\n\tbackground-color: tansparent;\n}\n\n",
+    "selectTab": ".selectTab\r\n{\r\n}\r\n\r\n",
+    "mainNav_style_clone": ".mainNav_style_clone\n{\n\tcolor: #3282c8;\n\tborder-bottom: 3px solid #3282c8;\n\toutline:0;\n\t\n}\n\n",
+    "clickBtn": ".rgbaBtn\n{\n\tbackground-color:rgba(250,250,250,0.8);\n}\n\n",
+    "rgbaBtnBtn": ".clickBtn\n{\n\tbackground-color: rgb(105,105,105);\n}\n\n",
+    "radioBtn": ".radioBtn\n{\n\tcolor: green;\n}\n\n"
+  }
+}

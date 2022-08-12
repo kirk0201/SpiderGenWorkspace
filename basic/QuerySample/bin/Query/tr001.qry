@@ -1,0 +1,20 @@
+{
+	"name": "tr001",
+	"desc": "샘플1",
+	"queryType": "",
+	"input": {
+		"InBlock1": {
+			"format": [
+				["입력","input","","","char",null,0]
+			]
+		}
+	},
+	"output": {
+		"OutBlock1": {
+			"format": [
+				["출력3","output1","","","char",null,0],
+				["출력4","output2","","","signed",null,0]
+			]
+		}
+	}
+}
