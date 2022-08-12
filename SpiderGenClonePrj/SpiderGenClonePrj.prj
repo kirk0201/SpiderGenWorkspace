@@ -1,0 +1,1087 @@
+{
+  "projectName": "SpiderGenClonePrj",
+  "fileTree": {
+    "type": 0,
+    "name": "SpiderGenClonePrj",
+    "children": [
+      {
+        "type": 1,
+        "name": "Framework",
+        "action": 1,
+        "children": [
+          {
+            "type": 11,
+            "name": "afc",
+            "relType": 7,
+            "path": "afc\\"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "name": "Library",
+        "action": 2,
+        "children": [
+          {
+            "type": 5,
+            "name": "RadioBtnManager.js",
+            "action": 2,
+            "relType": 4,
+            "path": ""
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "name": "Template",
+        "action": 4,
+        "children": [
+          {
+            "type": 1,
+            "name": "Theme",
+            "children": [
+              {
+                "type": 4,
+                "name": "radioBtn.stl",
+                "action": 8,
+                "relType": 1,
+                "path": "Template\\Theme\\",
+                "comment": ""
+              },
+              {
+                "type": 4,
+                "name": "idField.stl",
+                "action": 8,
+                "relType": 1,
+                "path": "Template\\Theme\\",
+                "comment": ""
+              }
+            ]
+          },
+          {
+            "type": 4,
+            "name": "SpiderGenClonePrjApp_global.stl",
+            "relType": 1,
+            "path": "Template\\"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "name": "Query",
+        "children": []
+      },
+      {
+        "type": 1,
+        "name": "Assets",
+        "children": [
+          {
+            "type": 1,
+            "name": "Main",
+            "children": [
+              {
+                "type": 1,
+                "name": "Header",
+                "children": [
+                  {
+                    "type": 8,
+                    "name": "spidergen_logo.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "ic_login.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  }
+                ]
+              },
+              {
+                "type": 1,
+                "name": "Banner",
+                "children": [
+                  {
+                    "type": 8,
+                    "name": "main_visual.jpg",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "banner_whitespider.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "banner_download_arrow.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  }
+                ]
+              },
+              {
+                "type": 1,
+                "name": "NavCenter",
+                "children": [
+                  {
+                    "type": 8,
+                    "name": "nav_center1.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "nav_center2.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "nav_center3.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "nav_center4.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  }
+                ]
+              },
+              {
+                "type": 1,
+                "name": "Detail",
+                "children": [
+                  {
+                    "type": 8,
+                    "name": "detail1.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "detail2.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  }
+                ]
+              },
+              {
+                "type": 1,
+                "name": "Detail2",
+                "children": [
+                  {
+                    "type": 8,
+                    "name": "detail2_1.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "detail2_2_1.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "detail2_2_2.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "detail2_3.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  }
+                ]
+              },
+              {
+                "type": 1,
+                "name": "Slide",
+                "children": [
+                  {
+                    "type": 8,
+                    "name": "slide1.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "slide1_1.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "slide1_2.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "slide1_3.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "nextbtn.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "prevbtn.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "slide2.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "slide2_2.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "slide3.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "slide3-3.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "slide2_1.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  }
+                ]
+              },
+              {
+                "type": 1,
+                "name": "Detail3",
+                "children": [
+                  {
+                    "type": 8,
+                    "name": "detail3.jpg",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  }
+                ]
+              },
+              {
+                "type": 1,
+                "name": "Footer",
+                "children": [
+                  {
+                    "type": 8,
+                    "name": "footer_logo.png",
+                    "relType": 1,
+                    "path": "Assets\\"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": 1,
+            "name": "Doc",
+            "children": [
+              {
+                "type": 8,
+                "name": "home.png",
+                "relType": 1,
+                "path": "Assets\\"
+              },
+              {
+                "type": 8,
+                "name": "docs_background.png",
+                "relType": 1,
+                "path": "Assets\\"
+              },
+              {
+                "type": 8,
+                "name": "doc_nav1.png",
+                "relType": 1,
+                "path": "Assets\\Doc\\"
+              },
+              {
+                "type": 8,
+                "name": "doc_nav2.png",
+                "relType": 1,
+                "path": "Assets\\Doc\\"
+              },
+              {
+                "type": 8,
+                "name": "doc_nav3.png",
+                "relType": 1,
+                "path": "Assets\\Doc\\"
+              },
+              {
+                "type": 8,
+                "name": "doc_nav4.png",
+                "relType": 1,
+                "path": "Assets\\Doc\\"
+              }
+            ]
+          },
+          {
+            "type": 1,
+            "name": "Community",
+            "children": [
+              {
+                "type": 8,
+                "name": "community_1.png",
+                "relType": 1,
+                "path": "Assets\\Community\\"
+              },
+              {
+                "type": 8,
+                "name": "community_2.png",
+                "relType": 1,
+                "path": "Assets\\Community\\"
+              },
+              {
+                "type": 8,
+                "name": "community_3.png",
+                "relType": 1,
+                "path": "Assets\\Community\\"
+              },
+              {
+                "type": 8,
+                "name": "community_4.png",
+                "relType": 1,
+                "path": "Assets\\Community\\"
+              },
+              {
+                "type": 8,
+                "name": "community_arrow.png",
+                "relType": 1,
+                "path": "Assets\\Community\\"
+              },
+              {
+                "type": 8,
+                "name": "community_notice.png",
+                "relType": 1,
+                "path": "Assets\\Community\\"
+              },
+              {
+                "type": 1,
+                "name": "Qa",
+                "children": [
+                  {
+                    "type": 8,
+                    "name": "profile1.png",
+                    "relType": 1,
+                    "path": "Assets\\Community\\Qa\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "search.png",
+                    "relType": 1,
+                    "path": "Assets\\Community\\Qa\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "write.png",
+                    "relType": 1,
+                    "path": "Assets\\Community\\Qa\\"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": 1,
+            "name": "Login",
+            "children": [
+              {
+                "type": 8,
+                "name": "check.png",
+                "relType": 1,
+                "path": "Assets\\Login\\"
+              },
+              {
+                "type": 8,
+                "name": "close.png",
+                "relType": 1,
+                "path": "Assets\\Login\\"
+              }
+            ]
+          },
+          {
+            "type": 1,
+            "name": "Register",
+            "children": [
+              {
+                "type": 8,
+                "name": "img1.png",
+                "relType": 1,
+                "path": "Assets\\Register\\"
+              },
+              {
+                "type": 8,
+                "name": "img2.png",
+                "relType": 1,
+                "path": "Assets\\Register\\"
+              },
+              {
+                "type": 8,
+                "name": "logo.png",
+                "relType": 1,
+                "path": "Assets\\Register\\"
+              }
+            ]
+          },
+          {
+            "type": 1,
+            "name": "Introduce",
+            "children": [
+              {
+                "type": 8,
+                "name": "banner1.png",
+                "relType": 1,
+                "path": "Assets\\Introduce\\"
+              },
+              {
+                "type": 8,
+                "name": "banner2.png",
+                "relType": 1,
+                "path": "Assets\\Introduce\\"
+              },
+              {
+                "type": 8,
+                "name": "banner3.png",
+                "relType": 1,
+                "path": "Assets\\Introduce\\"
+              },
+              {
+                "type": 8,
+                "name": "banner4.png",
+                "relType": 1,
+                "path": "Assets\\Introduce\\"
+              },
+              {
+                "type": 8,
+                "name": "banner5.png",
+                "relType": 1,
+                "path": "Assets\\Introduce\\"
+              },
+              {
+                "type": 8,
+                "name": "banner6.png",
+                "relType": 1,
+                "path": "Assets\\Introduce\\"
+              },
+              {
+                "type": 8,
+                "name": "banner7.png",
+                "relType": 1,
+                "path": "Assets\\Introduce\\"
+              },
+              {
+                "type": 8,
+                "name": "banner8.png",
+                "relType": 1,
+                "path": "Assets\\Introduce\\"
+              },
+              {
+                "type": 8,
+                "name": "banner9.png",
+                "relType": 1,
+                "path": "Assets\\Introduce\\"
+              },
+              {
+                "type": 8,
+                "name": "banner10.png",
+                "relType": 1,
+                "path": "Assets\\Introduce\\"
+              },
+              {
+                "type": 8,
+                "name": "banner11.png",
+                "relType": 1,
+                "path": "Assets\\Introduce\\"
+              },
+              {
+                "type": 8,
+                "name": "banner12.png",
+                "relType": 1,
+                "path": "Assets\\Introduce\\"
+              },
+              {
+                "type": 8,
+                "name": "introduce1.png",
+                "relType": 1,
+                "path": "Assets\\Introduce\\"
+              },
+              {
+                "type": 8,
+                "name": "introduce2.png",
+                "relType": 1,
+                "path": "Assets\\Introduce\\"
+              },
+              {
+                "type": 8,
+                "name": "introduce3.png",
+                "relType": 1,
+                "path": "Assets\\Introduce\\"
+              },
+              {
+                "type": 8,
+                "name": "introduce4.png",
+                "relType": 1,
+                "path": "Assets\\Introduce\\"
+              },
+              {
+                "type": 8,
+                "name": "introduce5.png",
+                "relType": 1,
+                "path": "Assets\\Introduce\\"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "name": "Source",
+        "children": [
+          {
+            "type": 2,
+            "name": "SpiderGenClonePrjApp.cls",
+            "relType": 1,
+            "path": "Source\\"
+          },
+          {
+            "type": 2,
+            "name": "MainView.cls",
+            "relType": 1,
+            "path": "Source\\"
+          },
+          {
+            "type": 3,
+            "name": "MainView.lay",
+            "relType": 1,
+            "path": "Source\\"
+          },
+          {
+            "type": 1,
+            "name": "ContainerViews",
+            "children": [
+              {
+                "type": 1,
+                "name": "MainSectionView",
+                "children": [
+                  {
+                    "type": 1,
+                    "name": "HomeView",
+                    "children": [
+                      {
+                        "type": 2,
+                        "name": "HomeView.cls",
+                        "action": 5,
+                        "relType": 1,
+                        "path": "Source\\",
+                        "comment": ""
+                      },
+                      {
+                        "type": 3,
+                        "name": "HomeView.lay",
+                        "action": 6,
+                        "relType": 1,
+                        "path": "Source\\",
+                        "comment": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type": 1,
+                    "name": "CenterNavView",
+                    "children": [
+                      {
+                        "type": 2,
+                        "name": "CenterNavView.cls",
+                        "action": 5,
+                        "relType": 1,
+                        "path": "Source\\",
+                        "comment": ""
+                      },
+                      {
+                        "type": 3,
+                        "name": "CenterNavView.lay",
+                        "action": 6,
+                        "relType": 1,
+                        "path": "Source\\",
+                        "comment": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type": 1,
+                    "name": "DetailView",
+                    "children": [
+                      {
+                        "type": 2,
+                        "name": "DetailView.cls",
+                        "action": 5,
+                        "relType": 1,
+                        "path": "Source\\",
+                        "comment": ""
+                      },
+                      {
+                        "type": 3,
+                        "name": "DetailView.lay",
+                        "action": 6,
+                        "relType": 1,
+                        "path": "Source\\",
+                        "comment": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type": 1,
+                    "name": "DetailView2",
+                    "children": [
+                      {
+                        "type": 2,
+                        "name": "DetailView2.cls",
+                        "action": 5,
+                        "relType": 1,
+                        "path": "Source\\",
+                        "comment": ""
+                      },
+                      {
+                        "type": 3,
+                        "name": "DetailView2.lay",
+                        "action": 6,
+                        "relType": 1,
+                        "path": "Source\\",
+                        "comment": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type": 1,
+                    "name": "DetailView3",
+                    "children": [
+                      {
+                        "type": 2,
+                        "name": "DetailView3.cls",
+                        "action": 5,
+                        "relType": 1,
+                        "path": "Source\\",
+                        "comment": ""
+                      },
+                      {
+                        "type": 3,
+                        "name": "DetailView3.lay",
+                        "action": 6,
+                        "relType": 1,
+                        "path": "Source\\",
+                        "comment": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type": 1,
+                    "name": "FooterVIew",
+                    "children": [
+                      {
+                        "type": 2,
+                        "name": "FooterView.cls",
+                        "action": 5,
+                        "relType": 1,
+                        "path": "Source\\",
+                        "comment": ""
+                      },
+                      {
+                        "type": 3,
+                        "name": "FooterView.lay",
+                        "action": 6,
+                        "relType": 1,
+                        "path": "Source\\",
+                        "comment": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type": 1,
+                    "name": "SlideView",
+                    "children": [
+                      {
+                        "type": 2,
+                        "name": "SlideView.cls",
+                        "action": 5,
+                        "relType": 1,
+                        "path": "Source\\",
+                        "comment": ""
+                      },
+                      {
+                        "type": 3,
+                        "name": "SlideView.lay",
+                        "action": 6,
+                        "relType": 1,
+                        "path": "Source\\",
+                        "comment": ""
+                      },
+                      {
+                        "type": 1,
+                        "name": "Views",
+                        "children": [
+                          {
+                            "type": 2,
+                            "name": "SubSlideView1.cls",
+                            "action": 5,
+                            "relType": 1,
+                            "path": "Source\\",
+                            "comment": ""
+                          },
+                          {
+                            "type": 3,
+                            "name": "SubSlideView1.lay",
+                            "action": 6,
+                            "relType": 1,
+                            "path": "Source\\",
+                            "comment": ""
+                          },
+                          {
+                            "type": 2,
+                            "name": "SubSlideView2.cls",
+                            "action": 5,
+                            "relType": 1,
+                            "path": "Source\\",
+                            "comment": ""
+                          },
+                          {
+                            "type": 3,
+                            "name": "SubSlideView2.lay",
+                            "action": 6,
+                            "relType": 1,
+                            "path": "Source\\",
+                            "comment": ""
+                          },
+                          {
+                            "type": 2,
+                            "name": "SubSlideView3.cls",
+                            "action": 5,
+                            "relType": 1,
+                            "path": "Source\\",
+                            "comment": ""
+                          },
+                          {
+                            "type": 3,
+                            "name": "SubSlideView3.lay",
+                            "action": 6,
+                            "relType": 1,
+                            "path": "Source\\",
+                            "comment": ""
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": 2,
+                    "name": "MainSectionView.cls",
+                    "action": 5,
+                    "relType": 1,
+                    "path": "Source\\",
+                    "comment": ""
+                  },
+                  {
+                    "type": 3,
+                    "name": "MainSectionView.lay",
+                    "action": 6,
+                    "relType": 1,
+                    "path": "Source\\",
+                    "comment": ""
+                  }
+                ]
+              },
+              {
+                "type": 1,
+                "name": "DocSectionView",
+                "children": [
+                  {
+                    "type": 2,
+                    "name": "DocSectionView.cls",
+                    "action": 5,
+                    "relType": 1,
+                    "path": "Source\\",
+                    "comment": ""
+                  },
+                  {
+                    "type": 3,
+                    "name": "DocSectionView.lay",
+                    "action": 6,
+                    "relType": 1,
+                    "path": "Source\\",
+                    "comment": ""
+                  }
+                ]
+              },
+              {
+                "type": 1,
+                "name": "LoginView",
+                "children": [
+                  {
+                    "type": 2,
+                    "name": "LoginView.cls",
+                    "action": 5,
+                    "relType": 1,
+                    "path": "Source\\",
+                    "comment": ""
+                  },
+                  {
+                    "type": 3,
+                    "name": "LoginView.lay",
+                    "action": 6,
+                    "relType": 1,
+                    "path": "Source\\",
+                    "comment": ""
+                  }
+                ]
+              },
+              {
+                "type": 1,
+                "name": "RegisterView",
+                "children": [
+                  {
+                    "type": 2,
+                    "name": "RegisterView.cls",
+                    "action": 5,
+                    "relType": 1,
+                    "path": "Source\\",
+                    "comment": ""
+                  },
+                  {
+                    "type": 3,
+                    "name": "RegisterView.lay",
+                    "action": 6,
+                    "relType": 1,
+                    "path": "Source\\",
+                    "comment": ""
+                  }
+                ]
+              },
+              {
+                "type": 1,
+                "name": "IntroduceSectionView",
+                "children": [
+                  {
+                    "type": 2,
+                    "name": "IntroduceSectionView.cls",
+                    "action": 5,
+                    "relType": 1,
+                    "path": "Source\\",
+                    "comment": ""
+                  },
+                  {
+                    "type": 3,
+                    "name": "IntroduceSectionView.lay",
+                    "action": 6,
+                    "relType": 1,
+                    "path": "Source\\",
+                    "comment": ""
+                  },
+                  {
+                    "type": 1,
+                    "name": "IntroduceView",
+                    "children": [
+                      {
+                        "type": 2,
+                        "name": "IntroduceView.cls",
+                        "action": 5,
+                        "relType": 1,
+                        "path": "Source\\",
+                        "comment": ""
+                      },
+                      {
+                        "type": 3,
+                        "name": "IntroduceView.lay",
+                        "action": 6,
+                        "relType": 1,
+                        "path": "Source\\",
+                        "comment": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type": 1,
+                    "name": "HistoryView",
+                    "children": [
+                      {
+                        "type": 2,
+                        "name": "HistoryView.cls",
+                        "action": 5,
+                        "relType": 1,
+                        "path": "Source\\",
+                        "comment": ""
+                      },
+                      {
+                        "type": 3,
+                        "name": "HistoryView.lay",
+                        "action": 6,
+                        "relType": 1,
+                        "path": "Source\\",
+                        "comment": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type": 1,
+                    "name": "ClientView",
+                    "children": [
+                      {
+                        "type": 2,
+                        "name": "ClientView.cls",
+                        "action": 5,
+                        "relType": 1,
+                        "path": "Source\\",
+                        "comment": ""
+                      },
+                      {
+                        "type": 3,
+                        "name": "ClientView.lay",
+                        "action": 6,
+                        "relType": 1,
+                        "path": "Source\\",
+                        "comment": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": 1,
+                "name": "CommunityTabView",
+                "children": [
+                  {
+                    "type": 1,
+                    "name": "CommunitySectionView",
+                    "children": [
+                      {
+                        "type": 2,
+                        "name": "CommunitySectionView.cls",
+                        "action": 5,
+                        "relType": 1,
+                        "path": "Source\\",
+                        "comment": ""
+                      },
+                      {
+                        "type": 3,
+                        "name": "CommunitySectionView.lay",
+                        "action": 6,
+                        "relType": 1,
+                        "path": "Source\\",
+                        "comment": ""
+                      },
+                      {
+                        "type": 1,
+                        "name": "ListItems",
+                        "children": [
+                          {
+                            "type": 2,
+                            "name": "ListItemView.cls",
+                            "action": 5,
+                            "relType": 1,
+                            "path": "Source\\",
+                            "comment": ""
+                          },
+                          {
+                            "type": 3,
+                            "name": "ListItemView.lay",
+                            "action": 6,
+                            "relType": 1,
+                            "path": "Source\\",
+                            "comment": ""
+                          }
+                        ]
+                      },
+                      {
+                        "type": 1,
+                        "name": "QaSectionView",
+                        "children": [
+                          {
+                            "type": 2,
+                            "name": "QaSectionView.cls",
+                            "action": 5,
+                            "relType": 1,
+                            "path": "Source\\",
+                            "comment": ""
+                          },
+                          {
+                            "type": 3,
+                            "name": "QaSectionView.lay",
+                            "action": 6,
+                            "relType": 1,
+                            "path": "Source\\",
+                            "comment": ""
+                          },
+                          {
+                            "type": 1,
+                            "name": "ListItems",
+                            "children": [
+                              {
+                                "type": 2,
+                                "name": "QaItemVIew.cls",
+                                "action": 5,
+                                "relType": 1,
+                                "path": "Source\\",
+                                "comment": ""
+                              },
+                              {
+                                "type": 3,
+                                "name": "QaItemVIew.lay",
+                                "action": 6,
+                                "relType": 1,
+                                "path": "Source\\",
+                                "comment": ""
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": 2,
+                    "name": "CommunityTabView.cls",
+                    "action": 5,
+                    "relType": 1,
+                    "path": "Source\\",
+                    "comment": ""
+                  },
+                  {
+                    "type": 3,
+                    "name": "CommunityTabView.lay",
+                    "action": 6,
+                    "relType": 1,
+                    "path": "Source\\",
+                    "comment": ""
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "version": "3.2.9"
+}

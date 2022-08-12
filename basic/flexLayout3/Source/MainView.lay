@@ -1,0 +1,110 @@
+<div data-base="AView" data-class="MainView" class="AView-Style" style="left: 0px; top: 0px; width: 100%; height: 100%; background-color: rgb(239, 239, 239); position: absolute; padding-right: 60px; padding-left: 60px;" data-browser-height="1110" data-browser-width="610" data-class-map="{&quot;afc&quot;:[&quot;AView&quot;,&quot;ALabel&quot;,&quot;AFlexLayout&quot;,&quot;AButton&quot;,&quot;AImage&quot;,&quot;ATextBox&quot;]}">
+    <div data-base="AView" data-class="AView" class="AView-Style" style="width: 100%; height: auto; position: relative; left: 0px; top: 0px; max-width: 700px; margin-left: auto; margin-right: auto; padding-top: 20px;">
+        <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: 100%; height: auto; position: relative; text-align: center; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255); font-size: 24px; display: inline-block; padding-bottom: 5px; padding-top: 5px; left: 0px; top: 0px;">플렉스 레이아웃 예제</label>
+        <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: 100%; height: auto; position: relative; left: 0px; justify-content: center; align-items: center; font-size: 36px; padding-top: 20px; top: 0px;">
+            <div style="position: relative; box-sizing: border-box;">
+                <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px;">빠른</label>
+            </div>
+            <div style="position: relative; box-sizing: border-box;">
+                <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px;">●</label>
+            </div>
+            <div style="position: relative; box-sizing: border-box;">
+                <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px;">온라인 거래</label>
+            </div>
+        </div>
+        <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 140px; height: 40px; position: relative; left: 0px; top: 0px; display: block; margin-left: auto; margin-right: auto;">최신버전 다운로드</button>
+        <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: 100%; height: auto; position: relative; left: 0px; text-align: center; margin-top: 60px; font-size: 24px;">사용 방법</label>
+        <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: 100%; height: 190px; position: relative; left: 0px; top: 0px;">
+            <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: 100%; align-self: auto;" class="">
+                <div data-base="AView" data-class="AView" class="AView-Style" style="width: 100%; height: 100%; position: relative; left: 0px; top: 0px; padding: 20px; margin-left: -2px;">
+                    <img data-base="AImage" data-class="AImage" class="AImage-Style aimage-blank" style="width: 25px; height: 15px; position: relative; left: 0px; top: 2px; display: inline-block;">
+                    <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; display: inline-block;">예금</label>
+                    <pre data-base="ATextBox" data-class="ATextBox" class="ATextBox-Style" style="width: 100%; height: auto; position: relative; left: 0px; top: 0px; margin-top: 20px; margin-left: 0px;">실제 계정을 열고 자금을 추가하세요. 저희는 20개 이상의 지불 시스템을 사용합니다.</pre>
+                </div>
+            </div>
+            <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: 100%; align-self: auto;">
+                <div data-base="AView" data-class="AView" class="AView-Style" style="width: 100%; height: 100%; position: relative; left: 0px; top: 0px; padding: 20px;">
+                    <img data-base="AImage" data-class="AImage" class="AImage-Style aimage-blank" style="width: 25px; height: 15px; position: relative; left: 0px; top: 2px; display: inline-block;">
+                    <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; display: inline-block;">예금</label>
+                    <pre data-base="ATextBox" data-class="ATextBox" class="ATextBox-Style" style="width: 100%; height: auto; position: relative; left: 0px; top: 0px; margin-top: 20px; margin-left: 0px;">실제 계정을 열고 자금을 추가하세요. 저희는 20개 이상의 지불 시스템을 사용합니다.</pre>
+                </div>
+            </div>
+            <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: 100%; align-self: auto;">
+                <div data-base="AView" data-class="AView" class="AView-Style" style="width: 100%; height: 100%; position: relative; left: 0px; top: 0px; padding: 20px;">
+                    <img data-base="AImage" data-class="AImage" class="AImage-Style aimage-blank" style="width: 25px; height: 15px; position: relative; left: 0px; top: 2px; display: inline-block;">
+                    <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; display: inline-block;">예금</label>
+                    <pre data-base="ATextBox" data-class="ATextBox" class="ATextBox-Style" style="width: 100%; height: auto; position: relative; left: 0px; top: 0px; margin-top: 20px; margin-left: 0px;">실제 계정을 열고 자금을 추가하세요. 저희는 20개 이상의 지불 시스템을 사용합니다.</pre>
+                </div>
+            </div>
+        </div>
+        <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: 100%; height: auto; position: relative; left: 0px; top: 0px; text-align: center; margin-top: 60px; font-size: 24px;">모든 기기</label>
+        <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: 100%; height: 200px; position: relative; left: 0px; top: 0px; justify-content: space-evenly;">
+            <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: 20%; align-self: auto;" class="">
+                <div data-base="AView" data-class="AView" class="AView-Style" style="width: 100%; height: 0px; position: relative; left: 0px; top: 0px; min-height: 150px; padding-bottom: 140%;">
+                    <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: 100%; height: 100%; position: absolute; left: 0px; top: 0px; flex-direction: column; align-items: center;">
+                        <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: auto; align-self: stretch;" class="">
+                            <img data-base="AImage" data-class="AImage" class="AImage-Style aimage-blank" style="width: 100%; height: 100px; position: relative; left: 0px; top: 0px; background-image: url(&quot;Assets/balance.svg&quot;); display: inline-block;">
+                        </div>
+                        <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: auto; align-self: auto;">
+                            <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; text-align: center;">window</label>
+                        </div>
+                        <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: auto; align-self: auto;">
+                            <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px;">xp 이상</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: 20%; align-self: auto;" class="">
+                <div data-base="AView" data-class="AView" class="AView-Style" style="width: 100%; height: 100px; position: relative; left: 0px; top: 0px; padding-bottom: 140%; min-height: 150px;">
+                    <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: 100%; height: 100%; position: absolute; left: 0px; top: 0px; flex-direction: column; align-items: center;">
+                        <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: auto; align-self: stretch;" class="">
+                            <img data-base="AImage" data-class="AImage" class="AImage-Style aimage-blank" style="width: 100%; height: 100px; position: relative; left: 0px; top: 0px; background-image: url(&quot;Assets/balance.svg&quot;); display: inline-block;">
+                        </div>
+                        <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: auto; align-self: auto;">
+                            <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; text-align: center;">window</label>
+                        </div>
+                        <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: auto; align-self: auto;">
+                            <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px;">xp 이상</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: 20%; align-self: auto;" class="">
+                <div data-base="AView" data-class="AView" class="AView-Style" style="width: 100%; height: 100px; position: relative; left: 0px; top: 0px; min-height: 150px; padding-bottom: 140px;">
+                    <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: 100%; height: 100%; position: absolute; left: 0px; top: 0px; flex-direction: column; align-items: center;">
+                        <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: auto; align-self: stretch;" class="">
+                            <img data-base="AImage" data-class="AImage" class="AImage-Style aimage-blank" style="width: 100%; height: 100px; position: relative; left: 0px; top: 0px; background-image: url(&quot;Assets/balance.svg&quot;); display: inline-block;">
+                        </div>
+                        <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: auto; align-self: auto;">
+                            <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; text-align: center;">window</label>
+                        </div>
+                        <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: auto; align-self: auto;">
+                            <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px;">xp 이상</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: 20%; align-self: auto;" class="">
+                <div data-base="AView" data-class="AView" class="AView-Style" style="width: 100%; height: 100px; position: relative; left: 0px; top: 0px; min-height: 150px; padding-bottom: 140px;">
+                    <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: 100%; height: 100%; position: absolute; left: 0px; top: 0px; flex-direction: column; align-items: center;">
+                        <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: auto; align-self: stretch;" class="">
+                            <img data-base="AImage" data-class="AImage" class="AImage-Style aimage-blank" style="width: 100%; height: 100px; position: relative; left: 0px; top: 0px; background-image: url(&quot;Assets/balance.svg&quot;); display: inline-block;">
+                        </div>
+                        <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: auto; align-self: auto;">
+                            <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; text-align: center;">window</label>
+                        </div>
+                        <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: auto; align-self: auto;">
+                            <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px;">xp 이상</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-base="AView" data-class="AView" class="AView-Style" style="width: 100%; height: 200px; position: relative; left: 0px; top: 0px; margin-top: 0px; margin-left: 0px;">
+            <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: absolute; left: 40px; top: 30px;">홈</label>
+            <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: absolute; left: 90px; top: 30px;">거래</label>
+            <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: absolute; left: 160px; top: 30px;">교육</label>
+            <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: absolute; left: 210px; top: 30px;">회사</label>
+        </div>
+    </div>
+</div>

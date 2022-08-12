@@ -1,0 +1,99 @@
+
+._global_style_
+{
+	font-size: 12px !important;
+	font-family: courier !important;
+	text-size-adjust: none !important;
+
+}
+
+.global_resp
+{
+	/* global_resp 는 body 에 추가된 클래스 입니다. */
+
+}
+
+/*가로모드*/
+@media screen and (orientation: landscape)
+{
+	.global_resp
+	{
+	}
+}
+
+/*ios*/
+@supports (-webkit-overflow-scrolling: touch)
+{
+}
+
+/*tablet*/
+@media screen and (min-width:641px)
+{
+}
+
+.noneBorder
+{
+	border: 0 !important;
+	border-style: none !important;
+	outline: 0 !important;
+	background-color:transparent !important;
+}
+
+.hover
+{
+	color:rgb(050,130,200) !important;
+	outline: 0 !important;
+}
+
+.mainNav_style
+{
+	color: #3282c8 !important;
+	border-bottom: 3px solid #3282c8 !important;
+	outline:0 !important;
+	pointer-events: auto !important;
+	cursor: pointer !important;
+}
+
+.download_hover
+{
+	background-color:rgba(250,250,250,0.3) !important;
+}
+
+.rgbaBtn
+{
+	color:gray !important;
+	background-color: rgb(102, 98, 98) !important;
+}
+
+.mainLogoBtnStyle
+{
+	background-color: tansparent !important;
+}
+
+.selectTab
+{
+}
+
+.mainNav_style_clone
+{
+	color: #3282c8 !important;
+	border-bottom: 3px solid #3282c8 !important;
+	outline:0 !important;
+	
+}
+
+.rgbaBtn
+{
+	background-color:rgba(250,250,250,0.8) !important;
+}
+
+.clickBtn
+{
+	background-color: rgb(105,105,105) !important;
+}
+
+.radioBtn
+{
+	color: green !important;
+}
+

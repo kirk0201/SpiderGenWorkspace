@@ -1,0 +1,38 @@
+<div data-base="AView" data-class="MainView" class="AView-Style" style="left: 0px; top: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.62); position: absolute; border-color: rgb(171, 171, 171);" data-browser-height="640" data-browser-width="400" data-class-map="{&quot;afc&quot;:[&quot;AView&quot;,&quot;ALabel&quot;,&quot;AFlexLayout&quot;,&quot;AButton&quot;,&quot;ATextField&quot;]}">
+    <div data-base="AView" data-class="AView" class="AView-Style" style="width: 100%; height: 100%; position: relative; left: 0px; top: 0px; margin-top: 0px; margin-left: 0px; background-color: rgb(255, 255, 255); padding-left: 10px; padding-right: 10px;">
+        <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: calc(50% - 40px); font-size: 20px; font-weight: bold; margin-top: 30px;" data-center-x="true">본인인증</label>
+        <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: 100%; height: 100px; position: relative; left: 0px; top: 0px; margin-top: 30px; margin-left: 0px; flex-direction: column; justify-content: space-around; background-color: rgb(180, 180, 180); padding-top: 5px; padding-bottom: 5px;">
+            <div style="position: relative; box-sizing: border-box;">
+                <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; margin-left: -2px;">● 간편한 본인인증을 통해 신청가능 여부 및 이용한도를 확인하세요.</label>
+            </div>
+            <div style="position: relative; box-sizing: border-box;">
+                <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px;">● 조회 시 고객님의 신용 등급에는 영향이 없습니다.</label>
+            </div>
+            <div style="position: relative; box-sizing: border-box;">
+                <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px;">● 본인인증은 아래 방법 중 하나만 선택하여 인증하시면 됩니다.</label>
+            </div>
+        </div>
+        <div data-base="AView" data-class="AView" class="AView-Style" style="width: 100%; height: auto; position: relative; left: 0px; top: 0px; display: inline-block; margin-top: 30px; background-color: rgba(0, 0, 0, 0);">
+            <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 50%; height: 60px; position: relative; left: 0px; top: 0px; font-size: 17px; border-width: 1px; border-style: solid; border-color: rgb(199, 199, 199); font-weight: bold;">휴대폰</button>
+            <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 50%; height: 60px; position: relative; left: 0px; top: 0px; font-size: 17px; border-width: 1px; border-style: solid; border-color: rgb(199, 199, 199); font-weight: bold;">공인인증서</button>
+        </div>
+        <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; margin-top: 40px; font-size: 18px; display: block; font-weight: bold;">이름</label>
+        <input data-base="ATextField" data-class="ATextField" type="text" value="김재현" class="ATextField-Style" autocomplete="off" style="width: 100%; height: 50px; position: relative; left: 0px; top: 0px; font-size: 18px; padding-right: 10px; padding-left: 10px; margin-top: 10px; background-color: rgb(255, 255, 255);">
+        <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; font-size: 18px; display: block; font-weight: bold; margin-top: 20px;">주민등록번호</label>
+        <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: 100%; height: auto; position: relative; left: 0px; top: 0px; flex-direction: row; align-items: center; align-content: flex-start; margin-top: 10px;">
+            <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: auto; align-self: auto;" class="">
+                <input data-base="ATextField" data-class="ATextField" type="text" value="900201" class="ATextField-Style" autocomplete="off" style="width: 100%; height: 50px; position: relative; font-size: 18px; padding-right: 10px; padding-left: 10px; background-color: rgb(255, 255, 255); margin-left: 0px; left: 0px; top: 0px;">
+            </div>
+            <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: auto; align-self: auto;">
+                <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px;">-</label>
+            </div>
+            <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: 20%; align-self: auto;" class="">
+                <input data-base="ATextField" data-class="ATextField" type="text" value="1" class="ATextField-Style" autocomplete="off" style="width: 100%; height: 50px; position: relative; font-size: 18px; padding-right: 10px; padding-left: 10px; margin-top: 0px; background-color: rgb(255, 255, 255); margin-left: 0px; left: 0px; top: 0px; text-align: center;">
+            </div>
+            <div style="position: relative; box-sizing: border-box; flex: 1 1 100%; align-self: center;">
+                <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: 100%; height: 100%; position: relative; left: 0px; top: 0px; display: block; font-size: 40px; color: rgb(180, 180, 180); padding-left: 10px;">●●●●●●</label>
+            </div>
+        </div>
+        <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 100%; height: 50px; position: relative; left: 0px; top: 0px; margin-top: 20px; border-width: 1px; border-style: solid; font-size: 18px; background-color: rgb(228, 54, 54); color: rgb(255, 255, 255);">휴대전화 인증받기</button>
+    </div>
+</div>

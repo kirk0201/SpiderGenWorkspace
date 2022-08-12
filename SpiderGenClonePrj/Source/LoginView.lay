@@ -1,0 +1,36 @@
+<div data-base="AView" data-class="LoginView" class="AView-Style" style="left: 0px; top: 0px; width: 100%; height: 100%; background-color: rgb(255, 255, 255); position: relative; margin-left: 0px; padding-left: 20px; padding-right: 20px; padding-top: 20px; border-radius: 10px;" data-browser-width="500" data-browser-height="500" data-max-abutton="1" id="LoginView--loginView" data-class-map="{&quot;afc&quot;:[&quot;AView&quot;,&quot;AFlexLayout&quot;,&quot;AButton&quot;,&quot;ALabel&quot;,&quot;ATextField&quot;,&quot;ACheckBox&quot;]}">
+    <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; justify-content: flex-end;">
+        <div style="position: relative; box-sizing: border-box;">
+            <button data-base="AButton" data-class="AButton" class="AButton-Style noneBorder" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; cursor: pointer;" data-listener-click="LoginView:onAButton1Click" data-style=" noneBorder" data-style-down=" noneBorder">
+                <img src="Assets/Login/close.png">
+            </button>
+        </div>
+    </div>
+    <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: 100%; height: 100px; position: relative; left: 0px; top: 0px; justify-content: center; align-items: center;">
+        <div style="position: relative; box-sizing: border-box;">
+            <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; font-size: 28px; font-weight: bold;">로그인</label>
+        </div>
+    </div>
+    <input data-base="ATextField" data-class="ATextField" type="text" value="" class="ATextField-Style" autocomplete="off" style="width: 100%; height: auto; position: relative; left: 0px; top: 0px; font-size: 16px; padding: 10px; border-width: 1px; border-style: solid; border-color: rgb(205, 205, 205); margin-bottom: 20px; background-color: rgb(255, 255, 255);" placeholder="아이디">
+    <input data-base="ATextField" data-class="ATextField" type="password" value="" class="ATextField-Style" autocomplete="off" style="width: 100%; height: auto; position: relative; font-size: 16px; padding: 10px; border-width: 1px; border-style: solid; border-color: rgb(205, 205, 205); margin-bottom: 20px; background-color: rgb(255, 255, 255);" placeholder="비밀번호">
+    <span data-base="ACheckBox" data-class="ACheckBox" class="ACheckBox-Style noneBorder" tabindex="0" style="width: 100px; height: 20px; position: relative; left: 0px; top: 0px; background-image: url(&quot;Assets/Login/check.png&quot;); margin-bottom: 20px; cursor: pointer;" data-style=" noneBorder" data-check-class=" radioBtn" data-check-value="true">아이디 저장</span>
+    <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 100%; height: 50px; position: relative; left: 0px; top: 0px; font-size: 16px; font-weight: bold; color: rgb(255, 255, 255); background-color: rgb(40, 202, 174); margin-bottom: 20px; cursor: pointer; margin-top: 0px;" data-style-over="clickBtn">확인</button>
+    <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; justify-content: space-between; margin-bottom: 50px;">
+        <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: auto; align-self: auto;">
+            <button data-base="AButton" data-class="AButton" class="AButton-Style noneBorder" style="width: 80px; height: 22px; position: relative; left: 0px; top: 0px; background-color: rgba(0, 0, 0, 0); font-size: 14px; color: rgb(40, 202, 174); margin-left: -2px; cursor: pointer;" data-style=" noneBorder" data-style-down=" noneBorder">회원가입</button>
+        </div>
+        <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: 50%; align-self: auto;">
+            <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; margin-top: -2px; justify-content: space-between; align-items: center;">
+                <div style="position: relative; box-sizing: border-box;">
+                    <button data-base="AButton" data-class="AButton" class="AButton-Style noneBorder" style="width: 80px; height: 22px; position: relative; left: 0px; top: 0px; font-size: 14px; cursor: pointer;" data-style=" noneBorder" data-style-down=" noneBorder">아이디</button>
+                </div>
+                <div style="position: relative; box-sizing: border-box;">
+                    <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; font-size: 14px;">/</label>
+                </div>
+                <div style="position: relative; box-sizing: border-box;">
+                    <button data-base="AButton" data-class="AButton" class="AButton-Style noneBorder" style="width: auto; height: 22px; position: relative; left: 0px; top: 0px; font-size: 14px; cursor: pointer;" data-style=" noneBorder" data-style-down=" noneBorder">비밀번호 찾기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

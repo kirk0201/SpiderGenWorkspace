@@ -1,0 +1,7 @@
+{
+  "styleName": "radioBtn",
+  "items": {
+    "radioBtn": "\n.radioBtn\n{\n\t/* TODO:edit here */\n\tpointer-events: auto;\n}\n",
+    "edit_here": "\n.radioBtn\n{\n\t/* TODO:edit here */\n\tcursor:pointer;\n\n}\n"
+  }
+}
