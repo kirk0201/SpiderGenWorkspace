@@ -1,0 +1,51 @@
+
+._global_style_
+{
+	font-size: 12px;
+	font-family: courier;
+	text-size-adjust: none;
+
+}
+
+.global_resp
+{
+	/* TODO:edit here */
+
+}
+
+/*가로모드*/
+@media screen and (orientation: landscape)
+{
+}
+
+/*세로모드*/
+@media screen and (orientation: portrait)
+{
+}
+
+/*ios*/
+@supports (-webkit-overflow-scrolling: touch)
+{
+}
+
+/*not ios*/
+@supports not (-webkit-overflow-scrolling: touch)
+{
+}
+
+/*phone*/
+@media screen and (max-width: 640px)
+{
+}
+
+/*tablet*/
+@media screen and (min-width:641px)
+{
+}
+
+.common_listBg
+{
+	color: rgb(255, 255, 255);
+	background-color: rgb(30, 30, 162);
+}
+

@@ -39,10 +39,20 @@ function MainView*onActiveDone(isFirst)
 
 function MainView*onInputEditFocus(comp, info, e)
 {
+	console.log("this", this);
+	
+	// searchWnd는 ID값이 아닌 이미 만들어진 매소드로 자동완성 객체를 가리키는 매소드로 보여짐
 	if(this.searchWnd) return;
 	
+	// 해당 작업을 통해 searchWnd를 생성하는 듯
 	var wnd = new AWindow('search_result');
 	
+		console.log("comp",comp);
+		console.log("comp.getPos()", comp.getPos());
+		console.log("width", comp.element.style.width);
+		console.log("style", comp.element.style);
+
+		// getPost() : 해당 컴포넌트의 Position 값을 가져옴
 	var pos = comp.getPos(),
 		width = comp.element.style.width, thisObj = this;
 		
@@ -56,7 +66,7 @@ function MainView*onInputEditFocus(comp, info, e)
 	wnd.setResultCallback(function(result)
 	{
 		thisObj.searchWnd = null;
-		
+		console.log("comp.$ele.blue()", comp.$ele.blur());
 		comp.$ele.blur();
 		
 		if(result)
@@ -70,8 +80,11 @@ function MainView*onInputEditFocus(comp, info, e)
 	this.searchWnd = wnd;
 };
 
+// TextField Change 이벤트
+// onInputEditFocus에서 searchWnd에 wnd 객체를 할당
 function MainView*onInputEditChange(comp, info, e)
 {
+	console.log("this.searchWnd", this.searchWnd.getView());
 	if(this.searchWnd)
 	{
 		this.searchWnd.getView().filterData(comp.getText());
@@ -82,13 +95,18 @@ function MainView*onInputEditBlur(comp, info, e)
 {
 	if(this.searchWnd)
 	{
+		console.log("getView()",this.searchWnd.getView());
+		//.close()로는 자동완성 윈도우가 종료되지 않음 .closeManage()를 이용하여 윈도우를 닫아야함
 		this.searchWnd.getView().closeManage();
+
 	}
 	
 };
 
+
 function MainView*onInputEditKeyDown(comp, info, e)
 {
+	
 	if(!this.searchWnd) return;
 	
 	var resultView = this.searchWnd.getView(), item;
