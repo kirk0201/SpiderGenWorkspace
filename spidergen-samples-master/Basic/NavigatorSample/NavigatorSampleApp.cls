@@ -21,7 +21,7 @@ function NavigatorSampleApp*onReady()
 	
 	//다음과 같이 두가지 방법으로 사용할 수 있다.
 	//isMainNavi 값을 true, false 로 변경하여 다음 두가지 경우를 테스트 해 볼 수 있다.
-	var isMainNavi = false;
+	var isMainNavi = true;
 
 	// 응용프로그램 전체를 네비게이터 방식으로 동작하게 하는 경우
 	if(isMainNavi)
