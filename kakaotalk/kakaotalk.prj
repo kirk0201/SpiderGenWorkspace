@@ -61,6 +61,102 @@
                 "path": "Assets\\Login\\"
               }
             ]
+          },
+          {
+            "type": 1,
+            "name": "MainChat",
+            "children": [
+              {
+                "type": 1,
+                "name": "Slide",
+                "children": [
+                  {
+                    "type": 8,
+                    "name": "galaxywatch.jpg",
+                    "relType": 1,
+                    "path": "Assets\\MainChat\\Slide\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "lenova.jpg",
+                    "relType": 1,
+                    "path": "Assets\\MainChat\\Slide\\"
+                  }
+                ]
+              },
+              {
+                "type": 1,
+                "name": "Header",
+                "children": [
+                  {
+                    "type": 8,
+                    "name": "newChat.png",
+                    "relType": 1,
+                    "path": "Assets\\MainChat\\Header\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "searchBtn.png",
+                    "relType": 1,
+                    "path": "Assets\\MainChat\\Header\\"
+                  }
+                ]
+              },
+              {
+                "type": 1,
+                "name": "Side",
+                "children": [
+                  {
+                    "type": 8,
+                    "name": "chat_active.png",
+                    "relType": 1,
+                    "path": "Assets\\MainChat\\Side\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "chat_normal.png",
+                    "relType": 1,
+                    "path": "Assets\\MainChat\\Side\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "dot_active.png",
+                    "relType": 1,
+                    "path": "Assets\\MainChat\\Side\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "dot_normal.png",
+                    "relType": 1,
+                    "path": "Assets\\MainChat\\Side\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "setting_active.png",
+                    "relType": 1,
+                    "path": "Assets\\MainChat\\Side\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "setting_normal.png",
+                    "relType": 1,
+                    "path": "Assets\\MainChat\\Side\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "user_active.png",
+                    "relType": 1,
+                    "path": "Assets\\MainChat\\Side\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "user_normal.png",
+                    "relType": 1,
+                    "path": "Assets\\MainChat\\Side\\"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -127,6 +223,28 @@
                     "comment": ""
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "type": 1,
+            "name": "MainChatView",
+            "children": [
+              {
+                "type": 2,
+                "name": "MainChatView.cls",
+                "action": 5,
+                "relType": 1,
+                "path": "Source\\MainChatView\\",
+                "comment": ""
+              },
+              {
+                "type": 3,
+                "name": "MainChatView.lay",
+                "action": 6,
+                "relType": 1,
+                "path": "Source\\MainChatView\\",
+                "comment": ""
               }
             ]
           }

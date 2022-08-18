@@ -37,6 +37,7 @@ function MainView*onActiveDone(isFirst)
 
 };
 
+// IdField를 클릭하여 활성화될 때
 function MainView*onInputIdFieldFocus(comp, info, e)
 {
 
@@ -78,13 +79,15 @@ function MainView*onInputIdFieldFocus(comp, info, e)
 	});
 	
 	wnd.open('Source/AutoCompleteView/AutoCompleteView.lay', this.getContainer(), pos.left, pos.top+40, width);
-	wnd.setResultCallback(function(result) {
+	wnd.setResultCallback(function(result) 
+	{
 		thisMainView.searchWnd = null;
 		// blur()처리된 element를 가리킴
 		comp.$ele.blur();
-		console.log("result",result);
+// 		console.log("result",result);
 		if(result)
 		{
+			console.log("result", result);
 			thisMainView.inputIdField.setText(result.userEmail);
 			console.log("result.userEmail", result.userEmail);
 		}
@@ -99,17 +102,62 @@ function MainView*onInputIdFieldChange(comp, info, e)
 		this.searchWnd.getView().closeManage();
 	}*/
 	if(this.searchWnd) {
-		console.log(this.searchWnd.getView());
-		console.log("FilterData",this.searchWnd.getView().filterData(comp.getText()));
+// 		console.log(this.searchWnd.getView());
+// 		console.log("FilterData",this.searchWnd.getView().filterData(comp.getText()));
 		this.searchWnd.getView().filterData(comp.getText());
 	}
 };
 
 	// searchWnd 윈도우를 닫기 위한 코딩
+	// this.searchWnd.getView()는 AutoCompleteView를 가리키고 .getContainer를 추가하면 윈도우 객체를 가리킴
+	// 윈도우 객체를 닫기 위해 close() 매소드를 사용
 function MainView*onInputIdFieldBlur(comp, info, e)
 {
 	if(this.searchWnd)
 	{
-		this.searchWnd.getView();
+// 		console.log("1", this.searchWnd.getView());
+// 		console.log("2", this.searchWnd.getView().getContainer());
+// 		this.searchWnd.getView().getContainer().close();
+		this.searchWnd.getView().closeManage();
 	}
+};
+
+
+function MainView*onInputIdFieldKeydown(comp, info, e)
+{
+	if(!this.searchWnd) return;
+	var autoView = this.searchWnd.getView(), item;
+	var newArray = autoView.data;
+// 	console.log("1",autoView.autoCompleteList.createItems('Source/AutoCompleteView/AutoItemView/AutoItemView.lay',autoView.data));
+	// e.which==38 : up arrow
+	// e.which==40 : down arrow
+	// e.which==13 : enter
+	if(e.which==13)
+	{
+		if(autoView.data.filter((itm) => itm.userEmail !== comp.getText())){
+			console.log("엔터!", comp.getText());
+			autoView.autoCompleteList.removeAllItems();
+			newItm = autoView.data.push({"userEmail":comp.getText()});
+			autoView.autoCompleteList.createItems('Source/AutoCompleteView/AutoItemView/AutoItemView.lay', newArray);
+			autoView.autoCompleteList.refreshListView();
+		}
+		
+// 		console.log(autoView.autoCompleteList.addItem('Source/AutoCompleteView/AutoItemView/AutoItemView.lay', [] ,{"userEmail":"test입니다"}));
+// 		autoView.autoCompleteList.addItem('Source/AutoCompleteView/AutoItemView/AutoItemView.lay', [5]);
+// 		console.log(autoView.data.push({'userEmail':"test"}));
+// 		autoView.data.push({'userEmail':"test"});
+		/*autoView.getContainer()*/
+		/*item = autoView.autoCompleteList.getSelectItem();
+		autoView.onAutoCompleteListSelect(null, item);*/
+	
+	}
+};
+
+// 로그인 버튼 클릭 함수
+function MainView*onLoginBtnClick(comp, info, e)
+{
+	console.log("owner", ANavigator.find('navigator'));
+	ANavigator.find('navigator').goPage('MainChatView');
+	//TODO:edit here
+
 };

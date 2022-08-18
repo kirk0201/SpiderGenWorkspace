@@ -4,7 +4,7 @@
             <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; background-color: rgba(0, 0, 0, 0); font-size: 17px;" id="AutoItemView--userEmail"></label>
         </div>
         <div style="position: relative; box-sizing: border-box;">
-            <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 30px; height: 30px; position: relative; left: 0px; top: 0px; background-color: rgb(255, 255, 255); font-size: 17px; border-radius: 5px; font-weight: bold; color: rgb(205, 205, 205);" id="AutoItemView--deleteBtn">X</button>
+            <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 30px; height: 30px; position: relative; left: 0px; top: 0px; background-color: rgb(255, 255, 255); font-size: 17px; border-radius: 5px; font-weight: bold; color: rgb(205, 205, 205);" id="AutoItemView--deleteBtn" data-listener-click="AutoItemView:onDeleteBtnClick" data-listener-actiondown="AutoItemView:onDeleteBtnActiondown">X</button>
         </div>
     </div>
 </div>
