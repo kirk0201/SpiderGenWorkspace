@@ -80,8 +80,7 @@ function ResultView*removeCodeItem(item)
 
 function ResultView*onResultListviewSelect(comp, info, e)
 {
-	//console.log('select');
-	
+	console.error('select', this.getContainer());
 	this.getContainer().close(info.itemData);
 
 };
@@ -118,7 +117,7 @@ function ResultView*selectItemManage(isDown)
 
 	item = this.resultListview.getItem(inx);
 	this.resultListview.setSelectItem(item);
-
+	console.log("item",item);
 	return item;
 };
 

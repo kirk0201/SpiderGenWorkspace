@@ -108,13 +108,20 @@ function MainView*onInputEditKeyDown(comp, info, e)
 {
 	
 	if(!this.searchWnd) return;
-	
+	console.error("??",e.which);
 	var resultView = this.searchWnd.getView(), item;
 	
+	console.log('item?', item);
+	console.log('resultView', resultView);
+	// e.which==38 : up arrow
+	// e.which==40 : down arrow
+	// e.which==13 : enter
 	if(e.which==38 || e.which==40)
 	{
-		item = resultView.selectItemManage(e.which==38);
 		
+		item = resultView.selectItemManage(e.which==38);
+
+
 		this.inputEdit.setText(item.itemData.name);
 	}
 	

@@ -80,8 +80,7 @@ ResultView.prototype.removeCodeItem = function(item)
 
 ResultView.prototype.onResultListviewSelect = function(comp, info, e)
 {
-	//console.log('select');
-	
+	console.error('select', this.getContainer());
 	this.getContainer().close(info.itemData);
 
 };
@@ -118,7 +117,7 @@ ResultView.prototype.selectItemManage = function(isDown)
 
 	item = this.resultListview.getItem(inx);
 	this.resultListview.setSelectItem(item);
-
+	console.log("item",item);
 	return item;
 };
 
