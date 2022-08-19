@@ -8,6 +8,10 @@ function kakaotalkApp()
 	AApplication.call(this);
 
 	//TODO:edit here
+	
+	this.serverUrl = 'http://localhost:3000/login';
+	
+	this.qm = null;
 
 }
 afc.extendsClass(kakaotalkApp, AApplication);
@@ -25,10 +29,12 @@ kakaotalkApp.prototype.onReady = function()
 	
 	navigator.registerPage('Source/MainView.lay', 'MainView');
 	navigator.registerPage('Source/MainChatView/MainChatView.lay', 'MainChatView');
-	
+	navigator.registerPage('Source/MainChatView/SubView/ChatsView/ChatRoomView/ChatRoomView.lay', 'ChatRoomView');
 	navigator.goPage('MainView');
 	//TODO:edit here
-
+	
+	
+	this.connectServer();
 };
 
 kakaotalkApp.prototype.unitTest = function(unitUrl)
@@ -38,6 +44,23 @@ kakaotalkApp.prototype.unitTest = function(unitUrl)
 	this.onReady();
 
 	AApplication.prototype.unitTest.call(this, unitUrl);
+};
+
+
+
+kakaotalkApp.prototype.connectServer = function()
+{
+	//TODO:edit here
+	
+	this.qm = new WebQueryManager();
+	var nio = new HttpIO(this.qm);
+	
+	console.log("qm",this.qm);
+	console.log("nio", nio);
+	
+	this.qm.setNetworkIo(nio);
+	
+	this.qm.startManager(this.serverUrl);
 };
 
 var theApp = null;

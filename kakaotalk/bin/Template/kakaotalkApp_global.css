@@ -36,3 +36,9 @@
 	background-color: rgb(69, 44, 42) !important;
 }
 
+.clickBorderDelete
+{
+	outline: none !important;
+	border: 0 !important;
+}
+
