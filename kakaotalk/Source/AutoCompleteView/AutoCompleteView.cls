@@ -124,3 +124,32 @@ function AutoCompleteView*onAView1Actiondown(comp, info, e)
 	//TODO:edit here
 
 };
+function AutoCompleteView*onClearBtnClick(comp, info, e)
+{
+	this.autoCompleteList.removeAllItems();
+	//TODO:edit here
+
+};
+
+function AutoCompleteView*onClearBtnActiondown(comp, info, e)
+{
+	e.preventDefault();
+
+	//TODO:edit here
+
+};
+
+function AutoCompleteView*onAutoSaveBtnClick(comp, info, e)
+{
+	if (comp.getText() === "자동저장 on") comp.setText("자동저장 off");
+	else comp.setText("자동저장 on");
+	//TODO:edit here
+
+};
+
+function AutoCompleteView*onAutoSaveBtnActiondown(comp, info, e)
+{
+	e.preventDefault();
+	//TODO:edit here
+
+};

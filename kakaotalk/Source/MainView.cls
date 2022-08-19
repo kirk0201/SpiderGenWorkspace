@@ -1,4 +1,5 @@
-
+import 'Framework/afc/component/AIndicator.js';
+import 'Framework/afc/component/AToast.js';
 /**
 Constructor
 Do not call Function in Constructor.
@@ -78,7 +79,7 @@ function MainView*onInputIdFieldFocus(comp, info, e)
 		focusOnInit: false
 	});
 	
-	wnd.open('Source/AutoCompleteView/AutoCompleteView.lay', this.getContainer(), pos.left, pos.top+40, width);
+	wnd.open('Source/AutoCompleteView/test.lay', this.getContainer(), pos.left, pos.top+40, width);
 	wnd.setResultCallback(function(result) 
 	{
 		thisMainView.searchWnd = null;
@@ -156,8 +157,33 @@ function MainView*onInputIdFieldKeydown(comp, info, e)
 // 로그인 버튼 클릭 함수
 function MainView*onLoginBtnClick(comp, info, e)
 {
+	console.log("theApp", theApp);
+	var thisObj = this;
+	theApp.qm.sendProcessByName('login', this.getContainerId(), null,
+	function(queryData)
+	{
+		var blockData = queryData.getBlockData('InBlock1');
+		blockData[0].login_email = thisObj.inputIdField.getText();
+		blockData[0].login_password = thisObj.inputPassField.getText();
+		
+		console.log(queryData);
+		
+// 		console.log("printQueryData",queryData.printQueryData());
+	},
+	function(queryData)
+	{
+		queryData.printQueryData();
+		var blockData = queryData.getBlockData('OutBlock1');
+		console.log(blockData);
+		
+		if (blockData[0].token){
+			thisObj.inputIdField.setText("");
+			thisObj.inputPassField.setText("");
+			ANavigator.find('navigator').goPage('MainChatView');			
+		} else AToast.show(blockData[0].errMsg);
+	}
+	);
 	console.log("owner", ANavigator.find('navigator'));
-	ANavigator.find('navigator').goPage('MainChatView');
 	//TODO:edit here
 
 };

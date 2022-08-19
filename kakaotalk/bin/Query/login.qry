@@ -1,0 +1,21 @@
+{
+	"name": "login",
+	"desc": "로그인",
+	"queryType": ".JSON",
+	"input": {
+		"InBlock1": {
+			"format": [
+				["로그인이메일","login_email","","","char",10,4],
+				["로그인비밀번호","login_password","","","char",10,4]
+			]
+		}
+	},
+	"output": {
+		"OutBlock1": {
+			"format": [
+				["에러메세지","errMsg","","","char",10,4],
+				["토큰","token","","","char",10,4]
+			]
+		}
+	}
+}

@@ -124,3 +124,32 @@ AutoCompleteView.prototype.onAView1Actiondown = function(comp, info, e)
 	//TODO:edit here
 
 };
+AutoCompleteView.prototype.onClearBtnClick = function(comp, info, e)
+{
+	this.autoCompleteList.removeAllItems();
+	//TODO:edit here
+
+};
+
+AutoCompleteView.prototype.onClearBtnActiondown = function(comp, info, e)
+{
+	e.preventDefault();
+
+	//TODO:edit here
+
+};
+
+AutoCompleteView.prototype.onAutoSaveBtnClick = function(comp, info, e)
+{
+	if (comp.getText() === "자동저장 on") comp.setText("자동저장 off");
+	else comp.setText("자동저장 on");
+	//TODO:edit here
+
+};
+
+AutoCompleteView.prototype.onAutoSaveBtnActiondown = function(comp, info, e)
+{
+	e.preventDefault();
+	//TODO:edit here
+
+};

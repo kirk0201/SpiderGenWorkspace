@@ -1,0 +1,14 @@
+<div data-base="AView" data-class="ChatRoomView" class="AView-Style" style="left: 0px; top: 0px; width: 100%; height: 100%; background-color: rgb(255, 255, 255); position: relative;" data-browser-width="500" data-browser-height="600" data-class-map="{&quot;afc&quot;:[&quot;AView&quot;,&quot;ALabel&quot;,&quot;ATextField&quot;,&quot;AButton&quot;]}">
+    <div data-base="AView" data-class="AView" class="AView-Style" style="width: 100%; height: 100px; position: relative; left: 0px; top: 0px; background-color: rgb(147, 177, 205);">
+        <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: 60px; height: 60px; position: absolute; top: 20px; background-color: rgb(217, 217, 217); border-radius: 20px; left: 20px;" id="ChatRoomView--chat_img"></label>
+        <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: absolute; left: 110px; top: 40px; font-weight: bold; font-size: 14px;" id="ChatRoomView--chat_name">chat_name</label>
+    </div>
+    <div data-base="AView" data-class="AView" class="AView-Style" style="width: 100%; height: calc((100% - 100px) - 100px); position: absolute; left: 0px; top: 100px; background-color: rgb(155, 186, 216);" data-sgap-height="1"></div>
+    <div data-base="AView" data-class="AView" class="AView-Style" style="width: 100%; height: 100px; position: absolute; left: 0px; bottom: 0px; background-color: rgb(255, 255, 255);">
+        <input data-base="ATextField" data-class="ATextField" type="text" value="" class="ATextField-Style" autocomplete="off" style="width: calc((100% - 0px) - 80px); height: 100%; position: relative; left: 0px; top: 0px; margin-top: 0px; margin-left: 0px; padding-left: 30px; padding-right: 30px; cursor: pointer;" data-sgap-width="1" id="ChatRoomView--input_chatContent">
+        <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 80px; height: 100px; position: absolute; bottom: 0px; right: 0px; background-color: rgb(255, 236, 66); cursor: pointer;" id="ChatRoomView--input_sendBtn">전송</button>
+    </div>
+    <button data-base="AButton" data-class="AButton" class="AButton-Style clickBorderDelete" style="width: auto; height: auto; position: absolute; top: 40px; right: 50px; background-color: rgba(0, 0, 0, 0); cursor: pointer;" data-listener-click="ChatRoomView:onBackBtnClick" data-style-down="clickBorderDelete" data-style="clickBorderDelete">
+        <img src="Assets/SubView/ChatRoom/back.png">
+    </button>
+</div>

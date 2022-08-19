@@ -7,10 +7,10 @@
     </div>
     <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; justify-content: space-between; align-items: stretch; background-color: rgb(255, 255, 255); padding-left: 30px; padding-right: 30px; border-color: rgba(0, 0, 0, 0);">
         <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: auto; align-self: auto; padding: 5px;">
-            <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: auto; height: auto; position: relative; font-size: 14px; background-color: rgba(0, 0, 0, 0); left: 0px; top: 0px; padding: 5px;" id="AutoCompleteView--clearBtn">전체삭제</button>
+            <button data-base="AButton" data-class="AButton" class="AButton-Style clickBorderDelete" style="width: auto; height: auto; position: relative; font-size: 14px; background-color: rgba(0, 0, 0, 0); left: 0px; top: 0px; padding: 5px;" id="AutoCompleteView--clearBtn" data-listener-click="AutoCompleteView:onClearBtnClick" data-listener-actiondown="AutoCompleteView:onClearBtnActiondown" data-style="clickBorderDelete" data-style-down="clickBorderDelete">전체삭제</button>
         </div>
         <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: auto; align-self: auto; padding: 5px;">
-            <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; font-size: 14px; padding: 5px; background-color: rgba(0, 0, 0, 0);" id="AutoCompleteView--autoSaveBtn">자동저장on</button>
+            <button data-base="AButton" data-class="AButton" class="AButton-Style clickBorderDelete" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; font-size: 14px; padding: 5px; background-color: rgba(0, 0, 0, 0);" id="AutoCompleteView--autoSaveBtn" data-style="clickBorderDelete" data-style-down="clickBorderDelete" data-listener-click="AutoCompleteView:onAutoSaveBtnClick" data-listener-actiondown="AutoCompleteView:onAutoSaveBtnActiondown">자동저장 on</button>
         </div>
     </div>
 </div>

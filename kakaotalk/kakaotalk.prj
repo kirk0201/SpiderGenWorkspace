@@ -21,7 +21,71 @@
         "type": 1,
         "name": "Library",
         "action": 2,
-        "children": []
+        "children": [
+          {
+            "type": 5,
+            "name": "ABuffer.js",
+            "action": 2,
+            "relType": 4,
+            "path": ""
+          },
+          {
+            "type": 5,
+            "name": "AQuery.js",
+            "action": 2,
+            "relType": 4,
+            "path": ""
+          },
+          {
+            "type": 5,
+            "name": "AQueryData.js",
+            "action": 2,
+            "relType": 4,
+            "path": ""
+          },
+          {
+            "type": 5,
+            "name": "QueryManager.js",
+            "action": 2,
+            "relType": 4,
+            "path": ""
+          },
+          {
+            "type": 5,
+            "name": "NetworkIO.js",
+            "action": 2,
+            "relType": 4,
+            "path": ""
+          },
+          {
+            "type": 5,
+            "name": "HttpIO.js",
+            "action": 2,
+            "relType": 4,
+            "path": ""
+          },
+          {
+            "type": 2,
+            "name": "WebQueryData.cls",
+            "action": 5,
+            "relType": 1,
+            "path": "Library\\"
+          },
+          {
+            "type": 2,
+            "name": "WebQueryManager.cls",
+            "action": 5,
+            "relType": 1,
+            "path": "Library\\"
+          },
+          {
+            "type": 5,
+            "name": "RadioBtnManager.js",
+            "action": 2,
+            "relType": 4,
+            "path": ""
+          }
+        ]
       },
       {
         "type": 1,
@@ -44,7 +108,15 @@
       {
         "type": 1,
         "name": "Query",
-        "children": []
+        "children": [
+          {
+            "type": 8,
+            "name": "login.qry",
+            "relType": 1,
+            "path": "Query\\",
+            "comment": ""
+          }
+        ]
       },
       {
         "type": 1,
@@ -157,6 +229,24 @@
                 ]
               }
             ]
+          },
+          {
+            "type": 1,
+            "name": "SubView",
+            "children": [
+              {
+                "type": 1,
+                "name": "ChatRoom",
+                "children": [
+                  {
+                    "type": 8,
+                    "name": "back.png",
+                    "relType": 1,
+                    "path": "Assets\\SubView\\ChatRoom\\"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -223,6 +313,22 @@
                     "comment": ""
                   }
                 ]
+              },
+              {
+                "type": 2,
+                "name": "Test.cls",
+                "action": 5,
+                "relType": 1,
+                "path": "Source\\AutoCompleteView\\",
+                "comment": ""
+              },
+              {
+                "type": 3,
+                "name": "Test.lay",
+                "action": 6,
+                "relType": 1,
+                "path": "Source\\AutoCompleteView\\",
+                "comment": ""
               }
             ]
           },
@@ -245,6 +351,122 @@
                 "relType": 1,
                 "path": "Source\\MainChatView\\",
                 "comment": ""
+              },
+              {
+                "type": 1,
+                "name": "SubView",
+                "children": [
+                  {
+                    "type": 1,
+                    "name": "FriendsView",
+                    "children": [
+                      {
+                        "type": 2,
+                        "name": "FriendsView.cls",
+                        "action": 5,
+                        "relType": 1,
+                        "path": "Source\\MainChatView\\SubView\\FriendsView\\",
+                        "comment": ""
+                      },
+                      {
+                        "type": 3,
+                        "name": "FriendsView.lay",
+                        "action": 6,
+                        "relType": 1,
+                        "path": "Source\\MainChatView\\SubView\\FriendsView\\",
+                        "comment": ""
+                      },
+                      {
+                        "type": 1,
+                        "name": "FriendsItemView",
+                        "children": [
+                          {
+                            "type": 2,
+                            "name": "FriendsItemView.cls",
+                            "action": 5,
+                            "relType": 1,
+                            "path": "Source\\MainChatView\\SubView\\FriendsView\\FriendsItemView\\",
+                            "comment": ""
+                          },
+                          {
+                            "type": 3,
+                            "name": "FriendsItemView.lay",
+                            "action": 6,
+                            "relType": 1,
+                            "path": "Source\\MainChatView\\SubView\\FriendsView\\FriendsItemView\\",
+                            "comment": ""
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": 1,
+                    "name": "ChatsView",
+                    "children": [
+                      {
+                        "type": 2,
+                        "name": "ChatsView.cls",
+                        "action": 5,
+                        "relType": 1,
+                        "path": "Source\\MainChatView\\SubView\\ChatsView\\",
+                        "comment": ""
+                      },
+                      {
+                        "type": 3,
+                        "name": "ChatsView.lay",
+                        "action": 6,
+                        "relType": 1,
+                        "path": "Source\\MainChatView\\SubView\\ChatsView\\",
+                        "comment": ""
+                      },
+                      {
+                        "type": 1,
+                        "name": "ChatsItemView",
+                        "children": [
+                          {
+                            "type": 2,
+                            "name": "ChatsItemView.cls",
+                            "action": 5,
+                            "relType": 1,
+                            "path": "Source\\MainChatView\\SubView\\ChatsView\\ChatsItemView\\",
+                            "comment": ""
+                          },
+                          {
+                            "type": 3,
+                            "name": "ChatsItemView.lay",
+                            "action": 6,
+                            "relType": 1,
+                            "path": "Source\\MainChatView\\SubView\\ChatsView\\ChatsItemView\\",
+                            "comment": ""
+                          }
+                        ]
+                      },
+                      {
+                        "type": 1,
+                        "name": "ChatRoomView",
+                        "children": [
+                          {
+                            "type": 2,
+                            "name": "ChatRoomView.cls",
+                            "action": 5,
+                            "relType": 1,
+                            "path": "Source\\MainChatView\\SubView\\ChatsView\\ChatRoomView\\",
+                            "comment": ""
+                          },
+                          {
+                            "type": 3,
+                            "name": "ChatRoomView.lay",
+                            "action": 6,
+                            "relType": 1,
+                            "path": "Source\\MainChatView\\SubView\\ChatsView\\ChatRoomView\\",
+                            "comment": ""
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
