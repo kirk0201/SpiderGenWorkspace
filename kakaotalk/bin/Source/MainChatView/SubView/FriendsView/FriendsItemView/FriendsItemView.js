@@ -6,7 +6,7 @@ Do not call Function in Constructor.
 function FriendsItemView()
 {
 	AView.call(this);
-
+	this.data = null;
 	//TODO:edit here
 
 }
@@ -35,4 +35,15 @@ FriendsItemView.prototype.onActiveDone = function(isFirst)
 
 	//TODO:edit here
 
+};
+
+
+FriendsItemView.prototype.setData = function(data)
+{
+	console.log("itemData", data);
+// 	this.friend_img.setImage(data.chat_img);
+	this.friend_img.setImage(data.chat_img);
+	this.friend_name.setText(data.chat_name);
+	
+	this.data = data;
 };

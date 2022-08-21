@@ -6,7 +6,7 @@ Do not call Function in Constructor.
 class FriendsItemView()
 {
 	super();
-
+	this.data = null;
 	//TODO:edit here
 
 }
@@ -35,4 +35,15 @@ function FriendsItemView*onActiveDone(isFirst)
 
 	//TODO:edit here
 
+};
+
+
+function FriendsItemView*setData(data)
+{
+	console.log("itemData", data);
+// 	this.friend_img.setImage(data.chat_img);
+	this.friend_img.setImage(data.chat_img);
+	this.friend_name.setText(data.chat_name);
+	
+	this.data = data;
 };
