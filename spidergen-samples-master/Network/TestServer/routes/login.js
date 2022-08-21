@@ -1,4 +1,5 @@
 var express = require("express");
+var OutBlock2 = require("../fakedata.js");
 var router = express.Router();
 
 router.post("/", function (req, res) {
@@ -6,7 +7,7 @@ router.post("/", function (req, res) {
   var data = JSON.parse(req.body.data);
   var resData = null;
   var loginData = data.body.InBlock1[0];
-  var isImg = "https://picsum.photos/60/60";
+
   // var data = JSON.parse(req.body);
   // var data = JSONreq.body;
   // console.log(data.body);
@@ -33,6 +34,8 @@ router.post("/", function (req, res) {
       loginData.login_password === "1234"
     ) {
       console.log("로그인 성공");
+      // console.log(fake);
+      // console.log(typeof fake);
       resData = {
         //클라이언트에서 보낸 헤더값을 그대로 다시 응답데이터에 셋팅한다.
         header: {
@@ -42,6 +45,14 @@ router.post("/", function (req, res) {
         },
         body: {
           //이곳은 전문에 따라 다르게 응답값을 셋팅해 준다.
+          OutBlock2,
+          // OutBlock2: [
+          //   {
+          //     token: "test",
+          //     Friends: "test",
+          //     Chats: "Test",
+          //   },
+          // ],
         },
       };
     } else {

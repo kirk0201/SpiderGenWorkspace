@@ -102,6 +102,14 @@
             "name": "kakaotalkApp_global.stl",
             "relType": 1,
             "path": "Template\\"
+          },
+          {
+            "type": 4,
+            "name": "item.stl",
+            "action": 8,
+            "relType": 1,
+            "path": "Template\\",
+            "comment": ""
           }
         ]
       },
@@ -138,24 +146,6 @@
             "type": 1,
             "name": "MainChat",
             "children": [
-              {
-                "type": 1,
-                "name": "Slide",
-                "children": [
-                  {
-                    "type": 8,
-                    "name": "galaxywatch.jpg",
-                    "relType": 1,
-                    "path": "Assets\\MainChat\\Slide\\"
-                  },
-                  {
-                    "type": 8,
-                    "name": "lenova.jpg",
-                    "relType": 1,
-                    "path": "Assets\\MainChat\\Slide\\"
-                  }
-                ]
-              },
               {
                 "type": 1,
                 "name": "Header",
@@ -225,6 +215,60 @@
                     "name": "user_normal.png",
                     "relType": 1,
                     "path": "Assets\\MainChat\\Side\\"
+                  }
+                ]
+              },
+              {
+                "type": 1,
+                "name": "Slide",
+                "children": [
+                  {
+                    "type": 8,
+                    "name": "galaxywatch.jpg",
+                    "relType": 1,
+                    "path": "Assets\\MainChat\\Slide\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "lenova.jpg",
+                    "relType": 1,
+                    "path": "Assets\\MainChat\\Slide\\"
+                  }
+                ]
+              },
+              {
+                "type": 1,
+                "name": "Friends",
+                "children": [
+                  {
+                    "type": 8,
+                    "name": "고수.jpg",
+                    "relType": 1,
+                    "path": "Assets\\MainChat\\Friends\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "동수.jpg",
+                    "relType": 1,
+                    "path": "Assets\\MainChat\\Friends\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "민수.jpg",
+                    "relType": 1,
+                    "path": "Assets\\MainChat\\Friends\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "철수.jpg",
+                    "relType": 1,
+                    "path": "Assets\\MainChat\\Friends\\"
+                  },
+                  {
+                    "type": 8,
+                    "name": "하수.jpg",
+                    "relType": 1,
+                    "path": "Assets\\MainChat\\Friends\\"
                   }
                 ]
               }
@@ -461,6 +505,72 @@
                             "relType": 1,
                             "path": "Source\\MainChatView\\SubView\\ChatsView\\ChatRoomView\\",
                             "comment": ""
+                          },
+                          {
+                            "type": 1,
+                            "name": "ChatRoomItem",
+                            "children": [
+                              {
+                                "type": 2,
+                                "name": "ChatRoomItem.cls",
+                                "action": 5,
+                                "relType": 1,
+                                "path": "Source\\MainChatView\\SubView\\ChatsView\\ChatRoomView\\ChatRoomItem\\",
+                                "comment": ""
+                              },
+                              {
+                                "type": 3,
+                                "name": "ChatRoomItem.lay",
+                                "action": 6,
+                                "relType": 1,
+                                "path": "Source\\MainChatView\\SubView\\ChatsView\\ChatRoomView\\ChatRoomItem\\",
+                                "comment": ""
+                              }
+                            ]
+                          },
+                          {
+                            "type": 1,
+                            "name": "ChatReceiveItem",
+                            "children": [
+                              {
+                                "type": 2,
+                                "name": "ChatReceiveItem.cls",
+                                "action": 5,
+                                "relType": 1,
+                                "path": "Source\\MainChatView\\SubView\\ChatsView\\ChatRoomView\\ChatReceiveItem\\",
+                                "comment": ""
+                              },
+                              {
+                                "type": 3,
+                                "name": "ChatReceiveItem.lay",
+                                "action": 6,
+                                "relType": 1,
+                                "path": "Source\\MainChatView\\SubView\\ChatsView\\ChatRoomView\\ChatReceiveItem\\",
+                                "comment": ""
+                              }
+                            ]
+                          },
+                          {
+                            "type": 1,
+                            "name": "ChatSendItem",
+                            "children": [
+                              {
+                                "type": 2,
+                                "name": "ChatSendItem.cls",
+                                "action": 5,
+                                "relType": 1,
+                                "path": "Source\\MainChatView\\SubView\\ChatsView\\ChatRoomView\\ChatSendItem\\",
+                                "comment": ""
+                              },
+                              {
+                                "type": 3,
+                                "name": "ChatSendItem.lay",
+                                "action": 6,
+                                "relType": 1,
+                                "path": "Source\\MainChatView\\SubView\\ChatsView\\ChatRoomView\\ChatSendItem\\",
+                                "comment": ""
+                              }
+                            ]
                           }
                         ]
                       }

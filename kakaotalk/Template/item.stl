@@ -1,0 +1,6 @@
+{
+  "styleName": "item",
+  "items": {
+    "itemPos": "\n.itemPos\n{\n\t/* TODO:edit here */\n\tjustify-content: flex-end;\n}\n"
+  }
+}

@@ -1,5 +1,8 @@
-<div data-base="AView" data-class="FriendsView" class="AView-Style" style="left: 0px; top: 0px; width: 100%; height: 100%; background-color: rgb(255, 255, 255); position: relative; overflow: auto;" data-browser-width="365" data-browser-height="400" data-class-map="{&quot;afc&quot;:[&quot;AView&quot;,&quot;AListView&quot;]}">
-    <div data-base="AListView" data-class="AListView" class="AListView-Style" data-selectable="true" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; background-color: rgb(255, 255, 255);" data-iteminfo-767743="0,Source/MainChatView/SubView/FriendsView/FriendsItemView/FriendsItemView.lay,767743" data-default-url="Source/MainChatView/SubView/FriendsView/FriendsItemView/FriendsItemView.lay" data-listener-select="FriendsView:onFriendsViewSelect" id="FriendsView--friendsList">
+<div data-base="AView" data-class="FriendsView" class="AView-Style" style="left: 0px; top: 0px; width: 100%; height: 100%; background-color: rgb(255, 255, 255); position: relative; overflow: auto; z-index: 0; backface-visibility: hidden;" data-browser-width="365" data-browser-height="400" data-class-map="{&quot;afc&quot;:[&quot;AView&quot;,&quot;AListView&quot;]}">
+    <div data-base="AListView" data-class="AListView" class="AListView-Style" data-selectable="true" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; background-color: rgb(255, 255, 255);" data-listener-select="FriendsView:onFriendsViewSelect" id="FriendsView--friendsList">
+        <div class="listview-row" style="height: 100px;"></div>
+        <div class="listview-row AListView-select" style="height: 100px;"></div>
+        <div class="listview-row" style="height: 100px;"></div>
         <div class="listview-row" style="height: 100px;"></div>
     </div>
 </div>

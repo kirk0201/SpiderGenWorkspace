@@ -79,7 +79,7 @@ MainView.prototype.onInputIdFieldFocus = function(comp, info, e)
 		focusOnInit: false
 	});
 	
-	wnd.open('Source/AutoCompleteView/test.lay', this.getContainer(), pos.left, pos.top+40, width);
+	wnd.open('Source/AutoCompleteView/AutoCompleteView.lay', this.getContainer(), pos.left, pos.top+40, width);
 	wnd.setResultCallback(function(result) 
 	{
 		thisMainView.searchWnd = null;
@@ -173,17 +173,25 @@ MainView.prototype.onLoginBtnClick = function(comp, info, e)
 	function(queryData)
 	{
 		queryData.printQueryData();
-		var blockData = queryData.getBlockData('OutBlock1');
-		console.log(blockData);
+		console.log("queryData",queryData);
+		var block1Data = queryData.getBlockData('OutBlock1');
+		var block2Data = queryData.getBlockData('OutBlock2');
+		console.log("block1Data", block1Data);
+		console.log("block2Data",block2Data);
 		
-		if (blockData[0].token){
+		if (block2Data){
 			thisObj.inputIdField.setText("");
 			thisObj.inputPassField.setText("");
-			ANavigator.find('navigator').goPage('MainChatView');			
-		} else AToast.show(blockData[0].errMsg);
+			
+			var data = {
+				loginData: block2Data
+			};
+			
+			ANavigator.find('navigator').goPage('MainChatView', data);			
+		} else AToast.show(block1Data[0].errMsg);
 	}
 	);
-	console.log("owner", ANavigator.find('navigator'));
+// 	console.log("owner", ANavigator.find('navigator'));
 	//TODO:edit here
 
 };

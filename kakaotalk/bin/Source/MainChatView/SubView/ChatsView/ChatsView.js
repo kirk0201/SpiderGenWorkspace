@@ -15,7 +15,8 @@ afc.extendsClass(ChatsView, AView);
 ChatsView.prototype.init = function(context, evtListener)
 {
 	AView.prototype.init.call(this, context, evtListener);
-	this.chatListData =
+
+/*	this.chatListData =
 	[
 		{
 			id: 1,
@@ -53,7 +54,7 @@ ChatsView.prototype.init = function(context, evtListener)
 			chat_name: '하수',
 			chat_content: '질문좀 해도 될까요?'
 		},
-	];
+	];*/
 	//TODO:edit here
 
 };
@@ -61,9 +62,12 @@ ChatsView.prototype.init = function(context, evtListener)
 ChatsView.prototype.onInitDone = function()
 {
 	AView.prototype.onInitDone.call(this);
+	var data = this.getContainer().getData().loginData[0].Chats;
+
+	console.log("ChatsData", this.data);
 
 	//TODO:edit here
-	this.chatsList.addItem('Source/MainChatView/SubView/ChatsView/ChatsItemView/ChatsItemView.lay', this.chatListData);
+	this.chatsList.addItem('Source/MainChatView/SubView/ChatsView/ChatsItemView/ChatsItemView.lay', data);
 };
 
 ChatsView.prototype.onActiveDone = function(isFirst)
@@ -78,9 +82,14 @@ ChatsView.prototype.onChatsViewSelect = function(comp, info, e)
 {
 
 	//TODO:edit here
+/*	
 	console.log("comp",comp);
 	console.log("e",e);
 	console.log('info', info);
 	console.log(this.getContainer());
-	ANavigator.find('navigator').goPage('ChatRoomView');
+*/
+	var data = this.getContainer().getData().loginData[0].Chats;
+
+	console.log("navidata", data);
+	ANavigator.find('navigator').goPage('ChatRoomView', data);
 };
