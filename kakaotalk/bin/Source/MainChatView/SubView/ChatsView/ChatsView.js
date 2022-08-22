@@ -7,7 +7,7 @@ function ChatsView()
 	AView.call(this);
 	var selectIdx = null;
 	//TODO:edit here
-
+	this.navi();
 }
 afc.extendsClass(ChatsView, AView);
 
@@ -15,7 +15,7 @@ afc.extendsClass(ChatsView, AView);
 ChatsView.prototype.init = function(context, evtListener)
 {
 	AView.prototype.init.call(this, context, evtListener);
-
+	this.navi();
 /*	this.chatListData =
 	[
 		{
@@ -62,18 +62,22 @@ ChatsView.prototype.init = function(context, evtListener)
 ChatsView.prototype.onInitDone = function()
 {
 	AView.prototype.onInitDone.call(this);
-	var data = this.getContainer().getData().loginData[0].Chats;
-
-	console.log("ChatsData", this.data);
-
-	//TODO:edit here
-	this.chatsList.addItem('Source/MainChatView/SubView/ChatsView/ChatsItemView/ChatsItemView.lay', data);
+	this.navi();
 };
+
+
 
 ChatsView.prototype.onActiveDone = function(isFirst)
 {
 	AView.prototype.onActiveDone.call(this, isFirst);
-
+	this.navi();
+	var navi = ANavigator.find('navigator');
+	console.log("네비게이터",navi);
+/*	
+	var data = this.getContainer().getData().loginData[0].Chats;
+	console.log("ChatsData", this.data);
+	this.chatsList.addItem('Source/MainChatView/SubView/ChatsView/ChatsItemView/ChatsItemView.lay', data);
+*/
 	//TODO:edit here
 
 };
@@ -93,9 +97,13 @@ ChatsView.prototype.onChatsViewSelect = function(comp, info, e)
 	console.log("navidata", data);
 	ANavigator.find('navigator').goPage('ChatRoomView', data);
 };
-
+ChatsView.prototype.navi = function(){
+	var navi = ANavigator.find('navigator');
+	console.log("네비게이터",navi);
+};
 ChatsView.prototype.onAView1Click = function(comp, info, e)
 {
+	this.navi();
 	console.log("comp",comp);
 	console.log("info",info);
 	console.log("e", e);
@@ -105,4 +113,12 @@ ChatsView.prototype.onAView1Click = function(comp, info, e)
 	console.log(selectIdx);
 	//TODO:edit here
 
+};
+
+ChatsView.prototype.onActive = function(isFirst)
+{
+	this.navi();
+	var data = this.getContainer().getData().loginData[0].Chats;
+	console.log("온엑티브ChatsData", this.data);
+	this.chatsList.addItem('Source/MainChatView/SubView/ChatsView/ChatsItemView/ChatsItemView.lay', data);
 };

@@ -7,7 +7,7 @@ class ChatsView()
 	super();
 	var selectIdx = null;
 	//TODO:edit here
-
+	this.navi();
 }
 extends AView;
 
@@ -15,7 +15,7 @@ extends AView;
 function ChatsView*init(context, evtListener)
 {
 	super.init(context, evtListener);
-
+	this.navi();
 /*	this.chatListData =
 	[
 		{
@@ -62,18 +62,22 @@ function ChatsView*init(context, evtListener)
 function ChatsView*onInitDone()
 {
 	super.onInitDone();
-	var data = this.getContainer().getData().loginData[0].Chats;
-
-	console.log("ChatsData", this.data);
-
-	//TODO:edit here
-	this.chatsList.addItem('Source/MainChatView/SubView/ChatsView/ChatsItemView/ChatsItemView.lay', data);
+	this.navi();
 };
+
+
 
 function ChatsView*onActiveDone(isFirst)
 {
 	super.onActiveDone(isFirst);
-
+	this.navi();
+	var navi = ANavigator.find('navigator');
+	console.log("네비게이터",navi);
+/*	
+	var data = this.getContainer().getData().loginData[0].Chats;
+	console.log("ChatsData", this.data);
+	this.chatsList.addItem('Source/MainChatView/SubView/ChatsView/ChatsItemView/ChatsItemView.lay', data);
+*/
 	//TODO:edit here
 
 };
@@ -93,9 +97,13 @@ function ChatsView*onChatsViewSelect(comp, info, e)
 	console.log("navidata", data);
 	ANavigator.find('navigator').goPage('ChatRoomView', data);
 };
-
+function ChatsView*navi(){
+	var navi = ANavigator.find('navigator');
+	console.log("네비게이터",navi);
+};
 function ChatsView*onAView1Click(comp, info, e)
 {
+	this.navi();
 	console.log("comp",comp);
 	console.log("info",info);
 	console.log("e", e);
@@ -105,4 +113,12 @@ function ChatsView*onAView1Click(comp, info, e)
 	console.log(selectIdx);
 	//TODO:edit here
 
+};
+
+function ChatsView*onActive(isFirst)
+{
+	this.navi();
+	var data = this.getContainer().getData().loginData[0].Chats;
+	console.log("온엑티브ChatsData", this.data);
+	this.chatsList.addItem('Source/MainChatView/SubView/ChatsView/ChatsItemView/ChatsItemView.lay', data);
 };

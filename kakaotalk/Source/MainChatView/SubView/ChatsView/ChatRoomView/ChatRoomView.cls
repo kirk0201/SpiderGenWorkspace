@@ -58,9 +58,13 @@ function ChatRoomView*onActiveDone(isFirst)
 
 function ChatRoomView*onBackBtnClick(comp, info, e)
 {
-
+	var navi = ANavigator.getRootNavigator();
 	//TODO:edit here
-	ANavigator.find('navigator').goPrevPage();
+// 	var data = this.getContainer().getData();
+	console.log("navi", navi);
+// console.log("ChatRoomViewData", data);
+
+	ANavigator.find('navigator').goPage('MainChatView');
 };
 let today = new Date();
 let hour = today.getHours();

@@ -17,7 +17,7 @@ extends AView;
 function MainChatView*init(context, evtListener)
 {
 	super.init(context, evtListener);
-
+	
 	//TODO:edit here
 
 };
@@ -36,7 +36,8 @@ function MainChatView*onInitDone()
 function MainChatView*onActiveDone(isFirst)
 {
 	super.onActiveDone(isFirst);
-
+	var data = this.getContainer().getData();
+	console.log("MainChatViewData",data);
 	//TODO:edit here
 
 };
@@ -85,7 +86,7 @@ function MainChatView*onAButton1Actionup(comp, info, e)
 
 function MainChatView*onEtcClick(comp, info, e)
 {
-	AToast.show("아직 준비중이에요")
+	AToast.show("아직 준비중이에요");
 	//TODO:edit here
 
 };
