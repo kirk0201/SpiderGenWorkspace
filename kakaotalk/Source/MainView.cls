@@ -6,9 +6,9 @@ Do not call Function in Constructor.
 class MainView()
 {
 	super();
-
+	var isCheck = false;
 	//TODO:edit here
-
+	
 }
 extends AView;
 
@@ -16,7 +16,7 @@ extends AView;
 function MainView*init(context, evtListener)
 {
 	super.init(context, evtListener);
-
+	
 	//TODO:edit here
 
 };
@@ -25,6 +25,7 @@ function MainView*onInitDone()
 {
 	super.onInitDone();
 
+
 	//TODO:edit here
 
 };
@@ -32,7 +33,9 @@ function MainView*onInitDone()
 function MainView*onActiveDone(isFirst)
 {
 	super.onActiveDone(isFirst);
+			
 
+	console.log(this.getContainer().getData());
 	//TODO:edit here
 
 };
@@ -153,10 +156,22 @@ function MainView*onInputIdFieldKeydown(comp, info, e)
 	}
 };
 
+
 // 로그인 버튼 클릭 함수
 function MainView*onLoginBtnClick(comp, info, e)
 {
-	console.log("theApp", theApp);
+	this.loginApi();
+};
+
+function MainView*onInputKeydown(comp, info, e)
+{
+	if(e.which == 13) this.loginApi();
+};
+
+function MainView*loginApi()
+{
+// console.log("isCheck", isCheck);
+	
 	var thisObj = this;
 	theApp.qm.sendProcessByName('login', this.getContainerId(), null,
 	function(queryData)
@@ -164,9 +179,8 @@ function MainView*onLoginBtnClick(comp, info, e)
 		var blockData = queryData.getBlockData('InBlock1');
 		blockData[0].login_email = thisObj.inputIdField.getText();
 		blockData[0].login_password = thisObj.inputPassField.getText();
-		
+	
 		console.log(queryData);
-		
 // 		console.log("printQueryData",queryData.printQueryData());
 	},
 	function(queryData)
@@ -183,14 +197,35 @@ function MainView*onLoginBtnClick(comp, info, e)
 			thisObj.inputPassField.setText("");
 			
 			var data = {
-				loginData: block2Data
+				loginData:block2Data,
+				autoLogin: thisObj.isCheck
 			};
 			
 			ANavigator.find('navigator').goPage('MainChatView', data);			
 		} else AToast.show(block1Data[0].errMsg);
 	}
 	);
-// 	console.log("owner", ANavigator.find('navigator'));
+};
+
+
+function MainView*onAutoLoginCheckClick(comp, info, e)
+{
+	
+	var check= this.checkBox;
+	console.log(check.getCheck());
+	if(check.getCheck() === true)
+	{
+		this.inputIdField.setText("kirk0201@naver.com");
+		this.inputPassField.setText("1234");
+		isCheck = true;
+	} else
+	{
+		this.inputIdField.setText("");
+		this.inputPassField.setText("");
+		isCheck = false;
+	}
+	
+	console.log(Boolean(check.getValue()));
 	//TODO:edit here
 
 };
