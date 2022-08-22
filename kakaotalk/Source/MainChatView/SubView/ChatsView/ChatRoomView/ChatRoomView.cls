@@ -24,12 +24,13 @@ function ChatRoomView*init(context, evtListener)
 function ChatRoomView*onInitDone()
 {
 	super.onInitDone();
-	var chat = this.getContainer().getData()[0];
+	var chat = this.getContainer().getData();
 	this.chat_name.setText(chat.chat_name);
 	this.chat_img.setImage(chat.chat_img);
 	
-	var data = this.getContainer().getData()[0].chat_content;
-	console.log("chatroomview data", chat);
+	var data = this.getContainer().getData().chat_content;
+	console.log("data",data);
+// 	console.log("chatroomview data", chat.chat_content);
 // 	var n = 0;
 /*	while(data.length > n){
 	console.log(n);
@@ -60,4 +61,20 @@ function ChatRoomView*onBackBtnClick(comp, info, e)
 
 	//TODO:edit here
 	ANavigator.find('navigator').goPrevPage();
+};
+let today = new Date();
+let hour = today.getHours();
+let minutes = today.getMinutes();
+function time() {
+  if (hour >= 0 && hour <= 12) return `오전 ${hour}:${minutes}`;
+  else return `오후 ${hour}:${minutes}`;
+}
+
+function ChatRoomView*sendMsgBtnClick(comp, info, e)
+{
+
+	//TODO:edit here
+	var msg = this.input_chatContent.getText();
+	var arr = [{who: "나", content:msg, time: time()}];
+	this.chatList.addItem('Source/MainChatView/SubView/ChatsView/ChatRoomView/ChatRoomItem/ChatRoomItem.lay', arr);
 };

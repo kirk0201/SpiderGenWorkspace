@@ -9,15 +9,24 @@ cordova.exec = function(successCallback, failCallback, className, funcName, para
 	{
 		if(funcName=='setPref')
 		{
-			localStorage.setItem(paramArray[0], paramArray[1]);
+            localStorage.setItem(paramArray[0], paramArray[1]);
+            _ret_helper(successCallback);
 		}
 		else if(funcName=='getPref')
 		{
 			var localData = localStorage.getItem(paramArray[0]);
-			successCallback(localData);
+            _ret_helper(successCallback, localData);
 		}
 	}
-	else window._exec(successCallback, failCallback, className, funcName, paramArray);
+    else _ret_helper(successCallback);
+    
+    function _ret_helper(callback, retVal)
+    {
+        setTimeout(function()
+        {
+            if(callback) callback(retVal);
+        }, 0);
+    }
 };
 
 
@@ -33,7 +42,11 @@ var documentEventHandlers =
 	'pause': window,
 	'resume': window,
 };
-var windowEventHandlers = {};
+
+var windowEventHandlers = 
+{
+
+};
 
 document.addEventListener = function(evt, handler, capture) 
 {
@@ -77,49 +90,3 @@ window.removeEventListener = function(evt, handler, capture)
 };
 
 
-//-----------------------------------------------------------------------------------------------
-//	for sqlite
-
-window.openSimulatorDB = function(fileName)
-{
-	var db = null;
-	
-	cordova.exec(function()
-	{
-		db = {};
-		
-		db.transaction = function(callback)
-		{
-			var tx = {};
-
-			tx.executeSql = function(sql, valArr, successCallback, failCallback)
-			{
-				cordova.exec(function(rs) 
-				{
-					var payload = { _rs: rs	};
-					
-					payload.rows = 
-					{
-						item: function(i) { return payload._rs[i]; },
-						length: rs.length
-				  	};
-
-					successCallback(tx, payload); 
-				}, 
-				function() { failCallback(tx, null); }, "SQLitePlugin", "executeSql", [sql, valArr]);
-			};
-
-			callback(tx);
-		};
-
-		db.close = function()
-		{
-			cordova.exec(null, null, "SQLitePlugin", "close", []);
-		};
-		
-	}
-	, function() { alert('sqlite open fail!'); } , "SQLitePlugin", "open", [fileName]);
-			
-	
-	return db;
-};

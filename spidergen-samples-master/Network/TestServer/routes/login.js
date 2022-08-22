@@ -4,6 +4,7 @@ var router = express.Router();
 
 router.post("/", function (req, res) {
   res.header("Access-Control-Allow-Origin", "*");
+  // res.setHeader("Access-Control-Allow-Credentials", "true");
   var data = JSON.parse(req.body.data);
   var resData = null;
   var loginData = data.body.InBlock1[0];

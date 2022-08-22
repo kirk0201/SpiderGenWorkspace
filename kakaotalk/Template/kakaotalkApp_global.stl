@@ -4,6 +4,10 @@
     "_global_style_": "\n._global_style_\n{\n\tfont-size: 12px;\n\tfont-family: courier;\n\ttext-size-adjust: none;\n\n}\n",
     "global_resp": "\r\n.global_resp\r\n{\r\n\t/* global_resp 는 body 에 추가된 클래스 입니다. */\r\n\r\n}\r\n\r\n/*가로모드*/\r\n@media screen and (orientation: landscape)\r\n{\r\n\t.global_resp\r\n\t{\r\n\t}\r\n}\r\n\r\n/*ios*/\r\n@supports (-webkit-overflow-scrolling: touch)\r\n{\r\n}\r\n\r\n/*tablet*/\r\n@media screen and (min-width:641px)\r\n{\r\n}\r\n",
     "loginBtnOver": ".loginBtnOver\n{\n\tbackground-color: rgb(69, 44, 42);\n}\n\n",
-    "clickBorderDelete": ".clickBorderDelete\n{\n\toutline: none;\n\tborder: 0;\n}\n\n"
+    "clickBorderDelete": ".clickBorderDelete\n{\n\toutline: 0;\n\tborder: none;\n}\n\n",
+    "buttonOver": ".buttonOver\n{\n\tbackground-image:url(\"Assets/MainChat/Side/user_hover.png\");\n\tbackground-repeat: no-repeat;\n}\n\n",
+    "friendBtnClick": ".friendBtnClick\n{\n\t\tbackground-image:url(\"Assets/MainChat/Side/user_active.png\");\n\tbackground-repeat:no-repeat;\n}\n\n",
+    "chatBtnHover": ".chatBtnHover\n{\n\tbackground-image:url('Assets/MainChat/Side/chat_hover.png');\n\tbackground-repeat:no-repeat;\n}\n\n",
+    "chatBtnClick": ".chatBtnClick\n{\n\tbackground-image:url('Assets/MainChat/Side/chat_active.png');\n\tbackground-repeat:no-repeat;\n}\n\n"
   }
 }

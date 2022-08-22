@@ -1,4 +1,6 @@
 import "Framework/afc/component/ANavigator.js";
+import 'Framework/afc/component/AIndicator.js';
+import 'Framework/afc/component/AToast.js';
 /**
 Constructor
 Do not call Function in Constructor.
@@ -9,7 +11,8 @@ class kakaotalkApp()
 
 	//TODO:edit here
 	
-	this.serverUrl = 'http://localhost:3000/login';
+// 	this.serverUrl = 'http://localhost:3000/login';
+	this.serverUrl = 'http://192.168.0.155:3000/login';
 	
 	this.qm = null;
 

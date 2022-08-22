@@ -42,10 +42,12 @@ function ChatsItemView*onActiveDone(isFirst)
 function ChatsItemView*setData(data)
 {
 	this.chat_img.setImage(data.chat_img);
+	
 	this.chat_name.setText(data.chat_name);
-	this.chat_content.setText(data.chat_content[0].content);
+	console.log("chat_content",);
+	this.chat_content.setText(data.chat_content[data.chat_content.length - 1].content);
 
 	this.data = data;
-	console.log(this.data);
+	console.log("ChatsItemView Data", this.data);
 };
 

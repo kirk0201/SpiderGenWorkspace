@@ -23,7 +23,8 @@ var PROJECT_OPTION =
 {
     "build": {
         "bridgeName": "none",
-        "frwLoadOption": "inTimeLoad"
+        "frwLoadOption": "usedAllLoad",
+        "subName": ""
     },
     "general": {
         "autoScale": false,
@@ -32,6 +33,7 @@ var PROJECT_OPTION =
         "queryFormat": "qry",
         "scaleVal": 1,
         "userScalable": false,
+        "localizing": "",
         "responsiveTest": "",
         "tabletMinWidth": 500
     },
@@ -46,15 +48,43 @@ var PROJECT_OPTION =
 	<script defer src="Framework/afc/library/AUtil.js"></script>
 	<script defer src="Framework/afc/library/afc.js"></script>
 	<script defer src="Framework/afc/library/TabKeyController.js"></script>
+	<script defer src="Framework/afc/library/ScrollManager.js"></script>
 	<script defer src="Framework/afc/library/PosUtil.js"></script>
 	<script defer src="Framework/afc/component/AComponent.js"></script>
+	<script defer src="Framework/afc/component/ALayout.js"></script>
 	<script defer src="Framework/afc/component/AView.js"></script>
 	<script defer src="Framework/afc/component/AFloat.js"></script>
 	<script defer src="Framework/afc/component/AContainer.js"></script>
 	<script defer src="Framework/afc/component/AWindow.js"></script>
 	<script defer src="Framework/afc/component/APage.js"></script>
+	<script defer src="Framework/afc/component/ANavigator.js"></script>
 	<script defer src="Framework/afc/component/AApplication.js"></script>
 	<script defer src="Framework/afc/event/AEvent.js"></script>
+	<script defer src="Framework/afc/event/AViewEvent.js"></script>
+	<script defer src="Framework/afc/component/AGridLayout.js"></script>
+	<script defer src="Framework/afc/event/AGridLayoutEvent.js"></script>
+	<script defer src="Framework/afc/component/ALabel.js"></script>
+	<script defer src="Framework/afc/event/ALabelEvent.js"></script>
+	<script defer src="Framework/afc/component/AButton.js"></script>
+	<script defer src="Framework/afc/event/AButtonEvent.js"></script>
+	<script defer src="Framework/afc/component/AFlexLayout.js"></script>
+	<script defer src="Framework/afc/event/AFlexLayoutEvent.js"></script>
+	<script defer src="Framework/afc/component/ATextBox.js"></script>
+	<script defer src="Framework/afc/event/ATextBoxEvent.js"></script>
+	<script defer src="Framework/afc/component/AImage.js"></script>
+	<script defer src="Framework/afc/event/AImageEvent.js"></script>
+	<script defer src="Framework/afc/component/ATextField.js"></script>
+	<script defer src="Framework/afc/event/ATextFieldEvent.js"></script>
+	<script defer src="Framework/afc/component/ACheckBox.js"></script>
+	<script defer src="Framework/afc/event/ACheckBoxEvent.js"></script>
+	<script defer src="Framework/afc/component/AListView.js"></script>
+	<script defer src="Framework/afc/event/AListViewEvent.js"></script>
+	<script defer src="Framework/afc/component/ASelectBox.js"></script>
+	<script defer src="Framework/afc/event/ASelectBoxEvent.js"></script>
+	<script defer src="Framework/afc/component/ATabView.js"></script>
+	<script defer src="Framework/afc/event/ATabViewEvent.js"></script>
+	<script defer src="Framework/afc/component/ASlideView.js"></script>
+	<script defer src="Framework/afc/event/ASlideViewEvent.js"></script>
 
 	
 	<script defer src="Library/ABuffer.js"></script>
@@ -66,6 +96,7 @@ var PROJECT_OPTION =
 	<script defer src="Library/WebQueryData.js"></script>
 	<script defer src="Library/WebQueryManager.js"></script>
 	<script defer src="Library/RadioBtnManager.js"></script>
+	<script defer src="Library/AppManager.js"></script>
 
 	<script defer src="Source/kakaotalkApp.js"></script>
 

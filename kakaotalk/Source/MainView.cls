@@ -1,5 +1,4 @@
-import 'Framework/afc/component/AIndicator.js';
-import 'Framework/afc/component/AToast.js';
+
 /**
 Constructor
 Do not call Function in Constructor.

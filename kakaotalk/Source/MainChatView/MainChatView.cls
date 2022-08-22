@@ -46,6 +46,7 @@ function MainChatView*onTabClick(comp, info, e)
 
 	//TODO:edit here
 	console.log(comp.compId);
+	this.rbm.selectButton(comp);
 	this.section.selectTabById(comp.compId);
 };
 
@@ -78,6 +79,13 @@ function MainChatView*onAButton1Actionup(comp, info, e)
 // 		ANavigator.find('navigator').goPage('MainView');	
 		
 	});
+	//TODO:edit here
+
+};
+
+function MainChatView*onEtcClick(comp, info, e)
+{
+	AToast.show("아직 준비중이에요")
 	//TODO:edit here
 
 };

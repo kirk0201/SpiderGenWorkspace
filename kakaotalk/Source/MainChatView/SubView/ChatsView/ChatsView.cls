@@ -5,7 +5,7 @@ Do not call Function in Constructor.
 class ChatsView()
 {
 	super();
-
+	var selectIdx = null;
 	//TODO:edit here
 
 }
@@ -88,8 +88,21 @@ function ChatsView*onChatsViewSelect(comp, info, e)
 	console.log('info', info);
 	console.log(this.getContainer());
 */
-	var data = this.getContainer().getData().loginData[0].Chats;
+	var data = this.getContainer().getData().loginData[0].Chats[selectIdx];
 
 	console.log("navidata", data);
 	ANavigator.find('navigator').goPage('ChatRoomView', data);
+};
+
+function ChatsView*onAView1Click(comp, info, e)
+{
+	console.log("comp",comp);
+	console.log("info",info);
+	console.log("e", e);
+	// ListView 선택시 선택된 아이템 인덱스번호
+	console.log("select", this.chatsList.indexOfItem(this.chatsList.getSelectItem()));
+	selectIdx= this.chatsList.indexOfItem(this.chatsList.getSelectItem());
+	console.log(selectIdx);
+	//TODO:edit here
+
 };

@@ -14,13 +14,17 @@
     ],
     "isPort": true,
     "scaleValue": 100,
-    "responsiveTest": ""
+    "responsiveTest": "",
+    "localizing": ""
   },
   "build": {
     "bridgeName": "none",
     "indexTitle": "",
-    "frwLoadOption": "inTimeLoad",
-    "stlImportant": true
+    "frwLoadOption": "usedAllLoad",
+    "stlImportant": true,
+    "subName": "",
+    "outputPath": "",
+    "scriptLink": ""
   },
   "script": {
     "before": [],
@@ -34,7 +38,7 @@
   },
   "deployment": {
     "upload": {
-      "idx": null,
+      "idx": 0,
       "list": []
     }
   }

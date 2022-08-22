@@ -1,5 +1,4 @@
-afc.loadScript("Framework/afc/component/AIndicator.js");
-afc.loadScript("Framework/afc/component/AToast.js");
+
 /**
 Constructor
 Do not call Function in Constructor.
