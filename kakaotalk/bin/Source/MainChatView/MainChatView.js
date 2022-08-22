@@ -51,7 +51,7 @@ MainChatView.prototype.onTabClick = function(comp, info, e)
 	this.section.selectTabById(comp.compId);
 };
 
-MainChatView.prototype.onAButton1Actionup = function(comp, info, e)
+MainChatView.prototype.onAButtonActionup = function(comp, info, e)
 {
 	var menu = new AMenu();
 	

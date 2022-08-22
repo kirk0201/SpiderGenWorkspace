@@ -51,7 +51,7 @@ function MainChatView*onTabClick(comp, info, e)
 	this.section.selectTabById(comp.compId);
 };
 
-function MainChatView*onAButton1Actionup(comp, info, e)
+function MainChatView*onAButtonActionup(comp, info, e)
 {
 	var menu = new AMenu();
 	
