@@ -17,7 +17,7 @@ afc.extendsClass(MainChatView, AView);
 MainChatView.prototype.init = function(context, evtListener)
 {
 	AView.prototype.init.call(this, context, evtListener);
-
+	
 	//TODO:edit here
 
 };
@@ -36,7 +36,8 @@ MainChatView.prototype.onInitDone = function()
 MainChatView.prototype.onActiveDone = function(isFirst)
 {
 	AView.prototype.onActiveDone.call(this, isFirst);
-
+	var data = this.getContainer().getData();
+	console.log("MainChatViewData",data);
 	//TODO:edit here
 
 };
@@ -50,10 +51,10 @@ MainChatView.prototype.onTabClick = function(comp, info, e)
 	this.section.selectTabById(comp.compId);
 };
 
-MainChatView.prototype.onAButton1Actionup = function(comp, info, e)
+MainChatView.prototype.onAButtonActionup = function(comp, info, e)
 {
 	var menu = new AMenu();
-	
+	var data = this.getContainer().getData();
 	var itemInfo = 
 	[
 		{text: '로그아웃'}
@@ -69,7 +70,7 @@ MainChatView.prototype.onAButton1Actionup = function(comp, info, e)
 		console.log("comp", comp);
 		console.log("info", info);
 		console.log("e", e);*/
- 		ANavigator.find('navigator').goPage('MainView');
+ 		ANavigator.find('navigator').goPage('MainView', data);
 
 			
 
@@ -85,7 +86,7 @@ MainChatView.prototype.onAButton1Actionup = function(comp, info, e)
 
 MainChatView.prototype.onEtcClick = function(comp, info, e)
 {
-	AToast.show("아직 준비중이에요")
+	AToast.show("아직 준비중이에요");
 	//TODO:edit here
 
 };

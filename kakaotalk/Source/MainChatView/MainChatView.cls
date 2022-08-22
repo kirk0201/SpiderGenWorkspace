@@ -17,7 +17,7 @@ extends AView;
 function MainChatView*init(context, evtListener)
 {
 	super.init(context, evtListener);
-
+	
 	//TODO:edit here
 
 };
@@ -36,7 +36,8 @@ function MainChatView*onInitDone()
 function MainChatView*onActiveDone(isFirst)
 {
 	super.onActiveDone(isFirst);
-
+	var data = this.getContainer().getData();
+	console.log("MainChatViewData",data);
 	//TODO:edit here
 
 };
@@ -50,10 +51,10 @@ function MainChatView*onTabClick(comp, info, e)
 	this.section.selectTabById(comp.compId);
 };
 
-function MainChatView*onAButton1Actionup(comp, info, e)
+function MainChatView*onAButtonActionup(comp, info, e)
 {
 	var menu = new AMenu();
-	
+	var data = this.getContainer().getData();
 	var itemInfo = 
 	[
 		{text: '로그아웃'}
@@ -69,7 +70,7 @@ function MainChatView*onAButton1Actionup(comp, info, e)
 		console.log("comp", comp);
 		console.log("info", info);
 		console.log("e", e);*/
- 		ANavigator.find('navigator').goPage('MainView');
+ 		ANavigator.find('navigator').goPage('MainView', data);
 
 			
 
@@ -85,7 +86,7 @@ function MainChatView*onAButton1Actionup(comp, info, e)
 
 function MainChatView*onEtcClick(comp, info, e)
 {
-	AToast.show("아직 준비중이에요")
+	AToast.show("아직 준비중이에요");
 	//TODO:edit here
 
 };

@@ -7,6 +7,7 @@ class ChatRoomView()
 {
 	super();
 
+
 	//TODO:edit here
 
 }
@@ -16,7 +17,7 @@ extends AView;
 function ChatRoomView*init(context, evtListener)
 {
 	super.init(context, evtListener);
-
+	
 	//TODO:edit here
 
 };
@@ -24,12 +25,10 @@ function ChatRoomView*init(context, evtListener)
 function ChatRoomView*onInitDone()
 {
 	super.onInitDone();
-	var chat = this.getContainer().getData();
-	this.chat_name.setText(chat.chat_name);
-	this.chat_img.setImage(chat.chat_img);
+
+
 	
-	var data = this.getContainer().getData().chat_content;
-	console.log("data",data);
+// 	console.log("data",data);
 // 	console.log("chatroomview data", chat.chat_content);
 // 	var n = 0;
 /*	while(data.length > n){
@@ -45,22 +44,32 @@ function ChatRoomView*onInitDone()
 	} 
 		n++;
 	}*/
-	this.chatList.addItem("Source/MainChatView/SubView/ChatsView/ChatRoomView/ChatRoomItem/ChatRoomItem.lay", data);
 
 };
 
 function ChatRoomView*onActiveDone(isFirst)
 {
 	super.onActiveDone();
+	this.chatList.removeAllItems();
+	var data = this.getContainer().getData();
+	var choice = data.choice;
+	var chatInfo = data.loginData[0].Chats[choice];
+	var chat = data.loginData[0].Chats[choice].chat_content;
+	console.log("Chat", chat);
+	console.log("채팅방 이름",chatInfo.chat_name);
+	this.chat_name.setText(chatInfo.chat_name);
+	this.chat_img.setImage(chatInfo.chat_img);
+	this.chatList.addItem("Source/MainChatView/SubView/ChatsView/ChatRoomView/ChatRoomItem/ChatRoomItem.lay", chat);
 	//TODO:edit here
 
 };
 
 function ChatRoomView*onBackBtnClick(comp, info, e)
 {
-
 	//TODO:edit here
-	ANavigator.find('navigator').goPrevPage();
+	var data = this.getContainer().getData();
+	console.log("this데이터", data);
+	ANavigator.find('navigator').goPage("MainChatView",data);
 };
 let today = new Date();
 let hour = today.getHours();
@@ -72,9 +81,19 @@ function time() {
 
 function ChatRoomView*sendMsgBtnClick(comp, info, e)
 {
-
 	//TODO:edit here
 	var msg = this.input_chatContent.getText();
 	var arr = [{who: "나", content:msg, time: time()}];
 	this.chatList.addItem('Source/MainChatView/SubView/ChatsView/ChatRoomView/ChatRoomItem/ChatRoomItem.lay', arr);
+};
+
+function ChatRoomView*onInputKeydown(comp, info, e)
+{
+	if(e.which ==13) 
+	{
+		var msg = this.input_chatContent.getText();
+		var arr = [{who: "나", content:msg, time: time()}];
+		this.chatList.addItem('Source/MainChatView/SubView/ChatsView/ChatRoomView/ChatRoomItem/ChatRoomItem.lay', arr);
+		this.input_chatContent.setText("");
+	}
 };

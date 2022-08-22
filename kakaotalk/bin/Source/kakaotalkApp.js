@@ -11,8 +11,8 @@ function kakaotalkApp()
 
 	//TODO:edit here
 	
-// 	this.serverUrl = 'http://localhost:3000/login';
-	this.serverUrl = 'http://192.168.0.155:3000/login';
+	this.serverUrl = 'http://localhost:3000/login';
+// 	this.serverUrl = 'http://192.168.0.155:3000/login';
 	
 	this.qm = null;
 

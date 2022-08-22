@@ -23,7 +23,7 @@
         <button data-base="AButton" data-class="AButton" class="AButton-Style clickBorderDelete" style="width: 30px; height: 30px; position: absolute; background-color: rgba(0, 0, 0, 0); top: 165px; left: 35px; cursor: pointer;" id="MainChatView--etc" data-style="clickBorderDelete" data-style-down="clickBorderDelete" data-listener-click="MainChatView:onEtcClick">
             <img src="Assets/MainChat/Side/dot_normal.png">
         </button>
-        <button data-base="AButton" data-class="AButton" class="AButton-Style clickBorderDelete" style="width: 30px; height: 30px; position: absolute; background-color: rgba(0, 0, 0, 0); left: 35px; bottom: 35px;" data-style="clickBorderDelete" data-style-down="clickBorderDelete" data-listener-actionup="MainChatView:onAButton1Actionup">
+        <button data-base="AButton" data-class="AButton" class="AButton-Style clickBorderDelete" style="width: 30px; height: 30px; position: absolute; background-color: rgba(0, 0, 0, 0); left: 35px; bottom: 35px; cursor: pointer;" data-style="clickBorderDelete" data-style-down="clickBorderDelete" data-listener-actionup="MainChatView:onAButtonActionup">
             <img src="Assets/MainChat/Side/setting_normal.png">
         </button>
     </div>
