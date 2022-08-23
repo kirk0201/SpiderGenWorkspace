@@ -8,14 +8,14 @@ let minutes = today.getMinutes();
 var weekday = new Array();
 weekday[0] = "일요일";
 weekday[1] = "월요일";
-weekday[0] = "화요일";
-weekday[0] = "수요일";
-weekday[0] = "목요일";
-weekday[0] = "금요일";
-weekday[0] = "토요일";
+weekday[2] = "화요일";
+weekday[3] = "수요일";
+weekday[4] = "목요일";
+weekday[5] = "금요일";
+weekday[6] = "토요일";
 
 let autoToday = `${year}년 ${month}월 ${date}일 ${weekday[day]}`;
-
+console.log(day);
 function time() {
   if (hour >= 0 && hour <= 12) return `오전 ${hour}:${minutes}`;
   else return `오후 ${hour}:${minutes}`;
