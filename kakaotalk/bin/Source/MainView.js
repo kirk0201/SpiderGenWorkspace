@@ -6,7 +6,7 @@ Do not call Function in Constructor.
 function MainView()
 {
 	AView.call(this);
-	var isCheck = false;
+	
 	//TODO:edit here
 	
 }
@@ -16,7 +16,7 @@ afc.extendsClass(MainView, AView);
 MainView.prototype.init = function(context, evtListener)
 {
 	AView.prototype.init.call(this, context, evtListener);
-	
+
 	//TODO:edit here
 
 };
@@ -24,7 +24,8 @@ MainView.prototype.init = function(context, evtListener)
 MainView.prototype.onInitDone = function()
 {
 	AView.prototype.onInitDone.call(this);
-
+	var isCheck = false;
+	console.log(isCheck);
 
 	//TODO:edit here
 
@@ -165,14 +166,19 @@ MainView.prototype.onLoginBtnClick = function(comp, info, e)
 
 MainView.prototype.onInputKeydown = function(comp, info, e)
 {
-	if(e.which == 13) this.loginApi();
+	if(e.which == 13) 
+	{
+		
+		this.loginApi();	
+	}
 };
 
 MainView.prototype.loginApi = function()
 {
 // console.log("isCheck", isCheck);
-	
 	var thisObj = this;
+	if(thisObj.isCheck === undefined) thisObj.isCheck = false;
+	
 	theApp.qm.sendProcessByName('login', this.getContainerId(), null,
 	function(queryData)
 	{
@@ -196,6 +202,7 @@ MainView.prototype.loginApi = function()
 			thisObj.inputIdField.setText("");
 			thisObj.inputPassField.setText("");
 			
+			console.log("this.isCheck", thisObj.isCheck);
 			var data = {
 				loginData:block2Data,
 				autoLogin: thisObj.isCheck
@@ -211,18 +218,18 @@ MainView.prototype.loginApi = function()
 MainView.prototype.onAutoLoginCheckClick = function(comp, info, e)
 {
 	
-	var check= this.checkBox;
+	var check = this.checkBox;
 	console.log(check.getCheck());
 	if(check.getCheck() === true)
 	{
 		this.inputIdField.setText("kirk0201@naver.com");
 		this.inputPassField.setText("1234");
-		isCheck = true;
+		this.thisObj.isCheck = true;
 	} else
 	{
 		this.inputIdField.setText("");
 		this.inputPassField.setText("");
-		isCheck = false;
+		this.thisObj.isCheck = false;
 	}
 	
 	console.log(Boolean(check.getValue()));

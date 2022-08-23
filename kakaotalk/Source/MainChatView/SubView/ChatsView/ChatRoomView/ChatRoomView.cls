@@ -84,7 +84,10 @@ function ChatRoomView*sendMsgBtnClick(comp, info, e)
 	//TODO:edit here
 	var msg = this.input_chatContent.getText();
 	var arr = [{who: "나", content:msg, time: time()}];
+	if (msg === '') return;
 	this.chatList.addItem('Source/MainChatView/SubView/ChatsView/ChatRoomView/ChatRoomItem/ChatRoomItem.lay', arr);
+	this.chatList.scrollToBottom();
+	this.input_chatContent.setText("");
 };
 
 function ChatRoomView*onInputKeydown(comp, info, e)
@@ -93,7 +96,9 @@ function ChatRoomView*onInputKeydown(comp, info, e)
 	{
 		var msg = this.input_chatContent.getText();
 		var arr = [{who: "나", content:msg, time: time()}];
+		if (msg === '') return;
 		this.chatList.addItem('Source/MainChatView/SubView/ChatsView/ChatRoomView/ChatRoomItem/ChatRoomItem.lay', arr);
+		this.chatList.scrollToBottom();
 		this.input_chatContent.setText("");
 	}
 };

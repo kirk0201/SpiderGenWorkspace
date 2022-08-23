@@ -6,7 +6,7 @@ Do not call Function in Constructor.
 class MainView()
 {
 	super();
-	var isCheck = false;
+	
 	//TODO:edit here
 	
 }
@@ -16,7 +16,7 @@ extends AView;
 function MainView*init(context, evtListener)
 {
 	super.init(context, evtListener);
-	
+
 	//TODO:edit here
 
 };
@@ -24,7 +24,8 @@ function MainView*init(context, evtListener)
 function MainView*onInitDone()
 {
 	super.onInitDone();
-
+	var isCheck = false;
+	console.log(isCheck);
 
 	//TODO:edit here
 
@@ -165,14 +166,19 @@ function MainView*onLoginBtnClick(comp, info, e)
 
 function MainView*onInputKeydown(comp, info, e)
 {
-	if(e.which == 13) this.loginApi();
+	if(e.which == 13) 
+	{
+		
+		this.loginApi();	
+	}
 };
 
 function MainView*loginApi()
 {
 // console.log("isCheck", isCheck);
-	
 	var thisObj = this;
+	if(thisObj.isCheck === undefined) thisObj.isCheck = false;
+	
 	theApp.qm.sendProcessByName('login', this.getContainerId(), null,
 	function(queryData)
 	{
@@ -196,6 +202,7 @@ function MainView*loginApi()
 			thisObj.inputIdField.setText("");
 			thisObj.inputPassField.setText("");
 			
+			console.log("this.isCheck", thisObj.isCheck);
 			var data = {
 				loginData:block2Data,
 				autoLogin: thisObj.isCheck
@@ -211,18 +218,18 @@ function MainView*loginApi()
 function MainView*onAutoLoginCheckClick(comp, info, e)
 {
 	
-	var check= this.checkBox;
+	var check = this.checkBox;
 	console.log(check.getCheck());
 	if(check.getCheck() === true)
 	{
 		this.inputIdField.setText("kirk0201@naver.com");
 		this.inputPassField.setText("1234");
-		isCheck = true;
+		this.thisObj.isCheck = true;
 	} else
 	{
 		this.inputIdField.setText("");
 		this.inputPassField.setText("");
-		isCheck = false;
+		this.thisObj.isCheck = false;
 	}
 	
 	console.log(Boolean(check.getValue()));

@@ -55,6 +55,8 @@ function ChatRoomItem*setData(data)
 	{
 		this.chat_img.hide();
 		this.flex.setStyleObj({"flex-direction":"row-reverse"});
+		this.content.setText(datas.content);
+		this.chat_time.setText(datas.time);
 		/*if(datas.)*/
 	}
 	else if (datas.date) 

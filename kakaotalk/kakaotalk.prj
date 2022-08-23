@@ -333,11 +333,13 @@
             "type": 3,
             "name": "MainView.lay",
             "relType": 1,
-            "path": "Source\\"
+            "path": "Source\\",
+            "comment": "로그인 뷰"
           },
           {
             "type": 1,
             "name": "AutoCompleteView",
+            "comment": "자동완성 뷰",
             "children": [
               {
                 "type": 2,
@@ -353,11 +355,12 @@
                 "action": 6,
                 "relType": 1,
                 "path": "Source\\AutoCompleteView\\",
-                "comment": ""
+                "comment": "자동완성 리스트 뷰"
               },
               {
                 "type": 1,
                 "name": "AutoItemView",
+                "comment": "자동완성 아이템뷰",
                 "children": [
                   {
                     "type": 2,
@@ -373,7 +376,7 @@
                     "action": 6,
                     "relType": 1,
                     "path": "Source\\",
-                    "comment": ""
+                    "comment": "자동완성 아이템뷰"
                   }
                 ]
               }
@@ -382,6 +385,7 @@
           {
             "type": 1,
             "name": "MainChatView",
+            "comment": "카톡 메인뷰",
             "children": [
               {
                 "type": 2,
@@ -397,15 +401,17 @@
                 "action": 6,
                 "relType": 1,
                 "path": "Source\\MainChatView\\",
-                "comment": ""
+                "comment": "카톡 메인뷰"
               },
               {
                 "type": 1,
                 "name": "SubView",
+                "comment": "메뉴 탭 서브뷰",
                 "children": [
                   {
                     "type": 1,
                     "name": "FriendsView",
+                    "comment": "친구목록 뷰",
                     "children": [
                       {
                         "type": 2,
@@ -421,11 +427,12 @@
                         "action": 6,
                         "relType": 1,
                         "path": "Source\\MainChatView\\SubView\\FriendsView\\",
-                        "comment": ""
+                        "comment": "친구목록 리스트뷰"
                       },
                       {
                         "type": 1,
                         "name": "FriendsItemView",
+                        "comment": "친구목록 아이템뷰",
                         "children": [
                           {
                             "type": 2,
@@ -441,7 +448,7 @@
                             "action": 6,
                             "relType": 1,
                             "path": "Source\\MainChatView\\SubView\\FriendsView\\FriendsItemView\\",
-                            "comment": ""
+                            "comment": "친구목록 아이템뷰"
                           }
                         ]
                       }
@@ -450,6 +457,7 @@
                   {
                     "type": 1,
                     "name": "ChatsView",
+                    "comment": "채팅목록 뷰",
                     "children": [
                       {
                         "type": 2,
@@ -465,11 +473,12 @@
                         "action": 6,
                         "relType": 1,
                         "path": "Source\\MainChatView\\SubView\\ChatsView\\",
-                        "comment": ""
+                        "comment": "채팅목록 리스트 뷰"
                       },
                       {
                         "type": 1,
                         "name": "ChatsItemView",
+                        "comment": "채팅목록 아이템뷰",
                         "children": [
                           {
                             "type": 2,
@@ -485,13 +494,14 @@
                             "action": 6,
                             "relType": 1,
                             "path": "Source\\MainChatView\\SubView\\ChatsView\\ChatsItemView\\",
-                            "comment": ""
+                            "comment": "친구목록 아이템뷰"
                           }
                         ]
                       },
                       {
                         "type": 1,
                         "name": "ChatRoomView",
+                        "comment": "채팅방 뷰",
                         "children": [
                           {
                             "type": 2,
@@ -507,11 +517,12 @@
                             "action": 6,
                             "relType": 1,
                             "path": "Source\\MainChatView\\SubView\\ChatsView\\ChatRoomView\\",
-                            "comment": ""
+                            "comment": "채팅방 리스트뷰"
                           },
                           {
                             "type": 1,
                             "name": "ChatRoomItem",
+                            "comment": "채팅방 아이템뷰",
                             "children": [
                               {
                                 "type": 2,
@@ -527,13 +538,36 @@
                                 "action": 6,
                                 "relType": 1,
                                 "path": "Source\\MainChatView\\SubView\\ChatsView\\ChatRoomView\\ChatRoomItem\\",
-                                "comment": ""
+                                "comment": "채팅방 아이템뷰"
                               }
                             ]
                           }
                         ]
                       }
                     ]
+                  }
+                ]
+              },
+              {
+                "type": 1,
+                "name": "SlideVIew",
+                "comment": "광고 슬라이드 뷰",
+                "children": [
+                  {
+                    "type": 2,
+                    "name": "SlideView.cls",
+                    "action": 5,
+                    "relType": 1,
+                    "path": "Source\\MainChatView\\SlideVIew\\",
+                    "comment": ""
+                  },
+                  {
+                    "type": 3,
+                    "name": "SlideView.lay",
+                    "action": 6,
+                    "relType": 1,
+                    "path": "Source\\MainChatView\\SlideVIew\\",
+                    "comment": ""
                   }
                 ]
               }

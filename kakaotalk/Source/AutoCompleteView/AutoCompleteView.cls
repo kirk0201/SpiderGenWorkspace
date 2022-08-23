@@ -32,7 +32,6 @@ function AutoCompleteView*onInitDone()
 {
 	super.onInitDone();
 
-
 	this.autoCompleteList.refreshListView();
 	// userEmail Mock Data
 	this.data =
