@@ -1,17 +1,23 @@
-import express from "express";
-import http from "http";
-import cors from "cors";
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import createError from "http-errors";
-import morgan from "morgan";
-import cookie from "cookie-parser";
-import session from "express-session";
-
+const express = require("express");
+const http = require("http");
+const cors = require("cors");
+const path = require("path");
+const createError = require("http-errors");
+const morgan = require("morgan");
+const cookie = require("cookie-parser");
+const session = require("express-session");
+const { sequelize } = require("./models");
 const app = express();
 const port = 3000;
-const __dirname = dirname(fileURLToPath(import.meta.url));
 
+sequelize
+  .sync({ force: false })
+  .then(() => {
+    console.log("Sequelize 연결성공");
+  })
+  .catch((err) => {
+    console.error(`연결실패 - ${err}`);
+  });
 app.use(
   cors({
     origin: "*",
@@ -107,14 +113,18 @@ app.use(
 
 app.get("/", (req, res) => {
   //   console.log(dirname);
-  res.send(`Hello World !!!`);
+  res.send(`Hello World !!!!!!`);
 });
 
 app.use((req, res, next) => {
   next(createError(404));
 });
 
-http.createServer(app).listen(port);
-// app.listen(port, () => {
-//   console.log(`port 3000번으로 서버를 열었습니다  http://localhost:${port}`);
-// });
+// http.createServer(app).listen(port);
+app.listen(port, () => {
+  console.log(
+    `서버가 성공적으로 열었습니다 포트번호: http://localhost:${port}`
+  );
+});
+
+module.exports = app;
