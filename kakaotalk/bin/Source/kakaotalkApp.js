@@ -12,7 +12,7 @@ function kakaotalkApp()
 	//TODO:edit here
 	
 // 	this.serverUrl = 'http://localhost:3000/login';
-	this.serverUrl = 'http://192.168.0.155:3000/login';
+	this.serverUrl = Define.SERVER_URL;//;
 	
 	this.qm = null;
 
@@ -23,7 +23,7 @@ afc.extendsClass(kakaotalkApp, AApplication);
 kakaotalkApp.prototype.onReady = function()
 {
 	AApplication.prototype.onReady.call(this);
-
+console.log(Define.SERVER_URL);
 	this.setMainContainer(new APage('main'));
 	this.mainContainer.open('Source/MainView.lay');
 
@@ -31,6 +31,7 @@ kakaotalkApp.prototype.onReady = function()
 	var navigator = new ANavigator('navigator', null);
 	
 	navigator.registerPage('Source/MainView.lay', 'MainView');
+	navigator.registerPage('Source/SignUpVIew/SignUpView.lay', 'SignUpView');
 	navigator.registerPage('Source/MainChatView/MainChatView.lay', 'MainChatView');
 	navigator.registerPage('Source/MainChatView/SubView/ChatsView/ChatRoomView/ChatRoomView.lay', 'ChatRoomView');
 	navigator.goPage('MainView');
