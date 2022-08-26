@@ -6,11 +6,13 @@ const createError = require("http-errors");
 const morgan = require("morgan");
 const cookie = require("cookie-parser");
 const session = require("express-session");
-const { sequelize } = require("./models");
+const db = require("./models");
 const app = express();
 const port = 3000;
 
-sequelize
+const userRouter = require("./routes/user");
+
+db.sequelize
   .sync({ force: false })
   .then(() => {
     console.log("Sequelize 연결성공");
@@ -110,7 +112,7 @@ app.use(
  *
  *  process.env.[키값]으로 불러옴
  */
-
+app.use("/user", userRouter);
 app.get("/", (req, res) => {
   //   console.log(dirname);
   res.send(`Hello World !!!!!!`);

@@ -2,12 +2,12 @@
 
 const Sequelize = require("sequelize");
 
-const Chat = require("./Chat");
-const Friend = require("./Friend");
-const User = require("./User");
+const chat = require("./chat");
+const friend = require("./friend");
+const user = require("./user");
 
 const env = process.env.NODE_ENV || "development";
-const config = require(__dirname + "/../config/config.js")[env];
+const config = require("../config/config")[env];
 const db = {};
 
 const sequelize = new Sequelize(
@@ -20,12 +20,16 @@ const sequelize = new Sequelize(
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-db.User = User;
-db.Friend = Friend;
-db.Chat = Chat;
+db.User = user;
+db.Friend = friend;
+db.Chat = chat;
 
-User.init(sequelize);
-Friend.init(sequelize);
-Chat.init(sequelize);
+user.init(sequelize);
+friend.init(sequelize);
+chat.init(sequelize);
+
+user.associate(db);
+friend.associate(db);
+chat.associate(db);
 
 module.exports = db;

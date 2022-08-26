@@ -1,0 +1,15 @@
+{
+	"name": "signup",
+	"desc": "회원가입 쿼리",
+	"queryType": ".json",
+	"input": {
+		"InBlock1": {
+			"format": [
+				["이메일","user_email","","","char",10,4],
+				["비밀번호","user_pwd","","","char",10,4],
+				["이름","user_name","","","char",10,4]
+			]
+		}
+	},
+	"output": {}
+}

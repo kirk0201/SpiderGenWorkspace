@@ -26,7 +26,6 @@ MainView.prototype.onInitDone = function()
 	AView.prototype.onInitDone.call(this);
 	var isCheck = false;
 	console.log(isCheck);
-
 	//TODO:edit here
 
 };
@@ -175,6 +174,7 @@ MainView.prototype.onInputKeydown = function(comp, info, e)
 
 MainView.prototype.loginApi = function()
 {
+	Define.SERVER_URL = "http://192.168.0.155:3000/user/login";
 // console.log("isCheck", isCheck);
 	var thisObj = this;
 	if(thisObj.isCheck === undefined) thisObj.isCheck = false;
@@ -235,4 +235,9 @@ MainView.prototype.onAutoLoginCheckClick = function(comp, info, e)
 	console.log(Boolean(check.getValue()));
 	//TODO:edit here
 
+};
+
+MainView.prototype.onRegisterGoClick = function(comp, info, e)
+{
+		this.getContainer().navigator.goPage('SignUpView');
 };

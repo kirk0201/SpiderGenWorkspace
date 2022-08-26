@@ -26,7 +26,6 @@ function MainView*onInitDone()
 	super.onInitDone();
 	var isCheck = false;
 	console.log(isCheck);
-
 	//TODO:edit here
 
 };
@@ -175,6 +174,7 @@ function MainView*onInputKeydown(comp, info, e)
 
 function MainView*loginApi()
 {
+	Define.SERVER_URL = "http://192.168.0.155:3000/user/login";
 // console.log("isCheck", isCheck);
 	var thisObj = this;
 	if(thisObj.isCheck === undefined) thisObj.isCheck = false;
@@ -235,4 +235,9 @@ function MainView*onAutoLoginCheckClick(comp, info, e)
 	console.log(Boolean(check.getValue()));
 	//TODO:edit here
 
+};
+
+function MainView*onRegisterGoClick(comp, info, e)
+{
+		this.getContainer().navigator.goPage('SignUpView');
 };
