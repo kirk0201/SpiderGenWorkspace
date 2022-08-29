@@ -5,22 +5,23 @@
 	"input": {
 		"InBlock1": {
 			"format": [
-				["로그인이메일","login_email","","","char",10,4],
-				["로그인패스워드","login_password","","","char",10,4]
+				["로그인이메일","user_email","","","char",10,4],
+				["로그인패스워드","user_pwd","","","char",10,4]
 			]
 		}
 	},
 	"output": {
 		"OutBlock1": {
 			"format": [
-				["에러메세지","errMsg","","","char",10,4]
+				["에러메세지","msg","","","char",10,4]
 			]
 		},
 		"OutBlock2": {
 			"format": [
 				["토큰","token","","","char",null,0],
 				["친구목록","Friends","","","char",null,0],
-				["채팅목록","Chats","","","char",null,0]
+				["채팅목록","Chats","","","char",null,0],
+				["메세지","msg","","","char",null,"0"]
 			]
 		}
 	}

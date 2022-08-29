@@ -7,7 +7,7 @@ Do not call Function in Constructor.
 class MainChatView()
 {
 	super();
-
+	this.token = null;
 	//TODO:edit here
 
 }
@@ -17,9 +17,9 @@ extends AView;
 function MainChatView*init(context, evtListener)
 {
 	super.init(context, evtListener);
-	
 	this.SetTimeSlider();
-	
+
+	console.log("!!!!!!!!!!!!!!!!!!!!q",this.getContainer().getData());
 /*	setTimeout(() => {
 		setInter++;
 		console.log("setInter", setInter);
@@ -69,6 +69,10 @@ function MainChatView*SetTimeSlider() {
 function MainChatView*onInitDone()
 {
 	super.onInitDone();
+	
+	this.token = this.getContainer().getData().loginData.token;
+	this.loginApi();
+	console.log("token", this.token);
 	this.rbm = new RadioBtnManager(this);
 	this.onTabClick(this.friendsBtn);
 	//TODO:edit here
@@ -86,6 +90,8 @@ function MainChatView*onTabClick(comp, info, e)
 	console.log(comp.compId);
 	this.rbm.selectButton(comp);
 	this.section.selectTabById(comp.compId);
+	if (comp.compId === "friendsBtn") this.loginApi();
+	console.log('tabId', comp.compId);
 };
 
 function MainChatView*onAButtonActionup(comp, info, e)
@@ -125,4 +131,32 @@ function MainChatView*onEtcClick(comp, info, e)
 	AToast.show("아직 준비중이에요");
 	//TODO:edit here
 
+};
+
+
+function MainChatView*loginApi()
+{
+
+	//TODO:edit here
+	var thisObj = this;
+	theApp.qm.startManager("http://192.168.0.155:3000/friend/myfriend");
+	theApp.qm.sendProcessByName('friend', this.getContainerId(), null,
+	function(queryData)
+	{
+		var blockData = queryData.getBlockData('InBlock1');
+		blockData[0].token = thisObj.token;
+	
+	
+		// 		console.log("InBlock queryData",queryData);
+		console.log("printQueryData",queryData.printQueryData());
+	},
+	function(queryData)
+	{
+		// 		queryData.printQueryData();
+		console.log("OutBlock1 queryData:", queryData);
+		var msg = queryData.queryObj.OutBlock1.msg;
+		// 		AToast.show(msg);
+
+	}
+	);
 };

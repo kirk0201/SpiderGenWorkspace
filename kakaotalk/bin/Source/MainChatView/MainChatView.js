@@ -7,7 +7,7 @@ Do not call Function in Constructor.
 function MainChatView()
 {
 	AView.call(this);
-
+	this.token = null;
 	//TODO:edit here
 
 }
@@ -17,9 +17,9 @@ afc.extendsClass(MainChatView, AView);
 MainChatView.prototype.init = function(context, evtListener)
 {
 	AView.prototype.init.call(this, context, evtListener);
-	
 	this.SetTimeSlider();
-	
+
+	console.log("!!!!!!!!!!!!!!!!!!!!q",this.getContainer().getData());
 /*	setTimeout(() => {
 		setInter++;
 		console.log("setInter", setInter);
@@ -69,6 +69,10 @@ MainChatView.prototype.SetTimeSlider = function() {
 MainChatView.prototype.onInitDone = function()
 {
 	AView.prototype.onInitDone.call(this);
+	
+	this.token = this.getContainer().getData().loginData.token;
+	this.loginApi();
+	console.log("token", this.token);
 	this.rbm = new RadioBtnManager(this);
 	this.onTabClick(this.friendsBtn);
 	//TODO:edit here
@@ -86,6 +90,8 @@ MainChatView.prototype.onTabClick = function(comp, info, e)
 	console.log(comp.compId);
 	this.rbm.selectButton(comp);
 	this.section.selectTabById(comp.compId);
+	if (comp.compId === "friendsBtn") this.loginApi();
+	console.log('tabId', comp.compId);
 };
 
 MainChatView.prototype.onAButtonActionup = function(comp, info, e)
@@ -125,4 +131,32 @@ MainChatView.prototype.onEtcClick = function(comp, info, e)
 	AToast.show("아직 준비중이에요");
 	//TODO:edit here
 
+};
+
+
+MainChatView.prototype.loginApi = function()
+{
+
+	//TODO:edit here
+	var thisObj = this;
+	theApp.qm.startManager("http://192.168.0.155:3000/friend/myfriend");
+	theApp.qm.sendProcessByName('friend', this.getContainerId(), null,
+	function(queryData)
+	{
+		var blockData = queryData.getBlockData('InBlock1');
+		blockData[0].token = thisObj.token;
+	
+	
+		// 		console.log("InBlock queryData",queryData);
+		console.log("printQueryData",queryData.printQueryData());
+	},
+	function(queryData)
+	{
+		// 		queryData.printQueryData();
+		console.log("OutBlock1 queryData:", queryData);
+		var msg = queryData.queryObj.OutBlock1.msg;
+		// 		AToast.show(msg);
+
+	}
+	);
 };

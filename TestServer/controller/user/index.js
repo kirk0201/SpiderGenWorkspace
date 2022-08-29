@@ -1,4 +1,5 @@
 module.exports = {
   signup: require("./signup"),
-  findemail: require("./findEmail"),
+  findemail: require("./findemail"),
+  signin: require("./signin"),
 };

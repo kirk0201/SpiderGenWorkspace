@@ -1,7 +1,7 @@
 {
-	"name": "signup",
-	"desc": "회원가입 쿼리",
-	"queryType": ".json",
+	"name": "register",
+	"desc": "쿼리 설명",
+	"queryType": "쿼리 타입",
 	"input": {
 		"InBlock1": {
 			"format": [
