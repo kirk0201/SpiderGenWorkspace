@@ -11,5 +11,11 @@
 			]
 		}
 	},
-	"output": {}
+	"output": {
+		"OutBlock1": {
+			"format": [
+				["메세지","msg","","","char",null,0]
+			]
+		}
+	}
 }

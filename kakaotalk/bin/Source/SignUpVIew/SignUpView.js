@@ -6,7 +6,6 @@ Do not call Function in Constructor.
 function SignUpView()
 {
 	AView.call(this);
-
 	//TODO:edit here
 
 }
@@ -24,7 +23,7 @@ SignUpView.prototype.init = function(context, evtListener)
 SignUpView.prototype.onInitDone = function()
 {
 	AView.prototype.onInitDone.call(this);
-
+	
 	//TODO:edit here
 
 };
@@ -60,41 +59,44 @@ SignUpView.prototype.onWrongPassChange = function(comp, info, e)
 
 SignUpView.prototype.loginApi = function()
 {
-	Define.SERVER_URL = "http://192.168.0.155:3000/user/signup";
+
+// 	this.connectServer();
 	var thisObj = this;
-	
+	theApp.qm.startManager("http://192.168.0.155:3000/user/signup");
 	theApp.qm.sendProcessByName('signup', this.getContainerId(), null,
 	function(queryData)
 	{
 		var blockData = queryData.getBlockData('InBlock1');
 		blockData[0].user_email = thisObj.user_email.getText();
-		blockData[0].user_pwd = thisObj.user_pwd.getText();
+		blockData[0].user_pwd = thisObj.user_pwd_confirm.getText();
+		blockData[0].user_name = thisObj.user_name.getText();
 	
-		console.log(queryData);
-// 		console.log("printQueryData",queryData.printQueryData());
+		// 		console.log("InBlock queryData",queryData);
+		console.log("printQueryData",queryData.printQueryData());
 	},
 	function(queryData)
 	{
-		console.log("OutBound1 queryData:",queryData);
-	/*	queryData.printQueryData();
-		console.log("queryData",queryData);
-		var block1Data = queryData.getBlockData('OutBlock1');
-		var block2Data = queryData.getBlockData('OutBlock2');
-		console.log("block1Data", block1Data);
-		console.log("block2Data",block2Data);
-		
-		if (block2Data){
-			thisObj.inputIdField.setText("");
-			thisObj.inputPassField.setText("");
-			
-			console.log("this.isCheck", thisObj.isCheck);
-			var data = {
-				loginData:block2Data,
-				autoLogin: thisObj.isCheck
-			};
-			
-			ANavigator.find('navigator').goPage('MainChatView', data);			
-		} else AToast.show(block1Data[0].errMsg);*/
+		// 		queryData.printQueryData();
+		console.log("OutBlock1 queryData:", queryData);
+		var msg = queryData.queryObj.OutBlock1.msg;
+		AToast.show(msg);
+
 	}
 	);
+};
+
+
+SignUpView.prototype.connectServer = function()
+{
+
+	//TODO:edit here
+	var serverUrl = Define.SERVER_URL = "http://192.168.0.155:3000/user/signup";
+	console.log("test",Define.SERVER_URL);
+	this.qm = new WebQueryManager();
+	this.qm.removeQueryListener(this);
+	
+	var nio = new HttpIO(this.qm);
+	this.qm.setNetworkIo(nio);
+	this.qm.startManager("http://192.168.0.155:3000/user/signup");
+		console.log("theApp", theApp);
 };

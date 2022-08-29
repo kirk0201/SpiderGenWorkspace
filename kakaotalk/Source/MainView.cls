@@ -174,8 +174,9 @@ function MainView*onInputKeydown(comp, info, e)
 
 function MainView*loginApi()
 {
-	Define.SERVER_URL = "http://192.168.0.155:3000/user/login";
+	
 // console.log("isCheck", isCheck);
+	theApp.qm.startManager(Define.SERVER_URL+`/signin`);
 	var thisObj = this;
 	if(thisObj.isCheck === undefined) thisObj.isCheck = false;
 	
@@ -183,8 +184,8 @@ function MainView*loginApi()
 	function(queryData)
 	{
 		var blockData = queryData.getBlockData('InBlock1');
-		blockData[0].login_email = thisObj.inputIdField.getText();
-		blockData[0].login_password = thisObj.inputPassField.getText();
+		blockData[0].user_email = thisObj.inputIdField.getText();
+		blockData[0].user_pwd = thisObj.inputPassField.getText();
 	
 		console.log(queryData);
 // 		console.log("printQueryData",queryData.printQueryData());
@@ -193,23 +194,21 @@ function MainView*loginApi()
 	{
 		queryData.printQueryData();
 		console.log("queryData",queryData);
-		var block1Data = queryData.getBlockData('OutBlock1');
-		var block2Data = queryData.getBlockData('OutBlock2');
-		console.log("block1Data", block1Data);
-		console.log("block2Data",block2Data);
+		var loginErr = queryData.getBlockData('OutBlock1');
+		var loginData = queryData.getBlockData('OutBlock2');
+		console.log("loginErr", loginErr);
+		console.log("loginData", loginData);
 		
-		if (block2Data){
+		if (loginData){
 			thisObj.inputIdField.setText("");
 			thisObj.inputPassField.setText("");
 			
-			console.log("this.isCheck", thisObj.isCheck);
 			var data = {
-				loginData:block2Data,
-				autoLogin: thisObj.isCheck
+				loginData,
 			};
 			
 			ANavigator.find('navigator').goPage('MainChatView', data);			
-		} else AToast.show(block1Data[0].errMsg);
+		} else AToast.show(loginErr.msg);
 	}
 	);
 };

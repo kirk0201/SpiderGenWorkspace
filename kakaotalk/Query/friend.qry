@@ -1,0 +1,19 @@
+{
+	"name": "friend",
+	"desc": "친구목록",
+	"queryType": ".json",
+	"input": {
+		"InBlock1": {
+			"format": [
+				["유저토큰","token","","","char",10,4]
+			]
+		}
+	},
+	"output": {
+		"OutBlock1": {
+			"format": [
+				["친구목록","friend_list","","","char",10,4]
+			]
+		}
+	}
+}

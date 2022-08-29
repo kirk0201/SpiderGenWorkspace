@@ -11,6 +11,7 @@ const app = express();
 const port = 3000;
 
 const userRouter = require("./routes/user");
+const friendRouter = require("./routes/friend");
 
 db.sequelize
   .sync({ force: false })
@@ -55,13 +56,14 @@ app.use(cookie());
  *  const bodyParser = require('body-parser');
  *  app.use(body-parser.json());
  *  or
- *  설치 없이 expree 내부 모듈로 사용
+ *  설치 없이 express 내부 모듈로 사용
  *  app.use(express.urlencoded({ extended: true }));
  *
  * json형태의 데이터를 다루기 위해서는 아래 방법으로 이용
  * Express 4.16 이후 버전은 express.json()이 내장되어 use를 설정하여 쉽게 req.body를 받을 수 있다
  *
  */
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 /** 4. Static
@@ -113,14 +115,15 @@ app.use(
  *  process.env.[키값]으로 불러옴
  */
 app.use("/user", userRouter);
+app.use("/friend", friendRouter);
 app.get("/", (req, res) => {
   //   console.log(dirname);
   res.send(`Hello World !!!!!!`);
 });
 
-app.use((req, res, next) => {
-  next(createError(404));
-});
+// app.use((req, res, next) => {
+//   next(createError(404));
+// });
 
 // http.createServer(app).listen(port);
 app.listen(port, () => {

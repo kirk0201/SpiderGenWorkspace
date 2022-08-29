@@ -145,6 +145,13 @@
             "relType": 1,
             "path": "Query\\",
             "comment": "회원가입"
+          },
+          {
+            "type": 8,
+            "name": "friend.qry",
+            "relType": 1,
+            "path": "Query\\",
+            "comment": ""
           }
         ]
       },

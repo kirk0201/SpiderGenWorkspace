@@ -12,8 +12,7 @@ function kakaotalkApp()
 	//TODO:edit here
 	
 // 	this.serverUrl = 'http://localhost:3000/login';
-	this.serverUrl = Define.SERVER_URL;//;
-	
+// 	this.serverUrl = Define.SERVER_URL;
 	this.qm = null;
 
 }
@@ -23,9 +22,8 @@ afc.extendsClass(kakaotalkApp, AApplication);
 kakaotalkApp.prototype.onReady = function()
 {
 	AApplication.prototype.onReady.call(this);
-console.log(Define.SERVER_URL);
-	this.setMainContainer(new APage('main'));
-	this.mainContainer.open('Source/MainView.lay');
+/*	this.setMainContainer(new APage('main'));
+	this.mainContainer.open('Source/MainView.lay');*/
 
 	// new Navigator 생성
 	var navigator = new ANavigator('navigator', null);
@@ -64,7 +62,9 @@ kakaotalkApp.prototype.connectServer = function()
 	
 	this.qm.setNetworkIo(nio);
 	
-	this.qm.startManager(this.serverUrl);
+// 	this.qm.startManager(this.serverUrl);
+	this.qm.startManager(Define.SERVER_URL);
+
 };
 
 var theApp = null;
