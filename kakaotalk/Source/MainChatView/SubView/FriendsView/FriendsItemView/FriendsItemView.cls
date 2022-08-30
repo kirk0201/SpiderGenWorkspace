@@ -40,10 +40,10 @@ function FriendsItemView*onActiveDone(isFirst)
 
 function FriendsItemView*setData(data)
 {
-	console.log("itemData", data);
+	console.log("itemData@@@@@@@@@@@@@@@@@", data);
 // 	this.friend_img.setImage(data.chat_img);
-	this.friend_img.setImage(data.chat_img);
-	this.friend_name.setText(data.chat_name);
+	this.friend_img.setImage(data.user_img);
+	this.friend_name.setText(data.user_name);
 	
 	this.data = data;
 };

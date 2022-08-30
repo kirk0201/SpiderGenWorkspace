@@ -154,7 +154,7 @@ MainChatView.prototype.loginApi = function()
 	{
 		// 		queryData.printQueryData();
 		console.log("OutBlock1 queryData:", queryData);
-		var msg = queryData.queryObj.OutBlock1.msg;
+// 		var msg = queryData.queryObj.OutBlock1.msg;
 		// 		AToast.show(msg);
 
 	}

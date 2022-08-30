@@ -5,8 +5,8 @@ module.exports = {
   post: async (req, res) => {
     // console.log(req.body);
     const data = JSON.parse(req.body.data);
-    console.log(data);
-    console.log(data.body.InBlock1[0]);
+    // console.log(data);
+    // console.log(data.body.InBlock1[0]);
     const { token } = data.body.InBlock1[0];
 
     resData = {
@@ -30,7 +30,7 @@ module.exports = {
     //         id:
     //     }
     // })
-    console.log("friendList", friendList);
+    // console.log("friendList", friendList);
     const infoArr = [];
 
     for (let user of friendList) {
@@ -43,7 +43,7 @@ module.exports = {
       });
       infoArr.push(info.dataValues);
     }
-    console.log("INFOARR", infoArr);
+    // console.log("INFOARR", infoArr);
     resData.body.OutBlock1 = infoArr;
     // 특정 ID의 친구 ID 목록
     // await friendList.forEach((user) => {

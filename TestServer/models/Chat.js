@@ -8,17 +8,23 @@ module.exports = class chat extends Sequelize.Model {
           type: Sequelize.INTEGER,
           allowNull: false,
         },
+        target_user: {
+          type: Sequelize.INTEGER,
+          allowNull: false,
+        },
         chat_comment: {
           type: Sequelize.CHAR,
           allowNull: false,
         },
-        chat_userid: {
-          type: Sequelize.INTEGER,
+        im_send: {
+          type: Sequelize.BOOLEAN,
+          allowNull: false,
+          defaultValue: false,
         },
       },
       {
         sequelize,
-        timestamps: false,
+        timestamps: true,
         charset: "utf8mb4",
         collate: "utf8mb4_general_ci",
       }
@@ -26,7 +32,7 @@ module.exports = class chat extends Sequelize.Model {
   }
   static associate(db) {
     db.Chat.belongsTo(db.User, { foreignKey: "chat_room", targetKey: "id" });
-    db.Chat.belongsTo(db.User, { foreignKey: "chat_userid", targetKey: "id" });
+    db.Chat.belongsTo(db.User, { foreignKey: "target_user", targetKey: "id" });
   }
 };
 
