@@ -6,10 +6,9 @@ module.exports = {
   post: async (req, res) => {
     // console.log(req.body);
     const data = JSON.parse(req.body.data);
-    console.log("Chatlist-data : ", data);
-    console.log("Chatlist-data.body.InBlock1 : ", data.body.InBlock1[0]);
+    // console.log("Chatlist-data : ", data);
+    // console.log("Chatlist-data.body.InBlock1 : ", data.body.InBlock1[0]);
     const { token } = data.body.InBlock1[0];
-    const dataArr = [];
     const unique = new Set();
     const lastList = [];
 
@@ -31,17 +30,8 @@ module.exports = {
       raw: true,
     });
 
-    findUserChat.map((user) => {
-      if (user.chat_room) dataArr.push(user.dataValues);
-    });
-    const test = findUserChat.filter((chat) => {
-      if (chat.target_user === 2) {
-        return chat.target_user === 2;
-      }
-    });
-
-    console.log("원본", findUserChat);
-    console.log("findUserChat", test);
+    // console.log("원본", findUserChat);
+    // console.log("findUserChat", test);
 
     findUserChat.map((chat) => unique.add(chat.target_user));
 
@@ -58,10 +48,9 @@ module.exports = {
     }
     resData.body.OutBlock1 = lastList;
 
-    //   console.log("temp", temp);
-    console.log(lastList);
+    // console.log(lastList);
 
-    console.log("resData:@@@@@@@@@@@", resData);
+    // console.log("resData:@@@@@@@@@@@", resData);
     res.json(resData);
     res.end();
   },
