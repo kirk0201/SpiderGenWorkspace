@@ -1,4 +1,3 @@
-const chat = require(".");
 const { User } = require("../../models");
 const { Friend } = require("../../models");
 const { Chat } = require("../../models");
@@ -10,8 +9,6 @@ module.exports = {
     // console.log("Chatlist-data : ", data);
     // console.log("Chatlist-data.body.InBlock1 : ", data.body.InBlock1[0]);
     const { token } = data.body.InBlock1[0];
-    const unique = new Set();
-    const lastList = [];
 
     resData = {
       header: {
@@ -23,6 +20,7 @@ module.exports = {
         OutBlock1: {},
       },
     };
+
     const findUserChat = await Chat.findAll({
       where: {
         chat_room: token,
@@ -39,42 +37,6 @@ module.exports = {
     });
 
     console.log("원본", findUserChat);
-    // console.log("findUserChat", test);
-
-    findUserChat.map((chat) => unique.add(chat.target_user));
-
-    for (let itm of unique) {
-      const selectOne = await Chat.findOne({
-        where: {
-          chat_room: token,
-          target_user: itm,
-        },
-        order: [["id", "desc"]],
-        raw: true,
-        nest: true,
-        include: [
-          {
-            model: User,
-            attributes: ["user_email", "user_name", "user_img"],
-          },
-        ],
-      });
-      const chatLog = await Chat.findAll({
-        where: {
-          chat_room: token,
-          target_user: itm,
-        },
-        raw: true,
-      });
-
-      //   console.log("selecOne", selectOne);
-      selectOne.log = chatLog;
-      lastList.push(selectOne);
-    }
-    resData.body.OutBlock1 = lastList;
-
-    console.log(lastList);
-    // console.log("resData:@@@@@@@@@@@ ", resData);
 
     res.json(resData);
     res.end();

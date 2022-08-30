@@ -54,7 +54,7 @@ ChatsView.prototype.onChatsViewSelect = function(comp, info, e)
 	/*var data = this.getContainer().getData().loginData[0].Chats[selectIdx];*/
 	var data = this.getContainer().getData();
 	if (data)data.choice = selectIdx;
-	console.log("챗뷰오브젝트", data );
+// 	console.log("챗뷰오브젝트", data );
 	ANavigator.find('navigator').goPage('ChatRoomView', data);
 };
 ChatsView.prototype.navi = function(){
@@ -63,20 +63,20 @@ ChatsView.prototype.navi = function(){
 };
 ChatsView.prototype.onAView1Click = function(comp, info, e)
 {
-	console.log("comp",comp);
-	console.log("info",info);
-	console.log("e", e);
+// 	console.log("comp",comp);
+// 	console.log("info",info);
+// 	console.log("e", e);
 	// ListView 선택시 선택된 아이템 인덱스번호
-	console.log("select", this.chatsList.indexOfItem(this.chatsList.getSelectItem()));
+// 	console.log("select", this.chatsList.indexOfItem(this.chatsList.getSelectItem()));
 	selectIdx= this.chatsList.indexOfItem(this.chatsList.getSelectItem());
-	console.log(selectIdx);
+// 	console.log(selectIdx);
 	//TODO:edit here
 
 };
 ChatsView.prototype.loginApi = function()
 {
 	this.token = this.getContainer().getData().loginData.token;
-	console.log("ChatsView@@@@@@",this.token);
+// 	console.log("ChatsView@@@@@@",this.token);
 	//TODO:edit here
 	var thisObj = this;
 	theApp.qm.startManager("http://192.168.0.155:3000/chat/chatlist");
@@ -96,7 +96,7 @@ ChatsView.prototype.loginApi = function()
 		console.log("!!!!@@@@@", blockData);
 		// 		queryData.printQueryData();
 		// 		console.log("friendsView queryData@@@@@@@@@@@@@@:", queryData);
-		thisObj.chatsList.addItem('Source/MainChatView/SubView/FriendsView/FriendsItemView/FriendsItemView.lay', blockData);
+		thisObj.chatsList.addItem('Source/MainChatView/SubView/ChatsView/ChatsItemView/ChatsItemView.lay', blockData);
 
 	}
 	);

@@ -50,6 +50,7 @@ ChatRoomView.prototype.onInitDone = function()
 ChatRoomView.prototype.onActiveDone = function(isFirst)
 {
 	AView.prototype.onActiveDone.call(this);
+	this.loginApi();
 	this.chatList.removeAllItems();
 	var data = this.getContainer().getData();
 	var choice = data.choice;
@@ -101,4 +102,36 @@ ChatRoomView.prototype.onInputKeydown = function(comp, info, e)
 		this.chatList.scrollToBottom();
 		this.input_chatContent.setText("");
 	}
+};
+
+ChatRoomView.prototype.loginApi = function()
+{
+	this.token = this.getContainer().getData().loginData.token;
+// 	console.log("ChatsView@@@@@@",this.token);
+	//TODO:edit here
+	var thisObj = this;
+	theApp.qm.startManager("http://192.168.0.155:3000/chat/chatlist");
+	theApp.qm.sendProcessByName('friend', this.getContainerId(), null,
+	function(queryData)
+	{
+		var blockData = queryData.getBlockData('InBlock1');
+		blockData[0].token = thisObj.token;
+	
+	
+		// 		console.log("InBlock queryData",queryData);
+		// 		console.log("printQueryData@@@@@@@@@@@@",queryData.printQueryData());
+	},
+	function(queryData)
+	{
+		var blockData = queryData.getBlockData('OutBlock1');
+		var chatLog = [];
+// 		console.log("ChatRoomViewData", blockData);
+		blockData.map((item)=> chatLog.push(item.log));
+		console.log("ChatLog",chatLog);
+		// 		queryData.printQueryData();
+		// 		console.log("friendsView queryData@@@@@@@@@@@@@@:", queryData);
+		thisObj.chatList.addItem('Source/MainChatView/SubView/ChatsView/ChatRoomView/ChatRoomItem/ChatRoomItem.lay', chatLog);
+
+	}
+	);
 };

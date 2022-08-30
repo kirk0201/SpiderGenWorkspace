@@ -41,13 +41,13 @@ ChatsItemView.prototype.onActiveDone = function(isFirst)
 
 ChatsItemView.prototype.setData = function(data)
 {
-	this.chat_img.setImage(data.chat_img);
-	
-	this.chat_name.setText(data.chat_name);
-	console.log("chat_content",);
-	this.chat_content.setText(data.chat_content[data.chat_content.length - 1].content);
+	console.log("@@@@@@@@@@@@ChatsItemView@@@@@@@@@@@@@@@@@@@@", data.user.user_name);
+	this.chat_img.setImage(data.user.user_img);
+	this.chat_name.setText(data.chat_comment);
+// 	console.log("chat_content",);
+// 	this.chat_content.setText(data.chat_content[data.chat_content.length - 1].content);
 
 	this.data = data;
-	console.log("ChatsItemView Data", this.data);
+// 	console.log("ChatsItemView Data", this.data);
 };
 
