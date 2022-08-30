@@ -12,6 +12,7 @@ const port = 3000;
 
 const userRouter = require("./routes/user");
 const friendRouter = require("./routes/friend");
+const chatRouter = require("./routes/chat");
 
 db.sequelize
   .sync({ force: false })
@@ -116,6 +117,7 @@ app.use(
  */
 app.use("/user", userRouter);
 app.use("/friend", friendRouter);
+app.use("/chat", chatRouter);
 app.get("/", (req, res) => {
   //   console.log(dirname);
   res.send(`Hello World !!!!!!`);

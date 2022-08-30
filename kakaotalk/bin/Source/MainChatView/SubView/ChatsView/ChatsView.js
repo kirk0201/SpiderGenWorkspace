@@ -18,7 +18,7 @@ ChatsView.prototype.init = function(context, evtListener)
 ChatsView.prototype.onInitDone = function()
 {
 	AView.prototype.onInitDone.call(this);
-
+	this.loginApi();
 };
 
 
@@ -26,11 +26,13 @@ ChatsView.prototype.onInitDone = function()
 ChatsView.prototype.onActiveDone = function(isFirst)
 {
 	AView.prototype.onActiveDone.call(this, isFirst);
+		
+
 	console.log("4");
 	this.navi();
-	var listData = this.getContainer().getData().loginData[0].Chats;
+// 	var listData = this.getContainer().getData().loginData[0].Chats;
 
-	this.chatsList.addItem('Source/MainChatView/SubView/ChatsView/ChatsItemView/ChatsItemView.lay', listData);
+// 	this.chatsList.addItem('Source/MainChatView/SubView/ChatsView/ChatsItemView/ChatsItemView.lay', listData);
 /*	
 	var data = this.getContainer().getData().loginData[0].Chats;
 	console.log("ChatsData", this.data);
@@ -70,6 +72,34 @@ ChatsView.prototype.onAView1Click = function(comp, info, e)
 	console.log(selectIdx);
 	//TODO:edit here
 
+};
+ChatsView.prototype.loginApi = function()
+{
+	this.token = this.getContainer().getData().loginData.token;
+	console.log("ChatsView@@@@@@",this.token);
+	//TODO:edit here
+	var thisObj = this;
+	theApp.qm.startManager("http://192.168.0.155:3000/chat/chatlist");
+	theApp.qm.sendProcessByName('friend', this.getContainerId(), null,
+	function(queryData)
+	{
+		var blockData = queryData.getBlockData('InBlock1');
+		blockData[0].token = thisObj.token;
+	
+	
+		// 		console.log("InBlock queryData",queryData);
+		// 		console.log("printQueryData@@@@@@@@@@@@",queryData.printQueryData());
+	},
+	function(queryData)
+	{
+		var blockData = queryData.getBlockData('OutBlock1');
+		console.log("!!!!@@@@@", blockData);
+		// 		queryData.printQueryData();
+		// 		console.log("friendsView queryData@@@@@@@@@@@@@@:", queryData);
+		thisObj.chatsList.addItem('Source/MainChatView/SubView/FriendsView/FriendsItemView/FriendsItemView.lay', blockData);
+
+	}
+	);
 };
 
 

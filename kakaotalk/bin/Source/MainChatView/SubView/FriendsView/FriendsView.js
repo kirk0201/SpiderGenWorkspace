@@ -18,6 +18,7 @@ FriendsView.prototype.init = function(context, evtListener)
 	AView.prototype.init.call(this, context, evtListener);
 
 
+
 // 	data.loginData[0].Friends
 
 	
@@ -32,23 +33,24 @@ FriendsView.prototype.init = function(context, evtListener)
 FriendsView.prototype.onInitDone = function()
 {
 	AView.prototype.onInitDone.call(this);
-// 	console.log("getData", this.getContainer().getData());
+	this.loginApi();
+
+	// 	console.log("getData", this.getContainer().getData());
 	
-	this.token = this.getContainer().getData().loginData.token;
-	console.log("@@@@@",this.token);
-// 	console.log("getData", this.getContainer().getData());
-	var data = this.getContainer().getData().loginData[0].Friends;
+	// 	var data = this.getContainer().getData().loginData[0].Friends;
 	// 	console.log("data", data);
 	//TODO:edit here
 	//	this.getContainer().getData()는 변수에 할당이 안됨 	
 	// 	var friend_data = this.getContainer().getData();
-	this.friendsList.addItem('Source/MainChatView/SubView/FriendsView/FriendsItemView/FriendsItemView.lay', data);
+	
 	
 };
 
 FriendsView.prototype.onActiveDone = function(isFirst)
 {
 	AView.prototype.onActiveDone.call(this, isFirst);
+
+		
 
 	//TODO:edit here
 
@@ -63,6 +65,7 @@ FriendsView.prototype.onFriendsViewSelect = function(comp, info, e)
 
 FriendsView.prototype.loginApi = function()
 {
+	this.token = this.getContainer().getData().loginData.token;
 
 	//TODO:edit here
 	var thisObj = this;
@@ -75,14 +78,15 @@ FriendsView.prototype.loginApi = function()
 	
 	
 		// 		console.log("InBlock queryData",queryData);
-		console.log("printQueryData",queryData.printQueryData());
+		// 		console.log("printQueryData@@@@@@@@@@@@",queryData.printQueryData());
 	},
 	function(queryData)
 	{
+		var blockData = queryData.getBlockData('OutBlock1');
+		console.log("!!!!", blockData);
 		// 		queryData.printQueryData();
-		console.log("OutBlock1 queryData:", queryData);
-		var msg = queryData.queryObj.OutBlock1.msg;
-		// 		AToast.show(msg);
+		// 		console.log("friendsView queryData@@@@@@@@@@@@@@:", queryData);
+		thisObj.friendsList.addItem('Source/MainChatView/SubView/FriendsView/FriendsItemView/FriendsItemView.lay', blockData);
 
 	}
 	);
