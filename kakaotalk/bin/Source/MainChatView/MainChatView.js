@@ -19,7 +19,7 @@ MainChatView.prototype.init = function(context, evtListener)
 	AView.prototype.init.call(this, context, evtListener);
 	this.SetTimeSlider();
 
-	console.log("!!!!!!!!!!!!!!!!!!!!q",this.getContainer().getData());
+// 	console.log("!!!!!!!!!!!!!!!!!!!!q",this.getContainer().getData());
 /*	setTimeout(() => {
 		setInter++;
 		console.log("setInter", setInter);
@@ -53,12 +53,12 @@ MainChatView.prototype.SetTimeSlider = function() {
 	this.bannerSlide.addItem('Source/MainChatView/SlideVIew/SlideView.lay', banner1);
 	setTimeout(() => {
 		setOutTime++;
-		console.log("setOutTime",setOutTime);
+// 		console.log("setOutTime",setOutTime);
 		this.bannerSlide.addItem('Source/MainChatView/SlideVIew/SlideView.lay', banner2);
 		this.bannerSlide.slideNext();
 		setTimeout(() => {
 			setInTime++;
-			console.log("setInTime",setInTime);
+// 			console.log("setInTime",setInTime);
 			this.bannerSlide.addItem('Source/MainChatView/SlideVIew/SlideView.lay', banner1);
 			this.bannerSlide.slideNext();
 			this.SetTimeSlider();
@@ -72,7 +72,7 @@ MainChatView.prototype.onInitDone = function()
 	
 	this.token = this.getContainer().getData().loginData.token;
 	this.loginApi();
-	console.log("token", this.token);
+// 	console.log("token", this.token);
 	this.rbm = new RadioBtnManager(this);
 	this.onTabClick(this.friendsBtn);
 	//TODO:edit here
@@ -82,16 +82,16 @@ MainChatView.prototype.onActiveDone = function(isFirst)
 {
 	AView.prototype.onActiveDone.call(this, isFirst);
 	var data = this.getContainer().getData();
-	console.log("MainChatViewData",data);
+// 	console.log("MainChatViewData",data);
 };
 
 MainChatView.prototype.onTabClick = function(comp, info, e)
 {
-	console.log(comp.compId);
+// 	console.log(comp.compId);
 	this.rbm.selectButton(comp);
 	this.section.selectTabById(comp.compId);
 	if (comp.compId === "friendsBtn") this.loginApi();
-	console.log('tabId', comp.compId);
+// 	console.log('tabId', comp.compId);
 };
 
 MainChatView.prototype.onAButtonActionup = function(comp, info, e)
@@ -148,12 +148,12 @@ MainChatView.prototype.loginApi = function()
 	
 	
 		// 		console.log("InBlock queryData",queryData);
-		console.log("printQueryData",queryData.printQueryData());
+// 		console.log("printQueryData",queryData.printQueryData());
 	},
 	function(queryData)
 	{
 		// 		queryData.printQueryData();
-		console.log("OutBlock1 queryData:", queryData);
+// 		console.log("OutBlock1 queryData:", queryData);
 // 		var msg = queryData.queryObj.OutBlock1.msg;
 		// 		AToast.show(msg);
 
