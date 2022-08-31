@@ -1,0 +1,20 @@
+{
+	"name": "chatlog",
+	"desc": "쿼리 설명",
+	"queryType": "쿼리 타입",
+	"input": {
+		"InBlock1": {
+			"format": [
+				["토큰","token","","","signed",10,4],
+				["채팅방 인덱스","select_chat","","","signed",10,4]
+			]
+		}
+	},
+	"output": {
+		"OutBlock1": {
+			"format": [
+				["채팅 로그","chat_log","","","char",10,4]
+			]
+		}
+	}
+}

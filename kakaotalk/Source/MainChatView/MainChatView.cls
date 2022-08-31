@@ -82,6 +82,7 @@ function MainChatView*onActiveDone(isFirst)
 {
 	super.onActiveDone(isFirst);
 	var data = this.getContainer().getData();
+	console.log("!@!@!@!@!@!@MainChatView_data!@!@!!@!@!@!@!@!@", this.getContainer().getData());
 // 	console.log("MainChatViewData",data);
 };
 
@@ -97,7 +98,7 @@ function MainChatView*onTabClick(comp, info, e)
 function MainChatView*onAButtonActionup(comp, info, e)
 {
 	var menu = new AMenu();
-	var data = this.getContainer().getData();
+// 	var data = this.getContainer().getData();
 	var itemInfo = 
 	[
 		{text: '로그아웃'}
@@ -112,7 +113,7 @@ function MainChatView*onAButtonActionup(comp, info, e)
 		console.log("comp", comp);
 		console.log("info", info);
 		console.log("e", e);*/
- 		ANavigator.find('navigator').goPage('MainView', data);
+ 		ANavigator.find('navigator').goPage('MainView');
 
 			
 

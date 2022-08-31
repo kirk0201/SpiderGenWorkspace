@@ -33,8 +33,8 @@ MainView.prototype.onInitDone = function()
 MainView.prototype.onActiveDone = function(isFirst)
 {
 	AView.prototype.onActiveDone.call(this, isFirst);
-			
-
+	console.log("@#@#@#@#@#@@#@#@#@#@#", this.getContainer().getData());
+	
 	console.log(this.getContainer().getData());
 	//TODO:edit here
 

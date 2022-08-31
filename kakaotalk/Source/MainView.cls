@@ -33,8 +33,8 @@ function MainView*onInitDone()
 function MainView*onActiveDone(isFirst)
 {
 	super.onActiveDone(isFirst);
-			
-
+	console.log("@#@#@#@#@#@@#@#@#@#@#", this.getContainer().getData());
+	
 	console.log(this.getContainer().getData());
 	//TODO:edit here
 

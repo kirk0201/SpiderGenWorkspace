@@ -16,7 +16,7 @@ extends AView;
 function FriendsView*init(context, evtListener)
 {
 	super.init(context, evtListener);
-
+				console.log("init 활성화@@@@");
 
 
 // 	data.loginData[0].Friends
@@ -30,10 +30,19 @@ function FriendsView*init(context, evtListener)
 
 };
 
+function FriendsView*onDeactive()
+{
+		this.friendsList.removeAllItems();
+					console.log("onDeactive 활성화@@@@");
+
+};
+
 function FriendsView*onInitDone()
 {
 	super.onInitDone();
-	this.loginApi();
+			console.log("onInitDone 활성화@@@@");
+
+
 
 	// 	console.log("getData", this.getContainer().getData());
 	
@@ -45,17 +54,33 @@ function FriendsView*onInitDone()
 	
 	
 };
+function FriendsView*onActive(isFirst)
+{
+		console.log("onActive 활성화@@@@");
+
+
+};
 
 function FriendsView*onActiveDone(isFirst)
 {
 	super.onActiveDone(isFirst);
-
+	console.log("onActiveDone 활성화@@@@");
+	this.friendsList.removeAllItems();
+	this.loginApi();
 		
 
 	//TODO:edit here
 
 };
 
+function FriendsView*onWillActive(isFirst){
+		console.log("onWillACtive 활성화@@@@");
+
+};
+function FriendsView*onDeactiveDone()
+{
+	console.log("onDeactive 활성화");
+};
 function FriendsView*onFriendsViewSelect(comp, info, e)
 {
 
@@ -66,7 +91,7 @@ function FriendsView*onFriendsViewSelect(comp, info, e)
 function FriendsView*loginApi()
 {
 	this.token = this.getContainer().getData().loginData.token;
-
+	console.log("@@@@@@@@@@@FriendsView_token@@@@@@@@@@@",this.token);
 	//TODO:edit here
 	var thisObj = this;
 	theApp.qm.startManager("http://192.168.0.155:3000/friend/myfriend");

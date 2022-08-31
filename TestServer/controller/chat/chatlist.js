@@ -1,4 +1,3 @@
-const chat = require(".");
 const { User } = require("../../models");
 const { Friend } = require("../../models");
 const { Chat } = require("../../models");
@@ -59,16 +58,22 @@ module.exports = {
           },
         ],
       });
+
       const chatLog = await Chat.findAll({
         where: {
           chat_room: token,
           target_user: itm,
         },
         raw: true,
+        nest: true,
+        include: {
+          model: User,
+          attributes: ["user_email", "user_name", "user_img"],
+        },
       });
 
       //   console.log("selecOne", selectOne);
-      selectOne.log = chatLog;
+      selectOne.chat_log = chatLog;
       lastList.push(selectOne);
     }
     resData.body.OutBlock1 = lastList;

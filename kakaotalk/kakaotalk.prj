@@ -152,6 +152,13 @@
             "relType": 1,
             "path": "Query\\",
             "comment": ""
+          },
+          {
+            "type": 8,
+            "name": "chatlog.qry",
+            "relType": 1,
+            "path": "Query\\",
+            "comment": ""
           }
         ]
       },
