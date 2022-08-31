@@ -24,7 +24,14 @@ module.exports = {
       where: {
         user_id: token,
       },
+      raw: true,
+      nest: true,
+      include: {
+        model: User,
+        attributes: ["user_email", "user_name", "user_img"],
+      },
     });
+    console.log(friendList);
     // let userInfo = await User.findOne({
     //     where: {
     //         id:
@@ -34,11 +41,11 @@ module.exports = {
     const infoArr = [];
 
     for (let user of friendList) {
-      //   console.log("user", user);
-      const data = user.dataValues;
+      // console.log("user", user);
+      const data = user.friend_id;
       let info = await User.findOne({
         where: {
-          id: data.id,
+          id: data,
         },
       });
       infoArr.push(info.dataValues);

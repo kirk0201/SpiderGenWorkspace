@@ -41,19 +41,20 @@ ChatRoomItem.prototype.onActiveDone = function(isFirst)
 ChatRoomItem.prototype.setData = function(data)
 {
 		console.log("data", data);
-		this.data = data;
-		
-		this.content.setText(data.content);
-		this.chat_time.setText(data.time);
-	if (data.who ==="나") 
+		console.log("data.createdAt",data.createdAt);
+		console.log("Define", this.TimeController(data.createdAt));
+		console.log("@@@@@@@@@@TEST@@@@@@@@@",this.TimeController(data.createdAt));
+		this.content.setText(data.chat_comment);
+		this.chat_time.setText(this.TimeController(data.createdAt).isTime);
+	if (data.im_send) 
 	{
 		this.chat_img.hide();
 		this.flex.setStyleObj({"flex-direction":"row-reverse"});
-		this.content.setText(data.content);
-		this.chat_time.setText(data.time);
+		this.content.setText(data.chat_comment);
+		this.chat_time.setText(this.TimeController(data.createdAt).isTime);
 		/*if(datas.)*/
 	}
-	else if (data.date) 
+/*	else if (data.date) 
 	{
 		this.chat_img.hide();
 		this.chat_time.hide();
@@ -63,8 +64,8 @@ ChatRoomItem.prototype.setData = function(data)
 		this.content.setStyle('background',"#a9bdce");
 		this.content.setStyle('margin-top',"10px");
 		this.content.setText(data.date);
-	}
-	else if (data.chat_img) this.chat_img.setImage(data.chat_img);
+	}*/
+	else if (data.user.user_img) this.chat_img.setImage(data.user.user_img);
 
 
 // this.content.element.style();
@@ -87,4 +88,24 @@ ChatRoomItem.prototype.setData = function(data)
 */
 // 	console.log("z",datas);
 // 	this.data = data;
+};
+
+// createdAt 시간 가공 함수
+ChatRoomItem.prototype.TimeController = function(time)
+{
+	//TODO:edit here
+	let dayAndTime = time.split("T");
+	let day = dayAndTime[0];
+	let isTime = dayAndTime[1].slice(0,5);
+	let hour = dayAndTime[1].slice(0,5).slice(0,2);
+	let minutes = dayAndTime[1].slice(0,5).slice(2, 5);
+
+	isTime = this.time(hour, minutes);
+	
+	return { dayAndTime, day, isTime};
+};
+
+ChatRoomItem.prototype.time = function(hour, minutes) {
+  if (hour >= 0 && hour <= 12) return `오전 ${hour}${minutes}`;
+  else return `오후 ${hour}${minutes}`;
 };

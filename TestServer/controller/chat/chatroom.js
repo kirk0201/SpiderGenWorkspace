@@ -8,8 +8,8 @@ module.exports = {
     const data = JSON.parse(req.body.data);
     // console.log("Chatlist-data : ", data);
     // console.log("Chatlist-data.body.InBlock1 : ", data.body.InBlock1[0]);
-    const { token } = data.body.InBlock1[0];
-
+    const { token, select_chat } = data.body.InBlock1[0];
+    // console.log("@@@@@@@@@@@@@@@@select_chat@@@@@@@@@@@@@@@@@@", select_chat);
     resData = {
       header: {
         packet_id: data.header.packet_id,
@@ -24,6 +24,7 @@ module.exports = {
     const findUserChat = await Chat.findAll({
       where: {
         chat_room: token,
+        target_user: select_chat,
       },
       order: [["target_user", "asc"]],
       raw: true,
@@ -36,8 +37,8 @@ module.exports = {
       ],
     });
 
-    console.log("원본", findUserChat);
-
+    console.log("Chatroom_resData", findUserChat);
+    resData.chat_log = findUserChat;
     res.json(resData);
     res.end();
   },
