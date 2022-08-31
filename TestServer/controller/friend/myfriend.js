@@ -31,7 +31,7 @@ module.exports = {
         attributes: ["user_email", "user_name", "user_img"],
       },
     });
-    console.log(friendList);
+    // console.log(friendList);
     // let userInfo = await User.findOne({
     //     where: {
     //         id:
@@ -47,10 +47,13 @@ module.exports = {
         where: {
           id: data,
         },
+        raw: true,
       });
-      infoArr.push(info.dataValues);
+      infoArr.push(info);
     }
     // console.log("INFOARR", infoArr);
+    console.log(infoArr);
+
     resData.body.OutBlock1 = infoArr;
     // 특정 ID의 친구 ID 목록
     // await friendList.forEach((user) => {

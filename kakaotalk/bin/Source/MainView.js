@@ -206,7 +206,7 @@ MainView.prototype.loginApi = function()
 			var data = {
 				loginData,
 			};
-			
+			ANavigator.find('navigator').closePage('MainView');
 			ANavigator.find('navigator').goPage('MainChatView', data);			
 		} else AToast.show(loginErr.msg);
 	}
@@ -238,5 +238,5 @@ MainView.prototype.onAutoLoginCheckClick = function(comp, info, e)
 
 MainView.prototype.onRegisterGoClick = function(comp, info, e)
 {
-		this.getContainer().navigator.goPage('SignUpView');
+		ANavigator.find('navigator').goPage('SignUpView');
 };

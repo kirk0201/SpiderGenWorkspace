@@ -33,7 +33,6 @@ function ChatRoomItem*onInitDone()
 function ChatRoomItem*onActiveDone(isFirst)
 {
 	super.onActiveDone(isFirst);
-
 	//TODO:edit here
 
 };
@@ -51,8 +50,8 @@ function ChatRoomItem*setData(data)
 		this.chat_img.hide();
 		this.flex.setStyleObj({"flex-direction":"row-reverse"});
 		this.content.setText(data.chat_comment);
+		this.content.setStyleObj({"background":"#feea31"});
 		this.chat_time.setText(this.TimeController(data.createdAt).isTime);
-		/*if(datas.)*/
 	}
 /*	else if (data.date) 
 	{

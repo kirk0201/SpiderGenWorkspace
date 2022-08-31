@@ -33,7 +33,6 @@ ChatRoomItem.prototype.onInitDone = function()
 ChatRoomItem.prototype.onActiveDone = function(isFirst)
 {
 	AView.prototype.onActiveDone.call(this, isFirst);
-
 	//TODO:edit here
 
 };
@@ -51,8 +50,8 @@ ChatRoomItem.prototype.setData = function(data)
 		this.chat_img.hide();
 		this.flex.setStyleObj({"flex-direction":"row-reverse"});
 		this.content.setText(data.chat_comment);
+		this.content.setStyleObj({"background":"#feea31"});
 		this.chat_time.setText(this.TimeController(data.createdAt).isTime);
-		/*if(datas.)*/
 	}
 /*	else if (data.date) 
 	{

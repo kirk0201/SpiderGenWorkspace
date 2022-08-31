@@ -1,0 +1,24 @@
+{
+	"name": "createMsg",
+	"desc": "쿼리 설명",
+	"queryType": "쿼리 타입",
+	"input": {
+		"InBlock1": {
+			"format": [
+				["토큰","token","","","signed",10,4],
+				["친구아이디","target_user","","","signed",10,4],
+				["채팅내용","chat_comment","","","char",null,"0"],
+				["내가보냈는가","im_send","","","char",null,"0"]
+			]
+		}
+	},
+	"output": {
+		"OutBlock1": {
+			"format": [
+				["String type","stringkey","","","char",10,4],
+				["Number type","signedkey","","","signed",10,4],
+				["Binary type","binarykey","","","binary",10,4]
+			]
+		}
+	}
+}

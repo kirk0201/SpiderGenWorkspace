@@ -7,6 +7,7 @@ function FriendsView()
 {
 	AView.call(this);
 	this.token = null;
+	this.data = null;
 	//TODO:edit here
 
 }
@@ -16,55 +17,18 @@ afc.extendsClass(FriendsView, AView);
 FriendsView.prototype.init = function(context, evtListener)
 {
 	AView.prototype.init.call(this, context, evtListener);
-				console.log("init 활성화@@@@");
-
-
-// 	data.loginData[0].Friends
-
-	
-	//TODO:edit here
-// 	console.log("container", this.getContainer());
-
-// 	console.log("friend_owner", this.owner.parent);
-
 
 };
 
-FriendsView.prototype.onDeactive = function()
-{
-		this.friendsList.removeAllItems();
-					console.log("onDeactive 활성화@@@@");
-
-};
 
 FriendsView.prototype.onInitDone = function()
 {
 	AView.prototype.onInitDone.call(this);
-			console.log("onInitDone 활성화@@@@");
-
-
-
-	// 	console.log("getData", this.getContainer().getData());
-	
-	// 	var data = this.getContainer().getData().loginData[0].Friends;
-	// 	console.log("data", data);
-	//TODO:edit here
-	//	this.getContainer().getData()는 변수에 할당이 안됨 	
-	// 	var friend_data = this.getContainer().getData();
-	
-	
-};
-FriendsView.prototype.onActive = function(isFirst)
-{
-		console.log("onActive 활성화@@@@");
-
-
 };
 
 FriendsView.prototype.onActiveDone = function(isFirst)
 {
 	AView.prototype.onActiveDone.call(this, isFirst);
-	console.log("onActiveDone 활성화@@@@");
 	this.friendsList.removeAllItems();
 	this.loginApi();
 		
@@ -73,19 +37,16 @@ FriendsView.prototype.onActiveDone = function(isFirst)
 
 };
 
-FriendsView.prototype.onWillActive = function(isFirst){
-		console.log("onWillACtive 활성화@@@@");
 
-};
-FriendsView.prototype.onDeactiveDone = function()
-{
-	console.log("onDeactive 활성화");
-};
 FriendsView.prototype.onFriendsViewSelect = function(comp, info, e)
 {
-
-	//TODO:edit here
-
+	console.log(this.getContainer().getData());
+	var data = this.getContainer().getData();
+	var selectIdx = this.friendsList.indexOfItem(this.friendsList.getSelectItem());
+// 실제 유저 아이디 값으로 넘길시
+	data.target_user = this.data[selectIdx].id;
+	data.select_chat = selectIdx;
+	ANavigator.find('navigator').goPage("ChatRoomView", data);
 };
 
 FriendsView.prototype.loginApi = function()
@@ -109,6 +70,7 @@ FriendsView.prototype.loginApi = function()
 	{
 		var blockData = queryData.getBlockData('OutBlock1');
 		console.log("!!!!", blockData);
+		thisObj.data = blockData;
 		// 		queryData.printQueryData();
 		// 		console.log("friendsView queryData@@@@@@@@@@@@@@:", queryData);
 		thisObj.friendsList.addItem('Source/MainChatView/SubView/FriendsView/FriendsItemView/FriendsItemView.lay', blockData);

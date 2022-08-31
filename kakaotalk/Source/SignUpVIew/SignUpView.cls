@@ -39,11 +39,14 @@ function SignUpView*onActiveDone(isFirst)
 function SignUpView*onSignUpBtnClick(comp, info, e)
 {
 	this.loginApi();
+	this.user_pwd.setText("");
+	this.user_pwd_confirm.setText("");
 };
 
 function SignUpView*onBackBtnClick(comp, info, e)
 {
-	this.getContainer().navigator.goPrevPage();
+	ANavigator.find('navigator').closePage('SignUpView');
+	ANavigator.find('navigator').goPage("MainView");
 };
 
 function SignUpView*onWrongPassChange(comp, info, e)
@@ -80,11 +83,14 @@ function SignUpView*loginApi()
 		console.log("OutBlock1 queryData:", queryData);
 		var msg = queryData.queryObj.OutBlock1.msg;
 		AToast.show(msg);
-
+		if(msg ==="회원가입을 성공했습니다")
+		{
+			ANavigator.find('navigator').closePage('SignUpView');
+			ANavigator.find('navigator').goPage("MainView");
+		}
 	}
 	);
 };
-
 
 function SignUpView*connectServer()
 {
