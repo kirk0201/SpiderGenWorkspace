@@ -6,6 +6,7 @@ class ChatsView()
 {
 	super();
 	var selectIdx = null;
+	this.data = null;
 }
 extends AView;
 
@@ -28,8 +29,8 @@ function ChatsView*onActiveDone(isFirst)
 	super.onActiveDone(isFirst);
 		
 
-	console.log("4");
-	this.navi();
+/*	console.log("4");
+	this.navi();*/
 // 	var listData = this.getContainer().getData().loginData[0].Chats;
 
 // 	this.chatsList.addItem('Source/MainChatView/SubView/ChatsView/ChatsItemView/ChatsItemView.lay', listData);
@@ -55,17 +56,23 @@ function ChatsView*onChatsViewSelect(comp, info, e)
 	var data = this.getContainer().getData();
 	selectIdx= this.chatsList.indexOfItem(this.chatsList.getSelectItem());
 	
-	console.log("selectIdx", selectIdx);
+/*	console.log("selectIdx", selectIdx);
 	console.log("ChatsView_Data", data);
+	console.log("this.data@@@!@",this.data);*/
+	if (data)
+	{
+		data.select_chat = selectIdx;
+		data.target_user = this.data[selectIdx].target_user;
+	}
 	
-	if (data)data.select_chat = selectIdx;
-// 	console.log("챗뷰오브젝트", data );
+	ANavigator.find('navigator').closePage('MainChatView');
 	ANavigator.find('navigator').goPage('ChatRoomView', data);
 };
-function ChatsView*navi(){
+
+/*function ChatsView*navi(){
 	var navi = ANavigator.find('navigator');
 	console.log("네비게이터",navi);
-};
+};*/
 
 function ChatsView*loginApi()
 {
@@ -79,10 +86,7 @@ function ChatsView*loginApi()
 	{
 		var blockData = queryData.getBlockData('InBlock1');
 		blockData[0].token = thisObj.token;
-	
-	
-		// 		console.log("InBlock queryData",queryData);
-		// 		console.log("printQueryData@@@@@@@@@@@@",queryData.printQueryData());
+
 	},
 	function(queryData)
 	{
@@ -90,6 +94,7 @@ function ChatsView*loginApi()
 		console.log("!!!!@@@@@", blockData);
 		// 		queryData.printQueryData();
 		// 		console.log("friendsView queryData@@@@@@@@@@@@@@:", queryData);
+		thisObj.data = blockData;
 		thisObj.chatsList.addItem('Source/MainChatView/SubView/ChatsView/ChatsItemView/ChatsItemView.lay', blockData);
 
 	}

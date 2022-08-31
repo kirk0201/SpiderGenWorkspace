@@ -43,7 +43,14 @@ ChatsItemView.prototype.setData = function(data)
 {
 	console.log("@@@@@@@@@@@@ChatsItemView@@@@@@@@@@@@@@@@@@@@", data.user.user_name);
 	this.chat_img.setImage(data.user.user_img);
-	this.chat_name.setText(data.chat_comment);
+	var newComment = null;
+	if(data.chat_comment.length> 20) {
+		newComment = data.chat_comment.slice(0, 50);
+		this.chat_name.setText(newComment);
+
+	} else {
+		this.chat_name.setText(data.chat_comment);
+	}
 // 	console.log("chat_content",);
 // 	this.chat_content.setText(data.chat_content[data.chat_content.length - 1].content);
 

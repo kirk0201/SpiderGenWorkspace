@@ -11,7 +11,7 @@ module.exports = {
     const { token } = data.body.InBlock1[0];
     const unique = new Set();
     const lastList = [];
-
+    console.log("token", token);
     resData = {
       header: {
         packet_id: data.header.packet_id,

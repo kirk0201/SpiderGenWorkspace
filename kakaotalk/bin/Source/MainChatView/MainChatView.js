@@ -107,21 +107,19 @@ MainChatView.prototype.onAButtonActionup = function(comp, info, e)
 	menu.setItemInfoArr(itemInfo);
 	menu.popupEx({ left:e.pageX, top:e.pageY}, function(result)
 	{
-/*		this.isBgCheck = false;
-		this.isFocusLostClose = false;
-		console.log(this);
+// 		this.isBgCheck = false;
+// 		this.isFocusLostClose = false;
+// 		console.log(this);
 		console.log("comp", comp);
 		console.log("info", info);
-		console.log("e", e);*/
- 		ANavigator.find('navigator').goPage('MainView');
-
-			
-
-// 		this.selItem.onclick(() => ANavigator.find('navigator').goPage('MainView'));
-
-		
-// 		ANavigator.find('navigator').goPage('MainView');	
-		
+		console.log("e", e);
+		console.log("TabMenu_Result", result);
+		if(result.text === "로그아웃") {
+// 			console.log(comp.parent.parent.owner.close()); 
+			ANavigator.find('navigator').closePage("MainChatView");	
+			ANavigator.find('navigator').goPage("MainView");
+		}
+		else return ;
 	});
 	//TODO:edit here
 
@@ -131,7 +129,6 @@ MainChatView.prototype.onEtcClick = function(comp, info, e)
 {
 	AToast.show("아직 준비중이에요");
 	//TODO:edit here
-
 };
 
 

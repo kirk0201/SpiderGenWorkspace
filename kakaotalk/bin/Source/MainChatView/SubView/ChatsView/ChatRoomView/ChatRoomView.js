@@ -6,7 +6,7 @@ Do not call Function in Constructor.
 function ChatRoomView()
 {
 	AView.call(this);
-
+	this.data = null;
 
 	//TODO:edit here
 
@@ -17,7 +17,7 @@ afc.extendsClass(ChatRoomView, AView);
 ChatRoomView.prototype.init = function(context, evtListener)
 {
 	AView.prototype.init.call(this, context, evtListener);
-	
+
 	//TODO:edit here
 
 };
@@ -25,7 +25,7 @@ ChatRoomView.prototype.init = function(context, evtListener)
 ChatRoomView.prototype.onInitDone = function()
 {
 	AView.prototype.onInitDone.call(this);
-	
+	this.data = this.getContainer().getData();
 
 
 	
@@ -63,8 +63,9 @@ ChatRoomView.prototype.onActiveDone = function(isFirst)
 	AView.prototype.onActiveDone.call(this);
 	this.chatList.removeAllItems();
 	var data = this.getContainer().getData();
+	
+	this.getUserApi();
 
-	this.loginApi(data);
 /*	var data = this.getContainer().getData();
 	var choice = data.choice;
 	var chatInfo = data.loginData[0].Chats[choice];
@@ -84,16 +85,19 @@ ChatRoomView.prototype.onBackBtnClick = function(comp, info, e)
 	//TODO:edit here
 	var data = this.getContainer().getData();
 	console.log("this데이터", data);
-	ANavigator.find('navigator').goPage("MainChatView",data);
+	console.log("parent",this.owner);
+/*	this.rbm = new RadioBtnManager(this);
+	this.onTabClick(this.friendsBtn);*/
+	ANavigator.find('navigator').closePage("ChatRoomView");
+	ANavigator.find('navigator').goPage("MainChatView", data);
 };
 
 ChatRoomView.prototype.sendMsgBtnClick = function(comp, info, e)
 {
 	//TODO:edit here
-	var msg = this.input_chatContent.getText();
-	var arr = [{who: "나", content:msg, time: time()}];
-	if (msg === '') return;
-	this.chatList.addItem('Source/MainChatView/SubView/ChatsView/ChatRoomView/ChatRoomItem/ChatRoomItem.lay', arr);
+	this.chatList.removeAllItems();
+
+	this.createMsgApi();
 	this.chatList.scrollToBottom();
 	this.input_chatContent.setText("");
 };
@@ -102,28 +106,26 @@ ChatRoomView.prototype.onInputKeydown = function(comp, info, e)
 {
 	if(e.which ==13) 
 	{
-		var msg = this.input_chatContent.getText();
-		var arr = [{who: "나", content:msg, time: time()}];
-		if (msg === '') return;
-		this.chatList.addItem('Source/MainChatView/SubView/ChatsView/ChatRoomView/ChatRoomItem/ChatRoomItem.lay', arr);
+		this.chatList.removeAllItems();
+		this.createMsgApi();
 		this.chatList.scrollToBottom();
 		this.input_chatContent.setText("");
 	}
 };
 
-ChatRoomView.prototype.loginApi = function(data)
+ChatRoomView.prototype.getUserApi = function()
 {
-	this.token = this.getContainer().getData().loginData.token;
-	console.log("LoginApi_data",data);
-// 	console.log("ChatsView@@@@@@",this.token);
+
 	//TODO:edit here
 	var thisObj = this;
 	theApp.qm.startManager("http://192.168.0.155:3000/chat/chatlist");
-	theApp.qm.sendProcessByName('friend', this.getContainerId(), null,
+	theApp.qm.sendProcessByName('chatlog', this.getContainerId(), null,
 	function(queryData)
 	{
 		var blockData = queryData.getBlockData('InBlock1');
-		blockData[0].token = thisObj.token;
+		console.log("!@$@!$@!@$!@$!@$!@$!@#!@$!@s",thisObj.data);
+		blockData[0].token = thisObj.data.loginData.token;
+		
 	
 		// 		console.log("InBlock queryData",queryData);
 		// 		console.log("printQueryData@@@@@@@@@@@@",queryData.printQueryData());
@@ -131,11 +133,10 @@ ChatRoomView.prototype.loginApi = function(data)
 	function(queryData)
 	{
 		var blockData = queryData.getBlockData('OutBlock1');
-		var chatLog = blockData[data.select_chat].chat_log;
-		console.log(blockData);
-		thisObj.chat_img.setImage(blockData[data.select_chat].user.user_img);
-		thisObj.chat_name.setText(blockData[data.select_chat].user.user_name);
-		thisObj.TimeController(blockData[data.select_chat].createdAt);
+		var chatLog = blockData[thisObj.data.select_chat].chat_log;
+		thisObj.chat_img.setImage(blockData[thisObj.data.select_chat].user.user_img);
+		thisObj.chat_name.setText(blockData[thisObj.data.select_chat].user.user_name);
+		thisObj.TimeController(blockData[thisObj.data.select_chat].createdAt);
 
 // 		var chatLog = [];
 // 		console.log("ChatRoomViewData", blockData);
@@ -144,6 +145,39 @@ ChatRoomView.prototype.loginApi = function(data)
 		// 		queryData.printQueryData();
 		// 		console.log("friendsView queryData@@@@@@@@@@@@@@:", queryData);
 		thisObj.chatList.addItem('Source/MainChatView/SubView/ChatsView/ChatRoomView/ChatRoomItem/ChatRoomItem.lay', chatLog);
+		thisObj.chatList.scrollToBottom();
+
+	}
+	);
+};
+
+ChatRoomView.prototype.createMsgApi = function()
+{
+
+	var thisObj = this;
+	theApp.qm.startManager("http://192.168.0.155:3000/chat/createmsg");
+	theApp.qm.sendProcessByName('chatlog', this.getContainerId(), null,
+	function(queryData)
+	{
+		var blockData = queryData.getBlockData('InBlock1');
+		blockData[0].token = thisObj.data.loginData.token;
+		blockData[0].target_user = thisObj.data.target_user;
+		blockData[0].chat_comment = thisObj.input_chatContent.getText();
+		blockData[0].im_send = 1;
+
+	},
+	function(queryData)
+	{
+		var blockData = queryData.getBlockData('OutBlock1');
+// 		var chatLog = blockData[thisObj.data.select_chat].chat_log;
+// 		console.log("blockData",blockData);
+/*		thisObj.chat_img.setImage(blockData[thisObj.data.select_chat].user.user_img);
+		thisObj.chat_name.setText(blockData[thisObj.data.select_chat].user.user_name);
+		thisObj.TimeController(blockData[thisObj.data.select_chat].createdAt);*/
+	
+		thisObj.chatList.addItem('Source/MainChatView/SubView/ChatsView/ChatRoomView/ChatRoomItem/ChatRoomItem.lay', blockData);
+		thisObj.chatList.scrollToBottom();
+
 
 	}
 	);
