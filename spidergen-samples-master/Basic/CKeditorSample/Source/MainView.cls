@@ -8,8 +8,8 @@
 
 //다음은 필요한 자바스크립트 파일을 동적으로 로딩하는 코드이다.
 //필요한 시점에 로드하면 된다. 여러번 호출해도 중복으로 로드되지 않는다. 
-afc.loadScript('Assets/ckeditor/ckeditor.js');
-
+// afc.loadScript('Assets/ckeditor/ckeditor.js');
+afc.loadScript('Assets/ckeditor5/build/ckeditor.js');
 /**
 Constructor
 Do not call Function in Constructor.
@@ -33,13 +33,27 @@ function MainView*init(context, evtListener)
 };
 
 function MainView*onInitDone()
-{
+{ 
 	super.onInitDone();
-	
+// 	console.log(this);
 	//여기서 ck에디터를 적용한다.
 	//이후는 ck에이터 매뉴얼을 참고하여 적용한다.
-	
- 	CKEDITOR.replace(this.ckeditor.getElementId() , { height: 500 });
+/*
+	var CKEDITOR = ClassicEditor.create(this.ckeditor.getElementId())
+	.then(editor => {
+		console.log(editor);
+	});
+*/
+/*	ClassicEditor.create(this.ckeditor.getElementId())
+	.then(editor => {
+		console.log(editor);
+	})
+	.catch(err => {
+		console.log(err);
+	});*/
+// 	console.log(CKEDITOR);
+	ClassicEditor.create(this.ckeditor.getElement(), { height: 500 });
+//  	CKEDITOR.replace(this.ckeditor.getElementId() , { height: 500 });
 	
 	//this.ckeditor 는 ATextArea 이다.
 };

@@ -1,0 +1,29 @@
+{
+  "styleName": "common_css",
+  "items": {
+    "btn_01_N": ".btn_01_N\n{\n\tbackground-color:#6667ab;\n\tcolor:#fff;\n}\n\n",
+    "btn_01_H": ".btn_01_H\n{\n\tbackground-color:#575891;\n\tcolor:#fff;\n}\n\n",
+    "btn_02_N": ".btn_02_N\n{\n\tborder:2px solid #d9d9d9;\n\tbackground-color:#f5f5f5;\n\tcolor:#333;\n}\n\n",
+    "btn_02_H": ".btn_02_H\n{\n\tborder:2px solid #d9d9d9;\n\tbackground-color:#dbdbdb;\n\tcolor:#333;\n}\n\n",
+    "box_02": ".box_02\n{\n}\n\n",
+    "input_01": ".input_01\n{\n\tborder:solid 2px #ccc;\n\tbackground-color:#fff;\n}\n\n.input_01::placeholder\n{\n\tcolor:#999;\n}",
+    "grid_hd_01": ".grid_hd_01\n{\n\t\n}\n\n\n.grid_hd_01 td\n{\n\tborder:2px solid #d9d9d9;\n\tbackground-color:#f5f5f5;\n\n}\n",
+    "grid_bd_01": ".grid_bd_01\n{\n\t\n}\n\n.grid_bd_01 td\n{\n\tborder:2px solid #d9d9d9;\n}\n",
+    "btn_close_N": ".btn_close_N\n{\n\tbackground-image: url(Assets/images/iconmonstr-x-mark-2.svg);\n\tbackground-repeat: no-repeat;\n\tbackground-position: center;\n\tbackground-color:rgba(0,0,0,0);\n}\n\n",
+    "btn_close_H": ".btn_close_H\n{\n\tbackground-image: url(Assets/images/iconmonstr-x-mark-2.svg);\n\tbackground-repeat: no-repeat;\n\tbackground-position: center;\n\tbackground-color:#f7f7f7;\n}\n\n",
+    "btn_back_N": ".btn_back_N\n{\n\tbackground-image: url(Assets/images/iconmonstr-arrow-64.svg);\n\tbackground-repeat: no-repeat;\n\tbackground-position: center;\n\tbackground-color:rgba(0,0,0,0);\n}\n\n",
+    "btn_back_H": ".btn_back_H\n{\n\tbackground-image: url(Assets/images/iconmonstr-arrow-64.svg);\n\tbackground-repeat: no-repeat;\n\tbackground-position: center;\n\tbackground-color:#f7f7f7;\n}\n\n",
+    "btn_menu_N": ".btn_menu_N\n{\n\tbackground-image: url(Assets/images/iconmonstr-menu-1.svg);\n\tbackground-repeat: no-repeat;\n\tbackground-position: center;\n\tbackground-color:rgba(0,0,0,0);\n}\n\n",
+    "btn_menu_H": ".btn_menu_H\n{\n\tbackground-image: url(Assets/images/iconmonstr-menu-1.svg);\n\tbackground-repeat: no-repeat;\n\tbackground-position: center;\n\tbackground-color:#f7f7f7;\n}\n\n\n",
+    "box_01": ".box_01\n{\n\tborder-bottom:2px solid #d9d9d9;\n\tbackground-color:#fff;\n}\n\n",
+    "bg_01": ".bg_01\n{\n\tbackground-color:#fff;\n}\n\n",
+    "grid_select": ".grid_select\n{\n\tbackground-color:#6667ab;\n\tcolor:#fff;\n}\n\n",
+    "grid_hd_02": ".grid_hd_02\n{\n}\n\n.grid_hd_02\n{\n}\n\n",
+    "grid_bd_02": ".grid_bd_02\n{\n}\n\n",
+    "btn_check_N": ".btn_check_N\n{\n\tbackground-image: url(Assets/images/iconmonstr-checkbox-30N.svg);\n\tbackground-repeat: no-repeat;\n\tbackground-position: center;\n\tbackground-color:rgba(0,0,0,0);\n}\n\n",
+    "grid_ev_color": ".grid_ev_color\n{\n\t\n}\n\n.grid_ev_color > tr:nth-child(4n-1)\n{\n\tbackground-color : #f9f9f9;\n}\n\n.grid_ev_color > tr:nth-child(4n)\n{\n\tbackground-color : #f9f9f9;\n}\n\n",
+    "chatting_stl_02": ".chatting_stl_02\n{\n\tborder-radius:16px 0px 16px 16px;\n\tpadding:6px 18px 5px 18px;\n\tbackground-color: rgb(47, 82, 112);\n\tcolor: rgb(255, 255, 255);\n}\n\n",
+    "chatting_stl_01": ".chatting_stl_01\n{\n\tborder-radius:0 16px 16px 16px;\n\tbackground-color:#dfe8f0;\n\tpadding:6px 18px 5px 18px;\n\tcolor: rgb(85, 85, 85);\n}\n\n",
+    "report_msg": ".report_msg\n{\n\tborder-radius:16px;\n\tbackground-color:#A1A2A4;\n\tpadding:6px 18px 5px 18px;\n\tcolor: rgb(85, 85#8F9295\n}\n\n"
+  }
+}

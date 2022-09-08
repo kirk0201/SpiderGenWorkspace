@@ -1,0 +1,24 @@
+{
+  "styleName": "font_style",
+  "items": {
+    "edit_here": "\n.edit_here\n{\n\t/* TODO:edit here */\n\n}\n",
+    "h1": ".h1\n{\n\tfont-size:36px;\n}\n\n",
+    "h2": ".h2\n{\n\tfont-size:30px;\n}\n\n",
+    "h3": ".h3\n{\n\tfont-size:28px;\n}\n\n",
+    "h4": ".h4\n{\n\tfont-size:26px;\n}\n\n",
+    "h5": ".h5\n{\n\tfont-size:44px;\n}\n\n",
+    "h6": ".h6\n{\n\tfont-size:40px;\n}\n\n",
+    "b1": ".b1\n{\n\tfont-size:24px;\n}\n\n",
+    "b2": ".b2\n{\n\tfont-size:22px;\n}\n\n",
+    "b3": ".b3\n{\n\t\n}\n\n",
+    "b4": ".b4\n{\n}\n\n",
+    "b5": ".b5\n{\n}\n\n",
+    "b6": ".b6\n{\n}\n\n",
+    "font_M": ".font_M\n{\n\t/*폰트 미디움*/\n\tfont-family: 'NotoSansCJKkr-Medium' !no;\n}\n\n",
+    "font_B": ".font_B\n{\n\t/*폰트 볼드*/\n\tfont-family: 'NotoSansCJKkr-Bold' !no;\n}\n\n",
+    "font_color_01": ".font_color_01\n{\n\tcolor:#6667ab\n}\n\n",
+    "font_color_02": ".font_color_02\n{\n\tcolor:#fff;\n}\n\n",
+    "font_color_03": ".font_color_03\n{\n\tcolor:#000;\n}\n\n",
+    "font_color_04": ".font_color_04\n{\n}\n\n"
+  }
+}

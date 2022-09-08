@@ -1,0 +1,21 @@
+{
+	"name": "nt0006",
+	"desc": "방 참여자 삭제",
+	"queryType": "NOTI",
+	"realType": 2,
+	"input":
+	{
+	},
+	
+	"output":
+	{
+		"OutBlock1":
+		{
+			"format":
+			[
+				["아이디", "userId", 0, 0, "char", 0, 0],
+				["방장아이디", "hostId", 0, 0, "char", 0, 0]
+			]
+		}
+	}
+}

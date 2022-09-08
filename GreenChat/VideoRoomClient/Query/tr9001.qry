@@ -1,0 +1,30 @@
+{
+	"name": "tr9001",
+	"desc": "상담룸리스트",
+	"queryType": "TRAN",
+	"input": {
+		"InBlock1": {
+			"format": [
+				["기간전체여부","isAllDay","","","char",0,"0"],
+				["검색 시작일","sDate","","","char",0,"0"],
+				["검색 종료일","eDate","","","char",0,"0"],
+				["검색조건", "sType","","","char",0,"0"],
+				["검색어", "sText","","","char",0,"0"],
+				["마지막룸키", "lastRoomKey","","","char",0,"0"]
+			]
+		}
+	},
+	"output": {
+		"OutBlock1": {
+			"format": [
+				["방키","roomKey","","","char",0,"0"],
+				["방제목","roomTitle","","","char",0,"0"],
+				["상담원","hostUser","","","char",0,"0"],
+				["고객명","userId","","","char",0,"0"],
+				["등록일","regDate","","","char",0,"0"],
+				["시작시간","sTime","","","char",0,"0"],
+				["종료시간","eTime","","","char",0,"0"]					
+			]
+		}
+	}
+}

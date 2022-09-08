@@ -1,0 +1,16 @@
+<div data-base="AView" data-class="RecvMsgView" class="AView-Style" style="left: 0px; top: 0px; width: 100%; height: 100%; position: absolute; background-color: rgba(0, 0, 0, 0);" data-browser-height="100" data-class-map="{&quot;afc&quot;:[&quot;AView&quot;,&quot;ALabel&quot;,&quot;AFlexLayout&quot;]}" data-browser-width="690">
+    <div data-base="AView" data-class="AView" class="AView-Style" style="width: 100%; height: auto; position: relative; left: 0px; top: 0px; background-color: rgba(0, 0, 0, 0); padding-top: 5px; margin-left: 0px; margin-top: 0px; padding-bottom: 5px;">
+        <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: 38px; height: 38px; position: absolute; left: 20px; top: 20px; background-image: url(&quot;Assets/images/ic_myprofile.png&quot;); background-size: contain; background-repeat: no-repeat;" data-background-option="fit"></label>
+        <label data-base="ALabel" data-class="ALabel" class="ALabel-Style font_b4 font_color_07" style="width: calc((100% - 65px) - 0px); height: 23px; position: relative; left: 65px; top: 0px; font-weight: bold; display: block; padding-bottom: 5px;" id="RecvMsgView--userName" data-style=" font_b4 font_color_07" data-sgap-width="1">고객님</label>
+        <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: calc((100% - 65px) - 0px); height: auto; position: relative; max-width: 85%; overflow: hidden; top: 0px; left: 65px;" data-sgap-width="1">
+            <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: auto; align-self: auto;">
+                <div data-base="AView" data-class="AView" class="AView-Style chatting_stl_01" style="width: auto; height: auto; top: 0px; left: 0px; position: relative;" data-style="chatting_stl_01">
+                    <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: 100%; height: auto; left: 0px; position: relative; margin-top: 0px;" data-style="" id="RecvMsgView--message">안녕하세요.</label>
+                </div>
+            </div>
+            <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: auto; align-self: flex-end;">
+                <label data-base="ALabel" data-class="ALabel" class="ALabel-Style font_b4 font_color_04" style="width: auto; height: auto; position: relative; display: inline-block; text-align: right; vertical-align: bottom; margin-top: 0px; left: 0px; top: 0px;" id="RecvMsgView--msgTime" data-style=" font_b4 font_color_04"> 10:10:10</label>
+            </div>
+        </div>
+    </div>
+</div>

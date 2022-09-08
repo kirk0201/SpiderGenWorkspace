@@ -1,0 +1,20 @@
+{
+	"name": "tr9000",
+	"desc": "상담로그",
+	"queryType": "TRAN",
+	"input": {
+		"InBlock1": {
+			"format": [
+				["로그내용","info","","","char",0,"0"]
+			]
+		}
+	},
+	"output": {
+		"OutBlock1": {
+			"format": [
+				["결과","result","","","signed",0,"0"],
+				["메시지","message","","","char",0,"0"]
+			]
+		}
+	}
+}

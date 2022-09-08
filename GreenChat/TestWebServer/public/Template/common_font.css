@@ -1,0 +1,19 @@
+
+@font-face {
+	font-family: 'NotoSansCJKkr-Regular' ;
+	src:url(../Assets/font/NanumGothic.otf) format('opentype'); 
+
+}
+
+@font-face {
+	font-family: 'NotoSansCJKkr-Medium' ;
+	src:url(../Assets/font/NanumGothic.otf) format('opentype'); 
+	
+}
+
+@font-face {
+	font-family: 'NotoSansCJKkr-Bold' ;
+	src:url(../Assets/font/NanumGothicBold.otf) format('opentype');
+
+}
+

@@ -1,0 +1,12 @@
+{
+  "name": "VideoRoomServer",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "fs-extra": "^9.0.1",
+    "kurento-client": "git+https://github.com/Kurento/kurento-client-js.git",
+    "mysql": "^2.18.1",
+    "request": "^2.88.2",
+    "ws": "^7.3.1"
+  }
+}
