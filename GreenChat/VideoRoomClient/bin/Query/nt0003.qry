@@ -1,0 +1,23 @@
+{
+	"name": "nt0003",
+	"desc": "대기실 방정보 변경",
+	"queryType": ".NOTI",
+	"realType": 0,
+	"input":
+	{
+	},
+	
+	"output":
+	{
+		"OutBlock1":
+		{
+			"format":
+			[
+				["아이디","roomId","0","0","char",0,0],				
+				["종류","roomType","0","0","signed",0,0],
+				["인원","playerNum","0","0","signed",0,0],
+				["제목","roomName","0","0","char",0,0]
+			]
+		}
+	}
+}

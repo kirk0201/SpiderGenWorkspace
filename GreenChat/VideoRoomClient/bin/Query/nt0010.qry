@@ -1,0 +1,11 @@
+{
+	"name": "nt0010",
+	"desc": "중복로그인알림",
+	"queryType": "NOTI",
+	"realType": 0,
+	"input": {
+	},
+	"output": {
+		
+	}
+}

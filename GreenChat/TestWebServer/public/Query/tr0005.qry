@@ -1,0 +1,22 @@
+{
+	"name": "tr0005",
+	"desc": "방 참여하기",
+	"queryType": "TRAN",
+	"input": {
+		"InBlock1": {
+			"format": [
+				["아이디","roomId","0","0","char",0,0],
+				["비밀번호","roomPw","0","0","char",0,0]
+			]
+		}
+	},
+	"output": {
+		"OutBlock1": {
+			"format": [
+				["성공/실패","result","0","0","signed",0,0],
+				["방종류","roomType","0","0","signed",0,0],
+				["방이름","roomName","0","0","char",0,0]
+			]
+		}
+	}
+}

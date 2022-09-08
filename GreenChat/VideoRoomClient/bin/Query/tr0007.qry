@@ -1,0 +1,28 @@
+{
+	"name": "tr0007",
+	"desc": "방 참여자 조회",
+	"queryType": "TRAN",
+	"input":
+	{
+		"InBlock1":
+		{
+			"format":
+			[
+				["방 아이디", "roomId", 0, 0, "char", 0, 0]
+			]
+		}
+	},
+	
+	"output":
+	{
+		"OutBlock1":
+		{
+			"format":
+			[
+				["유저아이디", "userId", 0, 0, "char", 0, 0],
+				["이름", "userName", 0, 0, "char", 0, 0]
+			]
+		}
+	}
+}
+

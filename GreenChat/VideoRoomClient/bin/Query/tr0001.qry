@@ -1,0 +1,21 @@
+{
+	"name": "tr0001",
+	"desc": "로그인",
+	"queryType": "TRAN",
+	"input": {
+		"InBlock1": {
+			"format": [
+				["로그인 아이디","uid","","","char",0,"0"],
+				["로그인 비밀번호","secKey","","","char",0,"0"]
+			]
+		}
+	},
+	"output": {
+		"OutBlock1": {
+			"format": [
+				["로그인 결과","result","","","signed",0,"0"],
+				["메시지","message","","","char",0,"0"]
+			]
+		}
+	}
+}

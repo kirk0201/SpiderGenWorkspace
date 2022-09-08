@@ -1,0 +1,15 @@
+<div data-base="AView" data-class="RoomView" class="AView-Style bg_01" style="left: 0px; top: 0px; width: 100%; height: 100%; background-color: rgb(239, 239, 239); position: absolute;" data-class-map="{&quot;afc&quot;:[&quot;AView&quot;,&quot;AButton&quot;,&quot;AListView&quot;,&quot;ALabel&quot;,&quot;ATextArea&quot;]}" data-style="bg_01" data-browser-height="680" data-browser-width="500">
+    <button data-base="AButton" data-class="AButton" class="AButton-Style btn_01_N" style="width: 80px; height: 40px; top: 104px; right: 10px;" data-listener-click="RoomView:onExitBtnClick" data-style="btn_01_N" data-style-over="btn_01_H" data-style-down="" data-style-disable="">채팅 종료</button>
+    <div data-base="AListView" data-class="AListView" class="AListView-Style" style="width: 100%; height: calc((100% - 150px) - 80px); left: 0px; top: 150px; background-color: rgb(242, 251, 248);" data-sgap-height="1" id="RoomView--chatList">
+        <div class="listview-row" style="height: auto;"></div>
+        <div class="listview-row AListView-select" style="height: auto;"></div>
+        <div class="listview-row" style="height: auto;"></div>
+        <div class="listview-row" style="height: auto;"></div>
+    </div>
+    <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; left: 20px; top: 21px; font-size: 20px;">&lt;&nbsp; 1:1 채팅 상담</label>
+    <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; left: 20px; top: 120px;">※ 운영 시간 : 주중 09:00 ~ 17:00</label>
+    <div data-base="AView" data-class="AView" class="AView-Style" style="width: 100%; position: absolute; left: 0px; bottom: 0px; height: 70px; background-color: rgba(0, 0, 0, 0);" id="RoomView--inputArea">
+        <textarea data-base="ATextArea" data-class="ATextArea" class="ATextArea-Style font_b2" style="height: 60px; position: absolute; background-color: rgb(255, 255, 255); border-radius: 50px; padding-left: 20px; width: calc((100% - 20px) - 60px); color: rgb(174, 174, 174); left: 20px; top: 0px;" id="RoomView--chatTxt" data-sgap-width="1" data-style=" font_b2" data-listener-keydown="RoomView:onChatTxtKeydown"></textarea>
+        <button data-base="AButton" data-class="AButton" class="AButton-Style" style="height: 60px; position: absolute; right: 7px; background-color: rgba(0, 0, 0, 0); width: 50px; background-image: url(&quot;Assets/images/ic_reply_d.png&quot;); top: 0px; background-repeat: no-repeat; background-size: 30px; background-position: center center;" id="RoomView--btnSendTalk" data-background-option="custom" data-listener-click="RoomView:onBtnSendTalkClick"></button>
+    </div>
+</div>

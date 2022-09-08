@@ -1,0 +1,20 @@
+{
+	"name": "nt0005",
+	"desc": "대기실 방정보 삭제",
+	"queryType": ".NOTI",
+	"realType": 2,
+	"input":
+	{
+	},
+	
+	"output":
+	{
+		"OutBlock1":
+		{
+			"format":
+			[
+				["아이디", "roomId", 0, 0, "char", 0, 0]
+			]
+		}
+	}
+}

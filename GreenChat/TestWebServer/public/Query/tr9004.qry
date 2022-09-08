@@ -1,0 +1,26 @@
+{
+	"name": "tr9004",
+	"desc": "채팅메시지리스트",
+	"queryType": "TRAN",
+	"input": {
+		"InBlock1": {
+			"format": [
+				["방키","roomKey","","","char",0,"0"],
+				["마지막메시지인덱스", "lastMsgIdx","","","char",0,"0"]
+			]
+		}
+	},
+	"output": {
+		"OutBlock1": {
+			"format": [
+				["메시지인덱스","msgIdx","","","char",0,"0"],
+				["상담방키","roomKey","","","char",0,"0"],
+				["유저아이디","userId","","","char",0,"0"],
+				["메시지타입","msgType","","","char",0,"0"],
+				["방장여부","isHostUser","","","char",0,"0"],
+				["등록일","regDate","","","char",0,"0"],				
+				["메시지","msg","","","char",0,"0"]
+			]
+		}
+	}
+}

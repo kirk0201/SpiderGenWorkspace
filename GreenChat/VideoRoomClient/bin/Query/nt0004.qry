@@ -1,0 +1,21 @@
+{
+	"name": "nt0004",
+	"desc": "방 참여자 추가",
+	"queryType": "NOTI",
+	"realType": 1,
+	"input":
+	{
+	},
+	
+	"output":
+	{
+		"OutBlock1":
+		{
+			"format":
+			[
+				["아이디", "userId", 0, 0, "char", 0, 0],
+				["이름", "userName", 0, 0, "char", 0, 0]
+			]
+		}
+	}
+}

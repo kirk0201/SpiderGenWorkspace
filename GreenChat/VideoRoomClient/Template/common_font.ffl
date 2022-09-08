@@ -1,0 +1,8 @@
+{
+  "styleName": "common_font",
+  "items": {
+    "NotoSansCJKkr-Regular": "\n@font-face {\n\tfont-family: 'NotoSansCJKkr-Regular' !no;\n\tsrc:url(Assets/font/NanumGothic.otf) format('opentype'); \n\n}\n",
+    "NotoSansCJKkr-Medium": "\n@font-face {\n\tfont-family: 'NotoSansCJKkr-Medium' !no;\n\tsrc:url(Assets/font/NanumGothic.otf) format('opentype'); \n\t\n}\n",
+    "NotoSansCJKkr-Bold": "\n@font-face {\n\tfont-family: 'NotoSansCJKkr-Bold' !no;\n\tsrc:url(Assets/font/NanumGothicBold.otf) format('opentype');\n\n}\n"
+  }
+}

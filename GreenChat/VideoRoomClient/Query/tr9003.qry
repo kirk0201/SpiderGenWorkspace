@@ -1,0 +1,20 @@
+{
+	"name": "tr9003",
+	"desc": "녹화리스트",
+	"queryType": "TRAN",
+	"input": {
+		"InBlock1": {
+			"format": [
+				["방키","roomKey","","","char",0,"0"]
+			]
+		}
+	},
+	"output": {
+		"OutBlock1": {
+			"format": [
+				["파일","file","","","char",0,"0"]
+			]
+		}
+	}
+}
+

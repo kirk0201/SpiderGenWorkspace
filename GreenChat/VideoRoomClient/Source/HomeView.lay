@@ -1,0 +1,28 @@
+<div data-base="AView" data-class="HomeView" class="AView-Style bg_01" style="left: 0px; top: 0px; width: 100%; height: 100%; background-color: rgb(255, 255, 255); position: absolute; font-size: 24px;" data-class-map="{&quot;afc&quot;:[&quot;AView&quot;,&quot;AGridLayout&quot;,&quot;ATextBox&quot;,&quot;AListView&quot;]}" data-style=" bg_01" data-browser-width="940">
+    <div data-base="AGridLayout" data-class="AGridLayout" class="AGridLayout-Style" style="width: 100%; height: 100%; left: 0px; top: 0px;">
+        <table cellpadding="0" cellspacing="0">
+            <colgroup>
+                <col>
+                <col>
+            </colgroup>
+            <tbody>
+                <tr>
+                    <td class="">
+                        <div data-base="AView" data-class="AView" class="AView-Style" style="width: 100%; height: 100%; left: 0px; top: 0px; position: relative; font-size: 16px; background-color: rgb(255, 255, 255);" data-group="" id="HomeView--roomListArea">
+                            <pre data-base="ATextBox" data-class="ATextBox" class="ATextBox-Style" style="width: auto; height: 30px; left: calc(50% - 48px); top: 20px; font-size: 20px;" data-center-x="true">상담 리스트</pre>
+                            <div data-base="AListView" data-class="AListView" class="AListView-Style" data-selectable="true" style="width: 100%; height: calc((100% - 90px) - 0px); left: 0px; top: 90px; background-color: rgb(255, 255, 255);" data-sgap-height="1" id="HomeView--roomListView">
+                                <div class="listview-row" style=""></div>
+                                <div class="listview-row AListView-select" style=""></div>
+                                <div class="listview-row" style=""></div>
+                                <div class="listview-row" style=""></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="">
+                        <div data-base="AView" data-class="AView" class="AView-Style" style="width: 100%; height: 100%; left: 0px; top: 0px; position: relative; font-size: 16px; background-color: rgb(255, 255, 255); border-left: 1px solid rgb(85, 85, 85);" data-group="" id="HomeView--chatRoomArea"></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

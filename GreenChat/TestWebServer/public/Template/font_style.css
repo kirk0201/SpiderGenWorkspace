@@ -1,0 +1,95 @@
+
+.edit_here
+{
+	/* TODO:edit here */
+
+}
+
+.h1
+{
+	font-size:36px !important;
+}
+
+.h2
+{
+	font-size:30px !important;
+}
+
+.h3
+{
+	font-size:28px !important;
+}
+
+.h4
+{
+	font-size:26px !important;
+}
+
+.h5
+{
+	font-size:44px !important;
+}
+
+.h6
+{
+	font-size:40px !important;
+}
+
+.b1
+{
+	font-size:24px !important;
+}
+
+.b2
+{
+	font-size:22px !important;
+}
+
+.b3
+{
+	
+}
+
+.b4
+{
+}
+
+.b5
+{
+}
+
+.b6
+{
+}
+
+.font_M
+{
+	/*폰트 미디움*/
+	font-family: 'NotoSansCJKkr-Medium' ;
+}
+
+.font_B
+{
+	/*폰트 볼드*/
+	font-family: 'NotoSansCJKkr-Bold' ;
+}
+
+.font_color_01
+{
+	color:#6667ab
+}
+
+.font_color_02
+{
+	color:#fff !important;
+}
+
+.font_color_03
+{
+	color:#000 !important;
+}
+
+.font_color_04
+{
+}
+

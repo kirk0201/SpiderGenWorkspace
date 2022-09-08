@@ -1,0 +1,24 @@
+{
+	"name": "tr9002",
+	"desc": "상담상세내역",
+	"queryType": "TRAN",
+	"input": {
+		"InBlock1": {
+			"format": [
+				["방키","roomKey","","","char",0,"0"],
+				["마지막로그아이디", "lastIdx","","","char",0,"0"]
+			]
+		}
+	},
+	"output": {
+		"OutBlock1": {
+			"format": [
+				["로그아이디","idx","","","char",0,"0"],
+				["룸키","roomKey","","","char",0,"0"],
+				["등록일","regDate","","","char",0,"0"],				
+				["내용","info","","","char",0,"0"]
+			]
+		}
+	}
+}
+

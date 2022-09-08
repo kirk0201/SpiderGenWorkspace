@@ -1,0 +1,28 @@
+{
+	"name": "sn0001",
+	"desc": "채팅 메시지 전송",
+	"queryType": "NOTI",
+	"input":
+	{
+		"InBlock1":
+		{
+			"format":
+			[
+				["메시지", "message", 0, 0, "char", 0, 0]
+			]
+		}
+	},
+	
+	"output":
+	{
+		"OutBlock1":
+		{
+			"format":
+			[
+				["유저 아이디", "userId", 0, 0, "char", 0, 0],
+				["유저 이름", "userName", 0, 0, "char", 0, 0],
+				["메시지", "message", 0, 0, "char", 0, 0]
+			]
+		}
+	}
+}

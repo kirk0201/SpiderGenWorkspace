@@ -1,0 +1,19 @@
+{
+	"name": "tr0008",
+	"desc": "영상녹화",
+	"queryType": "TRAN",
+	"input": {
+		"InBlock1": {
+			"format": [
+				["시작/중지","type","","","signed",0,0]
+			]
+		}
+	},
+	"output": {
+		"OutBlock1": {
+			"format": [
+				["성공/실패","result","","","signed",0,0]
+			]
+		}
+	}
+}
