@@ -1,0 +1,132 @@
+{
+  "projectName": "JewelerChat",
+  "fileTree": {
+    "type": 0,
+    "name": "JewelerChat",
+    "children": [
+      {
+        "type": 1,
+        "name": "Framework",
+        "action": 1,
+        "children": [
+          {
+            "type": 11,
+            "name": "afc",
+            "relType": 7,
+            "path": "afc\\"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "name": "Library",
+        "action": 2,
+        "children": []
+      },
+      {
+        "type": 1,
+        "name": "Template",
+        "action": 4,
+        "children": [
+          {
+            "type": 1,
+            "name": "Theme",
+            "children": []
+          },
+          {
+            "type": 4,
+            "name": "JewelerChatApp_global.stl",
+            "relType": 1,
+            "path": "Template\\"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "name": "Query",
+        "children": []
+      },
+      {
+        "type": 1,
+        "name": "Assets",
+        "children": []
+      },
+      {
+        "type": 1,
+        "name": "Source",
+        "children": [
+          {
+            "type": 2,
+            "name": "JewelerChatApp.cls",
+            "relType": 1,
+            "path": "Source\\",
+            "comment": "초기 생성자 cls"
+          },
+          {
+            "type": 2,
+            "name": "MainView.cls",
+            "relType": 1,
+            "path": "Source\\",
+            "comment": "로그인"
+          },
+          {
+            "type": 3,
+            "name": "MainView.lay",
+            "relType": 1,
+            "path": "Source\\",
+            "comment": "로그인"
+          },
+          {
+            "type": 2,
+            "name": "SignUpView.cls",
+            "action": 5,
+            "relType": 1,
+            "path": "Source\\",
+            "comment": "회원가입"
+          },
+          {
+            "type": 3,
+            "name": "SignUpView.lay",
+            "action": 6,
+            "relType": 1,
+            "path": "Source\\",
+            "comment": "회원가입"
+          },
+          {
+            "type": 2,
+            "name": "RegistUserView.cls",
+            "action": 5,
+            "relType": 1,
+            "path": "Source\\",
+            "comment": "초기 프로필 등록"
+          },
+          {
+            "type": 3,
+            "name": "RegistUserView.lay",
+            "action": 6,
+            "relType": 1,
+            "path": "Source\\",
+            "comment": "초기 프로필 등록"
+          },
+          {
+            "type": 2,
+            "name": "DetailUserView.cls",
+            "action": 5,
+            "relType": 1,
+            "path": "Source\\",
+            "comment": "상세 프로필 등록"
+          },
+          {
+            "type": 3,
+            "name": "DetailUserView.lay",
+            "action": 6,
+            "relType": 1,
+            "path": "Source\\",
+            "comment": "상세 프로필 등록"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "3.2.9"
+}
