@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>firebase</title>
+	<link rel="stylesheet" href="Framework/afc/style/afc.css"/>
+	<link rel="stylesheet" href="Framework/afc/style/comp.css"/>
+	<link rel="stylesheet" href="Framework/afc/style/basicStyle.css"/>
+	<link rel="stylesheet" href="Framework/afc/style/jquery-ui.css"/>
+
+	<link rel="stylesheet" href="Template/firebaseApp_global.css"/>
+
+	<script>
+	//Electron 과 추가 라이브러리(예, jQuery 등) 와의 충돌 방지
+	window.nodeRequire = window.require;
+	delete window.require;
+	delete window.exports;
+    delete window.module;
+
+var PROJECT_OPTION = 
+{
+    "build": {
+        "bridgeName": "none",
+        "frwLoadOption": "inTimeLoad"
+    },
+    "general": {
+        "autoScale": false,
+        "phoneDocWidth": 0,
+        "tabletDocWidth": 0,
+        "queryFormat": "qry",
+        "scaleVal": 1,
+        "userScalable": false,
+        "tabletMinWidth": 500
+    },
+    "unitUrl": ""
+};
+    </script>
+
+	<script defer src="Framework/afc/library/jquery-core.js"></script>
+	<script defer src="Framework/afc/library/jquery-ui.js"></script>
+	<script defer src="Framework/afc/library/jquery.ui.touch-punch.js"></script>
+	<script defer src="Framework/afc/library/ARect.js"></script>
+	<script defer src="Framework/afc/library/AUtil.js"></script>
+	<script defer src="Framework/afc/library/afc.js"></script>
+	<script defer src="Framework/afc/library/TabKeyController.js"></script>
+	<script defer src="Framework/afc/library/PosUtil.js"></script>
+	<script defer src="Framework/afc/component/AComponent.js"></script>
+	<script defer src="Framework/afc/component/AView.js"></script>
+	<script defer src="Framework/afc/component/AFloat.js"></script>
+	<script defer src="Framework/afc/component/AContainer.js"></script>
+	<script defer src="Framework/afc/component/AWindow.js"></script>
+	<script defer src="Framework/afc/component/APage.js"></script>
+	<script defer src="Framework/afc/component/AApplication.js"></script>
+	<script defer src="Framework/afc/event/AEvent.js"></script>
+
+	
+	<script defer src="Library/@firebase/analytics/dist/esm/index.esm.js"></script>
+	<script defer src="Library/@firebase/analytics/dist/esm/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/analytics/dist/index.cjs.js"></script>
+	<script defer src="Library/@firebase/analytics-compat/dist/esm/index.esm.js"></script>
+	<script defer src="Library/@firebase/analytics-compat/dist/esm/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/analytics-compat/dist/index.cjs.js"></script>
+	<script defer src="Library/@firebase/app/dist/esm/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/app/dist/esm/index.esm5.js"></script>
+	<script defer src="Library/@firebase/app/dist/index.cjs.js"></script>
+	<script defer src="Library/@firebase/app-check/dist/esm/index.esm.js"></script>
+	<script defer src="Library/@firebase/app-check/dist/esm/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/app-check/dist/index.cjs.js"></script>
+	<script defer src="Library/@firebase/app-check-compat/dist/esm/index.esm.js"></script>
+	<script defer src="Library/@firebase/app-check-compat/dist/esm/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/app-check-compat/dist/index.cjs.js"></script>
+	<script defer src="Library/@firebase/app-compat/dist/esm/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/app-compat/dist/esm/index.esm5.js"></script>
+	<script defer src="Library/@firebase/app-compat/dist/index.cjs.js"></script>
+	<script defer src="Library/@firebase/app-compat/dist/index.lite.esm5.js"></script>
+	<script defer src="Library/@firebase/app-compat/dist/index.lite.js"></script>
+	<script defer src="Library/@firebase/auth/dist/cordova/index.js"></script>
+	<script defer src="Library/@firebase/auth/dist/cordova/internal.js"></script>
+	<script defer src="Library/@firebase/auth/dist/cordova/popup_redirect-a23784e6.js"></script>
+	<script defer src="Library/@firebase/auth/dist/esm2017/index-6bd8d405.js"></script>
+	<script defer src="Library/@firebase/auth/dist/esm2017/index.js"></script>
+	<script defer src="Library/@firebase/auth/dist/esm2017/internal.js"></script>
+	<script defer src="Library/@firebase/auth/dist/esm5/index-0bcd930a.js"></script>
+	<script defer src="Library/@firebase/auth/dist/esm5/index.js"></script>
+	<script defer src="Library/@firebase/auth/dist/esm5/internal.js"></script>
+	<script defer src="Library/@firebase/auth/dist/index.webworker.esm5.js"></script>
+	<script defer src="Library/@firebase/auth/dist/node/index-5a9d0579.js"></script>
+	<script defer src="Library/@firebase/auth/dist/node/index.js"></script>
+	<script defer src="Library/@firebase/auth/dist/node/internal.js"></script>
+	<script defer src="Library/@firebase/auth/dist/node-esm/index-f3a96a92.js"></script>
+	<script defer src="Library/@firebase/auth/dist/node-esm/index.js"></script>
+	<script defer src="Library/@firebase/auth/dist/node-esm/internal.js"></script>
+	<script defer src="Library/@firebase/auth/dist/rn/index.js"></script>
+	<script defer src="Library/@firebase/auth/dist/rn/internal.js"></script>
+	<script defer src="Library/@firebase/auth/dist/rn/phone-54e6b3d3.js"></script>
+	<script defer src="Library/@firebase/auth-compat/dist/esm/index.node.esm.js"></script>
+	<script defer src="Library/@firebase/auth-compat/dist/firebase-auth.js"></script>
+	<script defer src="Library/@firebase/auth-compat/dist/index.esm.js"></script>
+	<script defer src="Library/@firebase/auth-compat/dist/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/auth-compat/dist/index.node.cjs.js"></script>
+	<script defer src="Library/@firebase/component/dist/esm/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/component/dist/esm/index.esm5.js"></script>
+	<script defer src="Library/@firebase/component/dist/index.cjs.js"></script>
+	<script defer src="Library/@firebase/database/dist/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/database/dist/index.esm5.js"></script>
+	<script defer src="Library/@firebase/database/dist/index.node.cjs.js"></script>
+	<script defer src="Library/@firebase/database/dist/index.standalone.js"></script>
+	<script defer src="Library/@firebase/database/dist/node-esm/index.node.esm.js"></script>
+	<script defer src="Library/@firebase/database-compat/dist/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/database-compat/dist/index.esm5.js"></script>
+	<script defer src="Library/@firebase/database-compat/dist/index.js"></script>
+	<script defer src="Library/@firebase/database-compat/dist/index.standalone.js"></script>
+	<script defer src="Library/@firebase/database-compat/dist/node-esm/index.js"></script>
+	<script defer src="Library/@firebase/firestore/dist/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/firestore/dist/index.esm5.js"></script>
+	<script defer src="Library/@firebase/firestore/dist/index.node.cjs.js"></script>
+	<script defer src="Library/@firebase/firestore/dist/index.rn.js"></script>
+	<script defer src="Library/@firebase/firestore/dist/lite/index.browser.esm2017.js"></script>
+	<script defer src="Library/@firebase/firestore/dist/lite/index.browser.esm5.js"></script>
+	<script defer src="Library/@firebase/firestore/dist/lite/index.node.cjs.js"></script>
+	<script defer src="Library/@firebase/firestore/dist/lite/index.rn.esm2017.js"></script>
+	<script defer src="Library/@firebase/firestore-compat/dist/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/firestore-compat/dist/index.esm5.js"></script>
+	<script defer src="Library/@firebase/firestore-compat/dist/index.node.cjs.js"></script>
+	<script defer src="Library/@firebase/firestore-compat/dist/index.rn.js"></script>
+	<script defer src="Library/@firebase/firestore-compat/dist/node-esm/index.node.esm.js"></script>
+	<script defer src="Library/@firebase/functions/dist/esm-node/index.node.esm.js"></script>
+	<script defer src="Library/@firebase/functions/dist/index.esm.js"></script>
+	<script defer src="Library/@firebase/functions/dist/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/functions/dist/index.node.cjs.js"></script>
+	<script defer src="Library/@firebase/functions-compat/dist/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/functions-compat/dist/index.esm5.js"></script>
+	<script defer src="Library/@firebase/functions-compat/dist/index.node.cjs.js"></script>
+	<script defer src="Library/@firebase/functions-compat/dist/node-esm/index.node.esm.js"></script>
+	<script defer src="Library/@firebase/installations/dist/esm/index.esm.js"></script>
+	<script defer src="Library/@firebase/installations/dist/esm/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/installations/dist/index.cjs.js"></script>
+	<script defer src="Library/@firebase/installations-compat/dist/esm/index.esm.js"></script>
+	<script defer src="Library/@firebase/installations-compat/dist/esm/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/installations-compat/dist/index.cjs.js"></script>
+	<script defer src="Library/@firebase/logger/dist/esm/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/logger/dist/esm/index.esm5.js"></script>
+	<script defer src="Library/@firebase/logger/dist/index.cjs.js"></script>
+	<script defer src="Library/@firebase/messaging/dist/esm/index.esm.js"></script>
+	<script defer src="Library/@firebase/messaging/dist/esm/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/messaging/dist/index.cjs.js"></script>
+	<script defer src="Library/@firebase/messaging/dist/index.sw.esm2017.js"></script>
+	<script defer src="Library/@firebase/messaging-compat/dist/esm/index.esm.js"></script>
+	<script defer src="Library/@firebase/messaging-compat/dist/esm/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/messaging-compat/dist/index.cjs.js"></script>
+	<script defer src="Library/@firebase/performance/dist/esm/index.esm.js"></script>
+	<script defer src="Library/@firebase/performance/dist/esm/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/performance/dist/index.cjs.js"></script>
+	<script defer src="Library/@firebase/performance-compat/dist/esm/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/performance-compat/dist/esm/index.esm5.js"></script>
+	<script defer src="Library/@firebase/performance-compat/dist/index.cjs.js"></script>
+	<script defer src="Library/@firebase/remote-config/dist/esm/index.esm.js"></script>
+	<script defer src="Library/@firebase/remote-config/dist/esm/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/remote-config/dist/index.cjs.js"></script>
+	<script defer src="Library/@firebase/remote-config-compat/dist/esm/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/remote-config-compat/dist/esm/index.esm5.js"></script>
+	<script defer src="Library/@firebase/remote-config-compat/dist/index.cjs.js"></script>
+	<script defer src="Library/@firebase/storage/dist/index.browser.cjs.js"></script>
+	<script defer src="Library/@firebase/storage/dist/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/storage/dist/index.esm5.js"></script>
+	<script defer src="Library/@firebase/storage/dist/index.node.cjs.js"></script>
+	<script defer src="Library/@firebase/storage/dist/node-esm/index.node.esm.js"></script>
+	<script defer src="Library/@firebase/storage-compat/dist/esm/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/storage-compat/dist/esm/index.esm5.js"></script>
+	<script defer src="Library/@firebase/storage-compat/dist/index.cjs.js"></script>
+	<script defer src="Library/@firebase/util/dist/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/util/dist/index.esm5.js"></script>
+	<script defer src="Library/@firebase/util/dist/index.node.cjs.js"></script>
+	<script defer src="Library/@firebase/util/dist/node-esm/index.node.esm.js"></script>
+	<script defer src="Library/@firebase/webchannel-wrapper/dist/index.esm.js"></script>
+	<script defer src="Library/@firebase/webchannel-wrapper/dist/index.esm2017.js"></script>
+	<script defer src="Library/@firebase/webchannel-wrapper/dist/index.js"></script>
+
+	<script defer src="Source/firebaseApp.js"></script>
+
+</head>
+<body class="_global_style_ global_resp">
+</body>
+</html>
