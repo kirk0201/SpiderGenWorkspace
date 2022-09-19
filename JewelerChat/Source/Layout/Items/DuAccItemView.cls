@@ -3,7 +3,7 @@
 Constructor
 Do not call Function in Constructor.
 */
-class MainView()
+class DuAccItemView()
 {
 	super();
 
@@ -13,7 +13,7 @@ class MainView()
 extends AView;
 
 
-function MainView*init(context, evtListener)
+function DuAccItemView*init(context, evtListener)
 {
 	super.init(context, evtListener);
 
@@ -21,7 +21,7 @@ function MainView*init(context, evtListener)
 
 };
 
-function MainView*onInitDone()
+function DuAccItemView*onInitDone()
 {
 	super.onInitDone();
 
@@ -29,10 +29,18 @@ function MainView*onInitDone()
 
 };
 
-function MainView*onActiveDone(isFirst)
+function DuAccItemView*onActiveDone(isFirst)
 {
 	super.onActiveDone(isFirst);
 
 	//TODO:edit here
 
+};
+
+
+function DuAccItemView*setData(data)
+{
+
+	//TODO:edit here
+	this.category_name.setText(data);
 };

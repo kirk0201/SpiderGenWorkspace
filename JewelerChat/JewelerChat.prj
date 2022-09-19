@@ -123,6 +123,82 @@
             "relType": 1,
             "path": "Source\\",
             "comment": "상세 프로필 등록"
+          },
+          {
+            "type": 1,
+            "name": "Layout",
+            "children": [
+              {
+                "type": 2,
+                "name": "DetailUserAccView.cls",
+                "action": 5,
+                "relType": 1,
+                "path": "Source\\Layout\\",
+                "comment": "상세 프로필 아코디언"
+              },
+              {
+                "type": 3,
+                "name": "DetailUserAccView.lay",
+                "action": 6,
+                "relType": 1,
+                "path": "Source\\Layout\\",
+                "comment": "상세 프로필 아코디언"
+              },
+              {
+                "type": 1,
+                "name": "Items",
+                "children": [
+                  {
+                    "type": 2,
+                    "name": "DuAccListView.cls",
+                    "action": 5,
+                    "relType": 1,
+                    "path": "Source\\Layout\\Items\\",
+                    "comment": "상세 프로필 아코디언 리스트 뷰"
+                  },
+                  {
+                    "type": 3,
+                    "name": "DuAccListView.lay",
+                    "action": 6,
+                    "relType": 1,
+                    "path": "Source\\Layout\\Items\\",
+                    "comment": "상세 프로필 아코디언 리스트 뷰"
+                  },
+                  {
+                    "type": 2,
+                    "name": "DuAccItemView.cls",
+                    "action": 5,
+                    "relType": 1,
+                    "path": "Source\\Layout\\Items\\",
+                    "comment": "상세 프로필 아코디언 아이템"
+                  },
+                  {
+                    "type": 3,
+                    "name": "DuAccItemView.lay",
+                    "action": 6,
+                    "relType": 1,
+                    "path": "Source\\Layout\\Items\\",
+                    "comment": "상세 프로필 아코디언 아이템"
+                  },
+                  {
+                    "type": 2,
+                    "name": "DuSkillItemView.cls",
+                    "action": 5,
+                    "relType": 1,
+                    "path": "Source\\Layout\\Items\\",
+                    "comment": "상세 프로필 보유 스킬 아이템"
+                  },
+                  {
+                    "type": 3,
+                    "name": "DuSkillItemView.lay",
+                    "action": 6,
+                    "relType": 1,
+                    "path": "Source\\Layout\\Items\\",
+                    "comment": "상세 프로필 보유 스킬 아이템"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }

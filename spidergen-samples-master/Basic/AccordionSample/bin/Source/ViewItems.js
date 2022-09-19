@@ -3,17 +3,17 @@
 Constructor
 Do not call Function in Constructor.
 */
-function MainView()
+function ViewItems()
 {
 	AView.call(this);
 
 	//TODO:edit here
 
 }
-afc.extendsClass(MainView, AView);
+afc.extendsClass(ViewItems, AView);
 
 
-MainView.prototype.init = function(context, evtListener)
+ViewItems.prototype.init = function(context, evtListener)
 {
 	AView.prototype.init.call(this, context, evtListener);
 
@@ -21,7 +21,7 @@ MainView.prototype.init = function(context, evtListener)
 
 };
 
-MainView.prototype.onInitDone = function()
+ViewItems.prototype.onInitDone = function()
 {
 	AView.prototype.onInitDone.call(this);
 
@@ -29,7 +29,7 @@ MainView.prototype.onInitDone = function()
 
 };
 
-MainView.prototype.onActiveDone = function(isFirst)
+ViewItems.prototype.onActiveDone = function(isFirst)
 {
 	AView.prototype.onActiveDone.call(this, isFirst);
 

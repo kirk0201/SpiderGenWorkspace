@@ -3,28 +3,28 @@
 Constructor
 Do not call Function in Constructor.
 */
-class DetailUserView()
+function DetailUserView()
 {
-	super();
+	AView.call(this);
 	this.skillArr = [];
 	this.skillContent = null;
 	//TODO:edit here
 
 }
-extends AView;
+afc.extendsClass(DetailUserView, AView);
 
 
-function DetailUserView*init(context, evtListener)
+DetailUserView.prototype.init = function(context, evtListener)
 {
-	super.init(context, evtListener);
+	AView.prototype.init.call(this, context, evtListener);
 
 	//TODO:edit here
 
 };
 
-function DetailUserView*onInitDone()
+DetailUserView.prototype.onInitDone = function()
 {
-	super.onInitDone();
+	AView.prototype.onInitDone.call(this);
 	
 	this.job_skill_sb.addItem("초급", 0, 0);
 	this.job_skill_sb.addItem("중급", 1, 1);
@@ -33,9 +33,9 @@ function DetailUserView*onInitDone()
 
 };
 
-function DetailUserView*onActiveDone(isFirst)
+DetailUserView.prototype.onActiveDone = function(isFirst)
 {
-	super.onActiveDone(isFirst);
+	AView.prototype.onActiveDone.call(this, isFirst);
 
 	//TODO:edit here
 
@@ -43,7 +43,7 @@ function DetailUserView*onActiveDone(isFirst)
 
 
 
-function DetailUserView*onJob_skill_tfChange(comp, info, e)
+DetailUserView.prototype.onJob_skill_tfChange = function(comp, info, e)
 {
 
 	//TODO:edit here
@@ -56,25 +56,24 @@ function DetailUserView*onJob_skill_tfChange(comp, info, e)
 
 
 // 보유 기술 버튼 클릭시 
-function DetailUserView*onJob_skill_btnClick(comp, info, e)
+DetailUserView.prototype.onJob_skill_btnClick = function(comp, info, e)
 {
 	//TODO:edit here
 	this.addSkillListItem();
 };	
 
-// 보유 기술 텍스트필드 Enter Keydown 입력시
-function DetailUserView*onJob_skill_tfKeydown(comp, info, e)
+DetailUserView.prototype.onJob_skill_tfKeydown = function(comp, info, e)
 {
 	//TODO:edit here
-	// Error 핸들링 할 것!
+	console.log("getText()", this.job_skill_tf.getText() !== null);
 	if(e.keyCode == 13 && this.job_skill_tf.getText() !== "")
 	{
 		this.addSkillListItem();
 	}
 };
 
-// listView 아이템 추가 함수
-function DetailUserView*addSkillListItem()
+// 보유 기술 텍스트필드 Enter Keydown 입력시
+DetailUserView.prototype.addSkillListItem = function()
 {
 	// 기존 아이템을 삭제하여 중복되는 아이템을 방지
 	this.skill_list.removeAllItems();
@@ -84,7 +83,7 @@ function DetailUserView*addSkillListItem()
 	this.skillContent = null;
 };
 
-function DetailUserView*onSkillListSelect(comp, info, e)
+DetailUserView.prototype.onSkillListSelect = function(comp, info, e)
 {
 
 	//TODO:edit here

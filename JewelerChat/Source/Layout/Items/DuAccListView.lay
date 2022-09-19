@@ -1,0 +1,8 @@
+<div data-base="AView" data-class="DuAccListView" class="AView-Style" style="left: 0px; top: 0px; width: 100%; height: 100%; background-color: rgb(255, 255, 255); position: relative;" data-browser-width="480" data-browser-height="500" data-class-map="{&quot;afc&quot;:[&quot;AView&quot;,&quot;AListView&quot;]}">
+    <div data-base="AListView" data-class="AListView" class="AListView-Style" data-selectable="true" style="width: 100%; height: 100%; position: relative; left: 0px; top: 0px; background-color: rgb(255, 255, 255);" id="DuAccListView--acclist">
+        <div class="listview-row" style="height: 101px;"></div>
+        <div class="listview-row AListView-select" style="height: 101px;"></div>
+        <div class="listview-row" style="height: 101px;"></div>
+        <div class="listview-row" style="height: 101px;"></div>
+    </div>
+</div>
