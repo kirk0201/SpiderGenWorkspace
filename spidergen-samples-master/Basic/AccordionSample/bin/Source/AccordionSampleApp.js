@@ -3,17 +3,17 @@
 Constructor
 Do not call Function in Constructor.
 */
-function JewelerChatApp()
+function AccordionSampleApp()
 {
 	AApplication.call(this);
 
 	//TODO:edit here
 
 }
-afc.extendsClass(JewelerChatApp, AApplication);
+afc.extendsClass(AccordionSampleApp, AApplication);
 
 
-JewelerChatApp.prototype.onReady = function()
+AccordionSampleApp.prototype.onReady = function()
 {
 	AApplication.prototype.onReady.call(this);
 
@@ -24,7 +24,7 @@ JewelerChatApp.prototype.onReady = function()
 
 };
 
-JewelerChatApp.prototype.unitTest = function(unitUrl)
+AccordionSampleApp.prototype.unitTest = function(unitUrl)
 {
 	//TODO:edit here
 
@@ -40,7 +40,7 @@ AApplication.start = function()
     afc.scriptReady(function()
     {
         if(window._version) _version.setFileVersion();
-	    theApp = new JewelerChatApp();
+	    theApp = new AccordionSampleApp();
 	    theApp.isLoadTheme = false;
         if(PROJECT_OPTION.unitUrl) theApp.unitTest(PROJECT_OPTION.unitUrl);
         else theApp.onReady();
