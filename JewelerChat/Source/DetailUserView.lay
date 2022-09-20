@@ -6,22 +6,23 @@
     </div>
     <div data-base="AView" data-class="AView" class="AView-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; background-color: rgba(0, 0, 0, 0);" data-group="직무 텍스트 필드">
         <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; font-weight: bold; margin-bottom: 5px;">직무</label>
-        <input data-base="ATextField" data-class="ATextField" type="text" value="" class="ATextField-Style" autocomplete="off" style="width: 100%; position: relative; background-color: rgb(255, 255, 255); height: 40px; margin-bottom: 30px; border-radius: 5px; border-width: 2px; border-style: solid; padding-left: 20px; margin-top: 0px; border-color: rgb(18, 18, 18);" data-group="유저 이름" id="DetailUserView--tf_name">
+        <input data-base="ATextField" data-class="ATextField" type="text" value="" class="ATextField-Style" autocomplete="off" style="width: 100%; position: relative; background-color: rgb(255, 255, 255); height: 40px; margin-bottom: 30px; border-radius: 5px; border-width: 2px; border-style: solid; padding-left: 20px; margin-top: 0px; border-color: rgb(51, 51, 51);" data-group="유저 이름" id="DetailUserView--tf_name">
         <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; font-weight: bold; margin-bottom: 5px;">직무 2</label>
-        <input data-base="ATextField" data-class="ATextField" type="text" value="" class="ATextField-Style" autocomplete="off" style="width: 100%; position: relative; background-color: rgb(255, 255, 255); height: 40px; margin-bottom: 30px; border-radius: 5px; border-width: 2px; border-style: solid; padding-left: 20px; margin-top: 0px; border-color: rgb(18, 18, 18);" data-group="유저 이름" id="">
+        <input data-base="ATextField" data-class="ATextField" type="text" value="" class="ATextField-Style" autocomplete="off" style="width: 100%; position: relative; background-color: rgb(255, 255, 255); height: 40px; margin-bottom: 30px; border-radius: 5px; border-width: 2px; border-style: solid; padding-left: 20px; margin-top: 0px; border-color: rgb(51, 51, 51);" data-group="유저 이름" id="">
         <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 30px; height: 30px; position: relative; left: 0px; top: 0px; background-color: rgb(238, 238, 238); font-weight: bold; font-size: 17px; border-radius: 5px; margin-right: 20px; margin-bottom: 30px;">+</button>
         <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; font-weight: bold; font-size: 17px;">직무 추가</label>
     </div>
     <div data-base="AView" data-class="AView" class="AView-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; background-color: rgba(0, 0, 0, 0);" data-group="기술 텍스트 필드">
-        <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; padding-right: 10px; margin-bottom: 5px;">보유기술 :</label>
-        <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px;" data-group="보유 기술 개수">0 개 </label>
+        <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; padding-right: 10px; margin-bottom: 5px; font-weight: bold;">보유기술 :</label>
+        <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; padding-right: 10px; font-weight: bold;" data-group="보유 기술 개수" id="DetailUserView--skill_count">0</label>
+        <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; font-weight: bold;" data-group="보유 기술 단위" id="">개 </label>
         <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: auto; position: relative; left: 0px; top: 0px; align-items: stretch; align-content: flex-start; height: auto; margin-bottom: 30px;" data-group="등록 레이아웃">
             <div style="position: relative; box-sizing: border-box; flex: 1 1 auto; align-self: auto; padding: 0px 10px 0px 0px;">
-                <input data-base="ATextField" data-class="ATextField" type="text" value="" class="ATextField-Style" autocomplete="off" style="width: 100%; position: relative; background-color: rgb(255, 255, 255); height: 40px; border-radius: 5px; border-width: 2px; border-style: solid; padding-left: 20px; margin-top: 0px; border-color: rgb(18, 18, 18); left: 0px; top: 0px;" data-group="유저 이름" id="DetailUserView--job_skill_tf" data-listener-change="DetailUserView:onJob_skill_tfChange" data-listener-keydown="DetailUserView:onJob_skill_tfKeydown">
+                <input data-base="ATextField" data-class="ATextField" type="text" value="" class="ATextField-Style" autocomplete="off" style="width: 100%; position: relative; background-color: rgb(255, 255, 255); height: 40px; border-radius: 5px; border-width: 2px; border-style: solid; padding-left: 20px; margin-top: 0px; border-color: rgb(51, 51, 51); left: 0px; top: 0px;" data-group="유저 이름" id="DetailUserView--job_skill_tf" data-listener-change="DetailUserView:onJob_skill_tfChange" data-listener-keydown="DetailUserView:onJob_skill_tfKeydown">
             </div>
             <div style="position: relative; box-sizing: border-box; flex: 1 1 auto; align-self: auto; padding: 0px 10px 0px 0px;">
-                <select data-base="ASelectBox" data-class="ASelectBox" class="ASelectBox-Style" style="width: 100%; height: 40px; position: relative; left: 0px; top: 0px; border-width: 2px; border-style: solid; border-color: rgb(0, 0, 0); border-radius: 5px;" id="DetailUserView--job_skill_sb" data-group="기술 숙련도">
-                    <option>선택하세요</option>
+                <select data-base="ASelectBox" data-class="ASelectBox" class="ASelectBox-Style" style="width: 100%; height: 40px; position: relative; left: 0px; top: 0px; border-width: 2px; border-style: solid; border-color: rgb(51, 51, 51); border-radius: 5px;" id="DetailUserView--job_skill_sb" data-group="기술 숙련도">
+                    <option value="0">선택하세요</option>
                 </select>
             </div>
             <div style="position: relative; box-sizing: border-box; flex: 1 1 auto; align-self: auto;">
@@ -29,7 +30,7 @@
             </div>
         </div>
     </div>
-    <div data-base="AListView" data-class="AListView" class="AListView-Style" data-selectable="true" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; margin-bottom: 30px;" id="DetailUserView--skill_list" data-listener-select="DetailUserView:onSkillListSelect">
+    <div data-base="AListView" data-class="AListView" class="AListView-Style" data-selectable="true" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; margin-bottom: 30px;" id="DetailUserView--skill_list" data-listener-select="DetailUserView:onSelectSkillList" data-direction="vertical">
         <div class="listview-row" style="height: 60px;"></div>
         <div class="listview-row AListView-select" style="height: 60px;"></div>
         <div class="listview-row" style="height: 60px;"></div>
