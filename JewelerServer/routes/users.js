@@ -1,4 +1,5 @@
 var express = require("express");
+var db = require("../controller/db.js");
 var router = express.Router();
 
 /* GET users listing. */
@@ -49,6 +50,9 @@ router.post("/", function (req, res, next) {
 
   console.log("쿼리명", data);
   console.log(data.body.InBlock1);
+  const clientData = data.body.InBlock1[0];
+
+  console.log(clientData);
   //console.log(data.body.InBlock1[0].login_id);
 
   var resData = null;
@@ -82,23 +86,25 @@ router.post("/", function (req, res, next) {
       },
       body: {
         //이곳은 전문에 따라 다르게 응답값을 셋팅해 준다.
-        OutBlock1: [
-          {
-            message: "회원가입에 성공하였습니다.",
-            result: true,
-          },
-        ],
+        OutBlock1: [],
       },
     };
-
-    //여러개의 데이터를 보내는 경우
-    for (var i = 0; i < 5; i++) {
-      resData.body.OutBlock1.push({
-        name: "홍길동" + i,
-        sex: 1,
-        age: 20000 + i,
+    const serverData = resData.body.OutBlock1;
+    // 비밀번호1,2가 서로 다를 경우
+    if (clientData.password1 !== clientData.password2) {
+      serverData.push({
+        message: "패스워드를 확인해주세요",
+        result: false,
       });
     }
+    //여러개의 데이터를 보내는 경우
+    // for (var i = 0; i < 5; i++) {
+    //   resData.body.OutBlock1.push({
+    //     name: "홍길동" + i,
+    //     sex: 1,
+    //     age: 20000 + i,
+    //   });
+    // }
   } else if (data.header.query_name == "ac003") {
     resData = {
       //클라이언트에서 보낸 헤더값을 그대로 다시 응답데이터에 셋팅한다.
