@@ -43,14 +43,13 @@ function SignUpView*onSignUpBtnClick(comp, info, e)
 	//TODO:edit here
 	theApp.qmChat.sendProcessByName("signUp", this.getContainerId(), null, 	
 	(queryData) => {
-		queryData.printQueryData();		
+		queryData.printQueryData();
 	}, 	
 	(queryData) => {
 		queryData.printQueryData();
 		
-				
-		var blockData = queryData.getBlockData('OutBlock1');
-		console.log(blockData);
+		var blockData = queryData.getBlockData('OutBlock1')[0];
+		AToast.show(blockData.message);
 		
 	});
 
