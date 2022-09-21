@@ -36,3 +36,10 @@ MainView.prototype.onActiveDone = function(isFirst)
 	//TODO:edit here
 
 };
+
+MainView.prototype.onRegisterBtnClick = function(comp, info, e)
+{
+	//TODO:edit here
+	theApp.navi.goPage("SignUpView");
+	
+};

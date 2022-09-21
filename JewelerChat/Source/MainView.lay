@@ -8,7 +8,7 @@
     </div>
     <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: 100%; height: auto; position: absolute; left: 0px; justify-content: space-evenly; bottom: 50px; border-color: rgba(0, 0, 0, 0);" data-group="하단 버튼 lay">
         <div style="position: relative; box-sizing: border-box;">
-            <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 80px; height: 22px; position: relative; left: 0px; top: 0px; font-weight: bold; border-bottom-width: 1px; border-bottom-style: solid;" id="MainView--register_btn">회원가입하기</button>
+            <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 80px; height: 22px; position: relative; left: 0px; top: 0px; font-weight: bold; border-bottom-width: 1px; border-bottom-style: solid;" id="MainView--register_btn" data-listener-click="MainView:onRegisterBtnClick">회원가입하기</button>
         </div>
         <div style="position: relative; box-sizing: border-box;">
             <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 80px; height: 22px; position: relative; left: 0px; top: 0px; margin-left: 0px; font-weight: bold; border-bottom-width: 1px; border-bottom-style: solid;" id="MainView--find_btn">비밀번호찾기</button>

@@ -18,7 +18,12 @@ MoreExpView.prototype.init = function(context, evtListener)
 	AView.prototype.init.call(this, context, evtListener);
 
 	//TODO:edit here
+	
+Util.addList(undefined, (cb)=>{
+ console.log("Util.addList", cb, 'sdwwe');
+});
 
+Define.testFunction();
 };
 
 MoreExpView.prototype.onInitDone = function()

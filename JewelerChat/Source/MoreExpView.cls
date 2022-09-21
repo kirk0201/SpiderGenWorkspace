@@ -18,7 +18,12 @@ function MoreExpView*init(context, evtListener)
 	super.init(context, evtListener);
 
 	//TODO:edit here
+	
+Util.addList(undefined, (cb)=>{
+ console.log("Util.addList", cb, 'sdwwe');
+});
 
+Define.testFunction();
 };
 
 function MoreExpView*onInitDone()

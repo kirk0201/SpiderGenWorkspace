@@ -1,12 +1,4 @@
-var Define = 
+const Define = 
 {
-	testFunction : () => {
-		console.log("test");
-	}
-}
-
-Define({
-	test: function(){
-		console.log("test!!");
-	}
-})
+	SERVER:"http://localhost:4000/users",
+};
