@@ -30,7 +30,7 @@
             </div>
         </div>
     </div>
-    <div data-base="AListView" data-class="AListView" class="AListView-Style" data-selectable="true" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; margin-bottom: 30px;" id="DetailUserView--skill_list" data-listener-select="DetailUserView:onSelectSkillList" data-direction="vertical">
+    <div data-base="AListView" data-class="AListView" class="AListView-Style" data-selectable="true" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; margin-bottom: 30px;" id="DetailUserView--skill_list" data-direction="vertical">
         <div class="listview-row" style="height: 60px;"></div>
         <div class="listview-row AListView-select" style="height: 60px;"></div>
         <div class="listview-row" style="height: 60px;"></div>

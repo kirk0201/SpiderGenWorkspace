@@ -6,9 +6,12 @@ Do not call Function in Constructor.
 class DetailUserView()
 {
 	super();
-	this.skillArr = [];
-	this.skillObj = {};
-	this.itemIndex = 0;
+	this.type = "default";
+	this.title = null;
+	this.subTitle = null;
+	this.listView = null;
+	this.itemUrl = "Source/Layout/Items/DuSkillItemView.lay";
+	this.dataArr = [];
 	this.listCount = null;
 	//TODO:edit here
 
@@ -19,7 +22,6 @@ extends AView;
 function DetailUserView*init(context, evtListener)
 {
 	super.init(context, evtListener);
-
 	//TODO:edit here
 	
 };
@@ -50,7 +52,7 @@ function DetailUserView*onJob_skill_btnClick(comp, info, e)
 	this.addSkillListItem();
 };	
 
-// 보유 기술 텍스트필드 Enter Keydown 입력시
+// 보유 기술 텍스트필드에서 Enter 입력시
 function DetailUserView*onJob_skill_tfKeydown(comp, info, e)
 {
 	//TODO:edit here
@@ -61,31 +63,18 @@ function DetailUserView*onJob_skill_tfKeydown(comp, info, e)
 	}
 };
 
-// listView 아이템 추가 함수
+// listView 아이템 추가 함수 및 초기화 함수 적용
 function DetailUserView*addSkillListItem()
 {
-	// Data 객체로 전달될 name, grade
-	var nameValue = this.job_skill_tf.getText();
-	var gradeValue = this.job_skill_sb.getData();
+	this.title = this.job_skill_tf.getText();
+	this.subTitle = this.job_skill_sb.getData();
+	this.listView = this.skill_list;
 	
 	// 할당된 값이 없을때 add하지 않는 조건
 	// @@ 추가적인 오류 알림 핸들러 할 것
-	if(nameValue !== "" && gradeValue !== "0")
+	if(this.title !== "" && this.subTitle !== "0")
 	{
-		// 기존 아이템을 삭제하여 중복되는 아이템을 방지
-		console.log("job", this.job_skill_sb.getData());
-		this.skill_list.removeAllItems();
-	
-		this.skillObj = 
-		{
-			name: nameValue,
-			grade: gradeValue,
-			index: 0 + this.listCount,
-		};
-		
-		// 데이터는 배열로 넘기기 때문에 객체를 배열에 넣어서 보냄
-		this.skillArr.push(this.skillObj);
-		this.skill_list.addItem("Source/Layout/Items/DuSkillItemView.lay", this.skillArr);
+		Util.addListItem(this.type, this.title, this.subTitle, this.listView, this.itemUrl, this.dataArr);
 		
 		// Text필드 초기화
 		this.job_skill_tf.setText("");
@@ -103,14 +92,17 @@ function DetailUserView*addSkillListItem()
 
 function DetailUserView*onSelectSkillList(comp, info, e)
 {
-
+debugger;
 	//TODO:edit here
 	console.log(e);
 	console.log(comp);
 	console.log(info);
 	console.log("getItems", this.skill_list.getItems());
-	var selectIndex = this.skill_list.indexOfItem(this.skill_list.getSelectItem());
+	
+	var selectIndex = this.skill_list.indexOfItem(info);
 	console.log("selectIndex", selectIndex);
+	info.view.doProcess(selectIndex);
+	
 };
 
 

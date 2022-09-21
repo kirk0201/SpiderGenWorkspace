@@ -36,3 +36,10 @@ function MainView*onActiveDone(isFirst)
 	//TODO:edit here
 
 };
+
+function MainView*onRegisterBtnClick(comp, info, e)
+{
+	//TODO:edit here
+	theApp.navi.goPage("SignUpView");
+	
+};

@@ -1,0 +1,21 @@
+{
+	"name": "signIn",
+	"desc": "로그인",
+	"queryType": "쿼리 타입",
+	"input": {
+		"InBlock1": {
+			"format": [
+				["아이디","uid","","","char",10,4],
+				["비밀번호","password","","","char",10,4]
+			]
+		}
+	},
+	"output": {
+		"OutBlock1": {
+			"format": [
+				["로그인 결과","result","","","char",10,4],
+				["메세지","message","","","signed",10,4]
+			]
+		}
+	}
+}
