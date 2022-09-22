@@ -1,0 +1,25 @@
+{
+	"name": "registUser",
+	"desc": "프로필",
+	"queryType": "쿼리 타입",
+	"input": {
+		"InBlock1": {
+			"format": [
+				["이름","name","","","char",10,4],
+				["닉네임","nickname","","","char",10,4],
+				["경력","career_period","","","signed",10,4],
+				["학력","graduate","","","char",10,4],
+				["자기소개","introduce","","","char",10,4],
+				["ID","id","","","signed",10,4]
+			]
+		}
+	},
+	"output": {
+		"OutBlock1": {
+			"format": [
+				["메세지","message","","","char",10,4],
+				["결과","result","","","char",10,4]
+			]
+		}
+	}
+}

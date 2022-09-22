@@ -3,7 +3,7 @@ const { User } = require("../../models");
 module.exports = {
   post: async (req, res) => {
     const data = JSON.parse(req.body.data);
-    // console.log(data);
+    console.log("Data", data);
     // console.log(data.body.InBlock1[0]);
     const { user_email, user_pwd } = data.body.InBlock1[0];
 

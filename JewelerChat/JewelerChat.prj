@@ -89,21 +89,28 @@
           },
           {
             "type": 2,
-            "name": "WebQueryData.cls",
-            "action": 2,
-            "relType": 4,
-            "path": ""
+            "name": "JCWebQueryData.cls",
+            "action": 5,
+            "relType": 1,
+            "path": "Library\\"
           },
           {
             "type": 2,
-            "name": "WebQueryManager.cls",
+            "name": "JCWebQueryManager.cls",
+            "action": 5,
+            "relType": 1,
+            "path": "Library\\"
+          },
+          {
+            "type": 5,
+            "name": "HttpIO.js",
             "action": 2,
             "relType": 4,
             "path": ""
           },
           {
             "type": 5,
-            "name": "HttpIO.js",
+            "name": "gibberish-aes.js",
             "action": 2,
             "relType": 4,
             "path": ""
@@ -144,7 +151,14 @@
             "name": "signUp.qry",
             "relType": 1,
             "path": "Query\\",
-            "comment": "회원가입"
+            "comment": "회원가입 쿼리"
+          },
+          {
+            "type": 8,
+            "name": "registUser.qry",
+            "relType": 1,
+            "path": "Query\\",
+            "comment": ""
           }
         ]
       },

@@ -14,7 +14,7 @@
 		"OutBlock1": {
 			"format": [
 				["로그인 결과","result","","","char",10,4],
-				["메세지","message","","","signed",10,4]
+				["메세지","message","","","char",10,4]
 			]
 		}
 	}

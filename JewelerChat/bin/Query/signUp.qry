@@ -1,21 +1,21 @@
 {
 	"name": "signUp",
-	"desc": "쿼리 설명",
+	"desc": "회원가입 쿼리",
 	"queryType": "쿼리 타입",
 	"input": {
 		"InBlock1": {
 			"format": [
-				["아아디","uid","","","char",10,4],
+				["아이디","uid","","","char",10,4],
 				["비밀번호1","password1","","","char",10,4],
-				["비밀번호2","password2","","","char",null,0]
+				["비밀번호2","password2","","","char",10,4]
 			]
 		}
 	},
 	"output": {
 		"OutBlock1": {
 			"format": [
-				["회원가입 결과","result","","","char",10,4],
-				["메세지","message","","","signed",10,4]
+				["메세지","message","","","char",10,4],
+				["결과","result","","","char",10,4]
 			]
 		}
 	}

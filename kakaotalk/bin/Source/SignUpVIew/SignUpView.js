@@ -92,7 +92,6 @@ SignUpView.prototype.loginApi = function()
 	);
 };
 
-
 SignUpView.prototype.connectServer = function()
 {
 
