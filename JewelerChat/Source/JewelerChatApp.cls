@@ -6,6 +6,22 @@ import "Framework/afc/component/AToast.js";
 Constructor
 Do not call Function in Constructor.
 */
+
+/*
+var thisObj = this;
+theApp.qm.sendProcessByName("signUp", this.getContainerId(), null, 	
+	(queryData) => {
+		queryData.printQueryData();
+	}, 	
+	(queryData) => {
+		queryData.printQueryData();
+		var blockData = queryData.getBlockData('OutBlock1')[0];
+		
+		AToast.show(blockData.message);
+		if(blockData.result) theApp.navi.goPage("MainView");
+});
+*/
+	
 class JewelerChatApp()
 {
 	super();
@@ -21,7 +37,9 @@ function JewelerChatApp*onReady()
 	super.onReady();
 	/*	this.setMainContainer(new APage('main'));
 	this.mainContainer.open('Source/MainView.lay');*/
-	
+
+	theApp.uObj = null;
+
 	theApp.navi = new ANavigator('navigator', null);
 	
 	theApp.navi.registerPage("Source/MainView.lay", "MainView");
@@ -34,13 +52,13 @@ function JewelerChatApp*onReady()
 	theApp.navi.goPage('MainView');
 	
 	//TODO:edit here
-	this.connectChatServer();
+	this.connectServer();
 };
 
-function JewelerChatApp*onNetworkReady()
+/*function JewelerChatApp*onNetworkReady()
 {
 
-};
+};*/
 
 function JewelerChatApp*unitTest(unitUrl)
 {
@@ -51,17 +69,17 @@ function JewelerChatApp*unitTest(unitUrl)
 	super.unitTest(unitUrl);
 };
 
-function JewelerChatApp*connectChatServer()
+function JewelerChatApp*connectServer()
 {
-	this.qmChat = new WebQueryManager();
-	var nio = new HttpIO(this.qmChat);	
+	this.qm = new JCWebQueryManager();
+	var nio = new HttpIO(this.qm);	
 // 	var nio = new WebsocketIO(this.qmChat);
 	
-	this.qmChat.setNetworkIo(nio);
+	this.qm.setNetworkIo(nio);
 	
 	//query buffer 를 셋팅하지 않으면 json string 으로 전송한다.
 	//this.qmChat.setQueryBuffer();
 	
-	this.qmChat.startManager(Define.SERVER);
+	this.qm.startManager(Define.SERVER);
 };
 

@@ -57,9 +57,6 @@ function kakaotalkApp*connectServer()
 	this.qm = new WebQueryManager();
 	var nio = new HttpIO(this.qm);
 	
-	console.log("qm",this.qm);
-	console.log("nio", nio);
-	
 	this.qm.setNetworkIo(nio);
 	
 // 	this.qm.startManager(this.serverUrl);

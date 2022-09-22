@@ -3,17 +3,17 @@
 Constructor
 Do not call Function in Constructor.
 */
-function WebQueryManager()
+function JCWebQueryManager()
 {
 	QueryManager.call(this);
 
 	
 
 }
-afc.extendsClass(WebQueryManager, QueryManager);
+afc.extendsClass(JCWebQueryManager, QueryManager);
 
 
-WebQueryManager.prototype.onReceived = function(data, size)
+JCWebQueryManager.prototype.onReceived = function(data, size)
 {
 	var recvObj = JSON.parse(data);
 	
@@ -25,12 +25,12 @@ WebQueryManager.prototype.onReceived = function(data, size)
 };
 
 //사용할 AQueryData(또는 상속받은 클래스) 객체를 생성하여 리턴한다.
-WebQueryManager.prototype.makeQueryData = function(aquery, isSend)
+JCWebQueryManager.prototype.makeQueryData = function(aquery, isSend)
 {
-	return new WebQueryData(aquery);
+	return new JCWebQueryData(aquery);
 };
 
-WebQueryManager.prototype.makeHeader = function(queryData, sendObj, menuNo)
+JCWebQueryManager.prototype.makeHeader = function(queryData, sendObj, menuNo)
 {
 	var packetId = this.makePacketId();
 	var qryName = queryData.getQueryName();
@@ -45,7 +45,7 @@ WebQueryManager.prototype.makeHeader = function(queryData, sendObj, menuNo)
 };
 
 //에러세팅
-WebQueryManager.prototype.setErrorData = function(recvObj)
+JCWebQueryManager.prototype.setErrorData = function(recvObj)
 {
 	this.errorData.errCode = recvObj.header.error_code;
 	this.errorData.errMsg = recvObj.header.error_msg;

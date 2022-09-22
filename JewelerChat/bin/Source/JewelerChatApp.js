@@ -6,6 +6,22 @@ afc.loadScript("Framework/afc/component/AToast.js");
 Constructor
 Do not call Function in Constructor.
 */
+
+/*
+var thisObj = this;
+theApp.qm.sendProcessByName("signUp", this.getContainerId(), null, 	
+	(queryData) => {
+		queryData.printQueryData();
+	}, 	
+	(queryData) => {
+		queryData.printQueryData();
+		var blockData = queryData.getBlockData('OutBlock1')[0];
+		
+		AToast.show(blockData.message);
+		if(blockData.result) theApp.navi.goPage("MainView");
+});
+*/
+	
 function JewelerChatApp()
 {
 	AApplication.call(this);
@@ -21,7 +37,9 @@ JewelerChatApp.prototype.onReady = function()
 	AApplication.prototype.onReady.call(this);
 	/*	this.setMainContainer(new APage('main'));
 	this.mainContainer.open('Source/MainView.lay');*/
-	
+
+	theApp.uObj = null;
+
 	theApp.navi = new ANavigator('navigator', null);
 	
 	theApp.navi.registerPage("Source/MainView.lay", "MainView");
@@ -34,13 +52,13 @@ JewelerChatApp.prototype.onReady = function()
 	theApp.navi.goPage('MainView');
 	
 	//TODO:edit here
-	this.connectChatServer();
+	this.connectServer();
 };
 
-JewelerChatApp.prototype.onNetworkReady = function()
+/*function JewelerChatApp*onNetworkReady()
 {
 
-};
+};*/
 
 JewelerChatApp.prototype.unitTest = function(unitUrl)
 {
@@ -51,18 +69,18 @@ JewelerChatApp.prototype.unitTest = function(unitUrl)
 	AApplication.prototype.unitTest.call(this, unitUrl);
 };
 
-JewelerChatApp.prototype.connectChatServer = function()
+JewelerChatApp.prototype.connectServer = function()
 {
-	this.qmChat = new WebQueryManager();
-	var nio = new HttpIO(this.qmChat);	
+	this.qm = new JCWebQueryManager();
+	var nio = new HttpIO(this.qm);	
 // 	var nio = new WebsocketIO(this.qmChat);
 	
-	this.qmChat.setNetworkIo(nio);
+	this.qm.setNetworkIo(nio);
 	
 	//query buffer 를 셋팅하지 않으면 json string 으로 전송한다.
 	//this.qmChat.setQueryBuffer();
 	
-	this.qmChat.startManager(Define.SERVER);
+	this.qm.startManager(Define.SERVER);
 };
 
 
