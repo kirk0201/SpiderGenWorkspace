@@ -69,15 +69,15 @@ DuSkillItemView.prototype.itemIndexDelete = function()
 	// DetailUserView에 dataArr 배열 객체의 index값과 넘어온 객체 index의 값이 일치하는 index를 찾아 idx변수에 저장
 	// listitem을 선택했을 때 보다 정확한 아이템 index를 찾기 위한 작업 
 	// (임의로 세팅한 고정 index 값이라 아이템을 삭제하면 유동적으로 인덱스가 바뀌므로 정확한 인덱스를 찾기 위한 추가 과정)
-	var idx = this.detailUserView.dataArr.findIndex((item, idx) => 
+	var idx = this.detailUserView.skillList.findIndex((item, idx) => 
 	{
 		if(item.index === this.itemIndex) return idx;
 	});
 	
 	// 위에서 보다 정확한 idx를 찾아 dataArr 배열에서 splice를 이용해 삭제 한다
-	this.detailUserView.dataArr.filter(item => 
+	this.detailUserView.skillList.filter(item => 
 	{
-		if(item.index === this.itemIndex) this.detailUserView.dataArr.splice(idx, 1);
+		if(item.index === this.itemIndex) this.detailUserView.skillList.splice(idx, 1);
 	});
 	
 	// 선택된 아이템을 listview에서 삭제  
@@ -102,7 +102,7 @@ DuSkillItemView.prototype.doProcess = function(idx)
 };
 
 
-DuSkillItemView.prototype.onAButton1Click = function(comp, info, e)
+DuSkillItemView.prototype.onCoverButtonClick = function(comp, info, e)
 {
 	this.getItemData();
 	console.log("this", this);

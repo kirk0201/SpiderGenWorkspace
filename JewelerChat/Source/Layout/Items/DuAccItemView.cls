@@ -16,7 +16,6 @@ extends AView;
 function DuAccItemView*init(context, evtListener)
 {
 	super.init(context, evtListener);
-
 	//TODO:edit here
 
 };
@@ -24,7 +23,7 @@ function DuAccItemView*init(context, evtListener)
 function DuAccItemView*onInitDone()
 {
 	super.onInitDone();
-
+	
 	//TODO:edit here
 
 };
@@ -42,5 +41,6 @@ function DuAccItemView*setData(data)
 {
 
 	//TODO:edit here
+	
 	this.category_name.setText(data);
 };

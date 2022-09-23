@@ -1,6 +1,6 @@
 {
   "general": {
-    "autoScale": false,
+    "autoScale": true,
     "userSize": false,
     "phoneDocWidth": 0,
     "tabletDocWidth": 0,
