@@ -46,6 +46,7 @@ function JewelerChatApp*onReady()
 	theApp.navi.registerPage("Source/SignUpView.lay", "SignUpView");
 	theApp.navi.registerPage("Source/RegistUserView.lay", "RegistUserView");
 	theApp.navi.registerPage("Source/DetailUserView.lay", "DetailUserView");
+	theApp.navi.registerPage("Source/Layout/DetailUserAccView.lay", "DetailUserAccView");
 	theApp.navi.registerPage("Source/MoreEduView.lay", "MoreEduView");
 	theApp.navi.registerPage("Source/MoreExpView.lay", "MoreExpView");
 	theApp.navi.registerPage("Source/MoreDetailView.lay", "MoreDetailView");

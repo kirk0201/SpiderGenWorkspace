@@ -16,7 +16,6 @@ afc.extendsClass(DuAccItemView, AView);
 DuAccItemView.prototype.init = function(context, evtListener)
 {
 	AView.prototype.init.call(this, context, evtListener);
-
 	//TODO:edit here
 
 };
@@ -24,7 +23,7 @@ DuAccItemView.prototype.init = function(context, evtListener)
 DuAccItemView.prototype.onInitDone = function()
 {
 	AView.prototype.onInitDone.call(this);
-
+	
 	//TODO:edit here
 
 };
@@ -42,5 +41,6 @@ DuAccItemView.prototype.setData = function(data)
 {
 
 	//TODO:edit here
+	
 	this.category_name.setText(data);
 };

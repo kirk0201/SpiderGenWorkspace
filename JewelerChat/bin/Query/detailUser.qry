@@ -1,0 +1,22 @@
+{
+	"name": "detailUser",
+	"desc": "DetailUser 쿼리",
+	"queryType": "쿼리 타입",
+	"input": {
+		"InBlock1": {
+			"format": [
+				["직무 리스트","jobList","","","char",10,4],
+				["스킬 리스트","skillList","","","char",10,4],
+				["유저 아이디","id","","","signed",null,"0"]
+			]
+		}
+	},
+	"output": {
+		"OutBlock1": {
+			"format": [
+				["메세지","message","","","char",10,4],
+				["결과","result","","","char",10,4]
+			]
+		}
+	}
+}

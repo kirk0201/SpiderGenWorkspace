@@ -16,7 +16,7 @@ afc.extendsClass(DetailUserAccView, AView);
 DetailUserAccView.prototype.init = function(context, evtListener)
 {
 	AView.prototype.init.call(this, context, evtListener);
-
+	
 	//TODO:edit here
 
 };
@@ -25,11 +25,14 @@ DetailUserAccView.prototype.onInitDone = function()
 {
 	
 	AView.prototype.onInitDone.call(this);
+	console.log("this>>", this.getContainer().getData());
+	var data = this.getContainer().getData();
+	
 	var itCategory = [
-					  "포르젝트 관리", "서비스·게임 기획", "웹 개발", 
+					  "프로젝트 관리", "서비스·게임 기획", "웹 개발", 
 					  "빅데이터/AI/알고리즘", "서버 개발", "보안", 
 					  "네트워크", "앱 개발", "게임 개발", "DB 관리·운영"
-					 ];
+				];
 					 
 	var designCategory = [
 							"시각·광고 디자인", "웹·앱 디자인", "제품·산업 디자인",
@@ -47,7 +50,7 @@ DetailUserAccView.prototype.onInitDone = function()
 	this.acc.insertItem("IT·인터넷", "Source/Layout/Items/DuAccListView.lay", itCategory);
 	this.acc.insertItem("디자인", "Source/Layout/Items/DuAccListView.lay", designCategory);
 	this.acc.insertItem("마케딩/PR", "Source/Layout/Items/DuAccListView.lay", prCategory);
-// 			console.log(this.acc.getElement().setStyle('background-color', "#eee"));
+// 	console.log(this.acc.getElement().setStyle('background-color', "#eee"));
 
 // 	this.acc.setStyleObj({backgroundColor: "#eee"});
 // 	this.acc.getCompStyleObj().main["backgroundColor"] = "#eee";
@@ -62,6 +65,13 @@ DetailUserAccView.prototype.onActiveDone = function(isFirst)
 {
 	AView.prototype.onActiveDone.call(this, isFirst);
 
+	//TODO:edit here
+
+};
+
+DetailUserAccView.prototype.setData = function(data)
+{
+	console.log("testData", data);
 	//TODO:edit here
 
 };
