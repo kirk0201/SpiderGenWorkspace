@@ -41,7 +41,7 @@ var router = express.Router();
 		}
 	};
 */
-router.post("/", function (req, res, next) {
+router.post("/", async function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
 
   //클라이언트에서 보낸 post 데이터를 꺼내 json 으로 파싱한다.
@@ -245,86 +245,79 @@ router.post("/", function (req, res, next) {
     let num2 = 0;
     const count = jobList.length;
 
-    while (num1 < count) {
-      db.query(
-        `INSERT INTO job (job_name, job_idx, user_id) VALUES (?, ?, ?)`,
-        [jobList[num1], num1, id],
-        (err, result) => {
-          if (err) throw err;
-          console.log("result", result);
-        }
-      );
-      num1++;
-    }
-    while (num2 < skillList.length) {
-      db.query(
-        `INSERT INTO skill (skill_name, skill_grade, user_id) VALUES(? ,? ,?)`,
-        [skillList[num2].name, skillList[num2].subName, id],
-        (err, result) => {
-          if (err) throw err;
-          if (result !== {}) {
-            serverData.push({
-              message: "데이터가 추가되었습니다",
-              result: true,
-            });
+    const insertDB = () => {
+      return new Promise(async (resolve, reject) => {
+        try {
+          while (num1 < count) {
+            await db.query(
+              `INSERT INTO job (job_name, job_idx, user_id) VALUES (?, ?, ?)`,
+              [jobList[num1], num1, id],
+              (err, result) => {
+                if (err) throw err;
+                resolve(result);
+              }
+            );
+            num1++;
           }
+        } catch (error) {
+          reject(error);
         }
-      );
-      num2++;
-    }
+      });
+    };
+
+    const insert2DB = () => {
+      return new Promise(async (resolve, reject) => {
+        try {
+          while (num2 < skillList.length) {
+            await db.query(
+              `INSERT INTO skill (skill_name, skill_grade, user_id) VALUES(? ,? ,?)`,
+              [skillList[num2].name, skillList[num2].subName, id],
+              (err, result) => {
+                if (err) throw err;
+                if (result !== {}) {
+                  serverData.push({
+                    message: "데이터가 추가되었습니다",
+                    result: true,
+                  });
+                  resolve(result);
+                }
+              }
+            );
+            num2++;
+          }
+        } catch (error) {
+          reject(error);
+        }
+      });
+    };
+
+    await insertDB();
+    await insert2DB();
+
     res.json(resData);
-    res.end();
+  } else if (data.header.query_name == "eduUser") {
+    resData = {
+      //클라이언트에서 보낸 헤더값을 그대로 다시 응답데이터에 셋팅한다.
+      header: {
+        packet_id: data.header.packet_id,
+        query_name: data.header.query_name,
+        error_code: 1000,
+      },
+      body: {
+        //이곳은 전문에 따라 다르게 응답값을 셋팅해 준다.
+        OutBlock1: [],
+      },
+    };
+    console.log(clientData);
+    const { id, name, degree, major, admission, graduate, isCurrent } =
+      clientData;
+    const serverData = resData.body.OutBlock1;
+
+    db.query(
+      `INSERT INTO education (name, degree, major, admission, graduate, isCurrent, id)`,
+      [name, degree, major, admission, graduate, isCurrent, id]
+    );
   }
-  // else if (data.header.query_name == "detailUser") {
-  //   resData = {
-  //     //클라이언트에서 보낸 헤더값을 그대로 다시 응답데이터에 셋팅한다.
-  //     header: {
-  //       packet_id: data.header.packet_id,
-  //       query_name: data.header.query_name,
-  //       error_code: 1000,
-  //     },
-  //     body: {
-  //       //이곳은 전문에 따라 다르게 응답값을 셋팅해 준다.
-  //       OutBlock1: [],
-  //     },
-  //   };
-  //   console.log(clientData);
-  //   const { id, jobList, skillList } = clientData;
-  //   const serverData = resData.body.OutBlock1;
-
-  //   let num1 = 0;
-  //   let num2 = 0;
-  //   const count = jobList.length;
-
-  //   while (num1 < count) {
-  //     db.query(
-  //       `INSERT INTO job (job_name, job_idx, user_id) VALUES (?, ?, ?)`,
-  //       [jobList[num1], num1, id],
-  //       (err, result) => {
-  //         if (err) throw err;
-  //         console.log("result", result);
-  //       }
-  //     );
-  //     n++;
-  //   }
-  // }
-  // skillList.map((item) => {
-  //   db.query(
-  //     `INSERT INTO skill (skill_name, skill_grade, user_id) VALUES (?, ?, ?)`,
-  //     [item.name, item.subName, id],
-  //     (err, result) => {
-  //       if (err) throw err;
-  //       if (result !== {}) {
-  //         serverData.push({
-  //           message: "데이터가 추가되었습니다",
-  //           result: true,
-  //         });
-  //       }
-  //       res.json(resData);
-  //       res.end();
-  //     }
-  //   );
-  // });
 });
 // db.query(
 //   `UPDATE user SET name=?, nickname=?, career_period=?, graduate=?, introduce=? WHERE id=?`,
