@@ -10,7 +10,8 @@
 				["전공","major","","","char",10,4],
 				["입학","admission","","","char",10,4],
 				["졸업","graduate","","","char",10,4],
-				["재학중","isCurrent","","0","signed",null,"0"]
+				["재학중","isCurrent","","0","signed",null,0],
+				["ID","id","","","signed",null,0]
 			]
 		}
 	},

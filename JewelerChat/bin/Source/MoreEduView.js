@@ -48,10 +48,8 @@ MoreEduView.prototype.onNextButtonClick = function(comp, info, e)
 		(queryData) => {
 			queryData.printQueryData();
 			var blockData = queryData.getBlockData('InBlock1');
-/*			blockData[0].jobList = thisObj.jobList;
-			blockData[0].skillList = thisObj.skillList;
-			blockData[0].id = theApp.uObj.id;			*/
 			console.log(theApp.uObj);
+			blockData[0].id = theApp.uObj.id;			
 // 			console.log("BlockData",blockData);
 		}, 	
 		(queryData) => {
@@ -83,12 +81,6 @@ MoreEduView.prototype.isFiledTF = function()
 		AToast.show("직무는 2개 이상 기술은 1개 이상 작성해주세요");
 		return false;
 	} else return true;*/
-
-};
-MoreEduView.prototype.onNextButtonClickv = function(comp, info, e)
-{
-
-	//TODO:edit here
 
 };
 
