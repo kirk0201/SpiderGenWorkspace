@@ -1,0 +1,19 @@
+
+
+/************************************************************************************/
+/*	Component Default Style 														*/
+/************************************************************************************/
+
+.RChart-Style
+{
+	position: absolute;
+	box-sizing: border-box;
+	border: 0px solid;
+}
+
+.RGrid-Style
+{
+	position: absolute;
+	box-sizing: border-box;
+	border: 0px solid;
+}

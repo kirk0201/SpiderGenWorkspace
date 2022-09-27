@@ -213,7 +213,7 @@ router.post("/", function (req, res, next) {
               if (err) throw err;
               if (result !== {}) {
                 serverData.push({
-                  message: "데이터를 추가하였습니다",
+                  message: "데이터가 추가되었습니다",
                   result: result,
                 });
               }
@@ -241,46 +241,114 @@ router.post("/", function (req, res, next) {
     const { id, jobList, skillList } = clientData;
     const serverData = resData.body.OutBlock1;
 
-    let n = 0;
+    let num1 = 0;
+    let num2 = 0;
     const count = jobList.length;
-    while (n < count) {
+
+    while (num1 < count) {
       db.query(
         `INSERT INTO job (job_name, job_idx, user_id) VALUES (?, ?, ?)`,
-        [jobList[n], n, id],
+        [jobList[num1], num1, id],
         (err, result) => {
           if (err) throw err;
           console.log("result", result);
         }
       );
-
-      n++;
+      num1++;
     }
-
-    // db.query(
-    //   `UPDATE user SET name=?, nickname=?, career_period=?, graduate=?, introduce=? WHERE id=?`,
-    //   [name, nickname, career_period, graduate, introduce, id],
-    //   (err, result) => {
-    //     if (err) throw err;
-    //     if (result !== {}) {
-    //       db.query(
-    //         `SELECT name, nickname, career_period, graduate, introduce FROM user WHERE id=?`,
-    //         [id],
-    //         (err, result) => {
-    //           if (err) throw err;
-    //           if (result !== {}) {
-    //             serverData.push({
-    //               message: "데이터를 추가하였습니다",
-    //               result: result,
-    //             });
-    //           }
-    //           res.json(resData);
-    //           res.end();
-    //         }
-    //       );
-    //     }
-    //   }
-    // );
+    while (num2 < skillList.length) {
+      db.query(
+        `INSERT INTO skill (skill_name, skill_grade, user_id) VALUES(? ,? ,?)`,
+        [skillList[num2].name, skillList[num2].subName, id],
+        (err, result) => {
+          if (err) throw err;
+          if (result !== {}) {
+            serverData.push({
+              message: "데이터가 추가되었습니다",
+              result: true,
+            });
+          }
+        }
+      );
+      num2++;
+    }
+    res.json(resData);
+    res.end();
   }
+  // else if (data.header.query_name == "detailUser") {
+  //   resData = {
+  //     //클라이언트에서 보낸 헤더값을 그대로 다시 응답데이터에 셋팅한다.
+  //     header: {
+  //       packet_id: data.header.packet_id,
+  //       query_name: data.header.query_name,
+  //       error_code: 1000,
+  //     },
+  //     body: {
+  //       //이곳은 전문에 따라 다르게 응답값을 셋팅해 준다.
+  //       OutBlock1: [],
+  //     },
+  //   };
+  //   console.log(clientData);
+  //   const { id, jobList, skillList } = clientData;
+  //   const serverData = resData.body.OutBlock1;
+
+  //   let num1 = 0;
+  //   let num2 = 0;
+  //   const count = jobList.length;
+
+  //   while (num1 < count) {
+  //     db.query(
+  //       `INSERT INTO job (job_name, job_idx, user_id) VALUES (?, ?, ?)`,
+  //       [jobList[num1], num1, id],
+  //       (err, result) => {
+  //         if (err) throw err;
+  //         console.log("result", result);
+  //       }
+  //     );
+  //     n++;
+  //   }
+  // }
+  // skillList.map((item) => {
+  //   db.query(
+  //     `INSERT INTO skill (skill_name, skill_grade, user_id) VALUES (?, ?, ?)`,
+  //     [item.name, item.subName, id],
+  //     (err, result) => {
+  //       if (err) throw err;
+  //       if (result !== {}) {
+  //         serverData.push({
+  //           message: "데이터가 추가되었습니다",
+  //           result: true,
+  //         });
+  //       }
+  //       res.json(resData);
+  //       res.end();
+  //     }
+  //   );
+  // });
 });
+// db.query(
+//   `UPDATE user SET name=?, nickname=?, career_period=?, graduate=?, introduce=? WHERE id=?`,
+//   [name, nickname, career_period, graduate, introduce, id],
+//   (err, result) => {
+//     if (err) throw err;
+//     if (result !== {}) {
+//       db.query(
+//         `SELECT name, nickname, career_period, graduate, introduce FROM user WHERE id=?`,
+//         [id],
+//         (err, result) => {
+//           if (err) throw err;
+//           if (result !== {}) {
+//             serverData.push({
+//               message: "데이터를 추가하였습니다",
+//               result: result,
+//             });
+//           }
+//           res.json(resData);
+//           res.end();
+//         }
+//       );
+//     }
+//   }
+// );
 
 module.exports = router;

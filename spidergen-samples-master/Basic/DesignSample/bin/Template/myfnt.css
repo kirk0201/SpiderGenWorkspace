@@ -1,0 +1,11 @@
+
+@font-face 
+{
+	font-family: 'NotoKrB';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../Assets/fonts/notokr-bold.eot') format('embedded-opentype'),
+	url('../Assets/fonts/notokr-bold.woff2') format('woff2'),
+	url('../Assets/fonts/notokr-bold.woff') format('woff');
+}
+
