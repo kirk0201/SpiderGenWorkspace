@@ -147,9 +147,10 @@ DetailUserView.prototype.onNextButtonClick = function(comp, info, e)
 		(queryData) => {
 			queryData.printQueryData();
 		var blockData = queryData.getBlockData('OutBlock1')[0];
+		console.log("blockData", blockData);
 		
 		AToast.show(blockData.message);
-		if(blockData.result) theApp.navi.goPage("MainView");
+		if(blockData.result) theApp.navi.goPage("MoreEduView");
 	});
 	} 
 	else if(!theApp.uObj)

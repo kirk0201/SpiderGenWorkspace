@@ -1,0 +1,29 @@
+
+.btn01-down
+{
+	background-color: rgb(36, 104, 175);
+	color: rgb(255, 255, 255);	
+}
+
+.btn02
+{
+	
+	background-color: rgb(247, 109, 34);
+	color: rgb(255, 255, 255);
+}
+
+.fsize20px
+{
+	font-size: 20px;
+}
+
+.fsize16px
+{
+	font-size: 16px;
+}
+
+.myBold
+{
+	font-family: notokr-bold;
+}
+

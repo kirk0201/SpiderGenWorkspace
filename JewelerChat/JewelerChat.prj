@@ -14,6 +14,12 @@
             "name": "afc",
             "relType": 7,
             "path": "afc\\"
+          },
+          {
+            "type": 11,
+            "name": "mdfc",
+            "relType": 7,
+            "path": "mdfc\\"
           }
         ]
       },
@@ -175,6 +181,13 @@
             "relType": 1,
             "path": "Query\\",
             "comment": "DetailUser 쿼리"
+          },
+          {
+            "type": 8,
+            "name": "eduUser.qry",
+            "relType": 1,
+            "path": "Query\\",
+            "comment": "최종학력"
           }
         ]
       },

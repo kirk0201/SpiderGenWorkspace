@@ -1,0 +1,63 @@
+
+._global_style_
+{
+	font-size: 12px;
+	font-family: courier;
+	text-size-adjust: none;
+
+}
+
+.global_resp
+{
+	/* global_resp 는 body 에 추가된 클래스 입니다. */
+
+}
+
+/*가로모드*/
+@media screen and (orientation: landscape)
+{
+	.global_resp
+	{
+	}
+}
+
+/*ios*/
+@supports (-webkit-overflow-scrolling: touch)
+{
+}
+
+/*tablet*/
+@media screen and (min-width:641px)
+{
+}
+
+.test-style
+{
+	background-color: cyan;
+}
+
+.btn-style
+{
+	
+}
+
+.btn-style > button
+{
+	color: rgb(0, 0, 255);	
+	text-decoration: none;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(0, 0, 255);
+	border-radius: 5px;
+}
+
+.btn-style > button:active
+{
+	color: rgb(0, 255, 255);	
+	text-decoration: none;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(0, 255, 255);
+	border-radius: 5px;
+}
+
