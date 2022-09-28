@@ -1,0 +1,14 @@
+
+.RadioBtnClick
+{
+	/* TODO:edit here */
+
+	border-width: 1px !important;
+	border-bottom-width: 5px !important;
+	border-bottom-style: solid !important;
+	border-bottom-color: rgb(0, 0, 0) !important;
+	border-left-width: 0px !important;
+	border-top-width: 0px !important;
+	border-right-width: 0px !important;
+}
+
