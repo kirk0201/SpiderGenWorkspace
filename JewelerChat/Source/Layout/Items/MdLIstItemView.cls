@@ -43,9 +43,23 @@ function MdLIstItemView*onActiveDone(isFirst)
 function MdLIstItemView*setData(data)
 {
 	//TODO:edit here
-	console.log("data", data);
-		if(data.subName === "link")	this.pf_name.setText("http://www." + data.name);
+	console.log("MDdata", data);
+	var dateData = data.firstValue;
+	var date = `${dateData.year}-${dateData.month.toString().length === 1 ? "0" + dateData.month: dateData.month}-${dateData.day}`;
 	
+	// 
+	if(data.type === "link")
+	{
+		this.pf_name.setText("http://www." + data.firstValue);
+	}
+	
+	if(data.type === "date") 
+	{
+		this.pf_type.setText(date);	
+		this.pf_name.setText(data.secValue);
+	}
+		
+
 };
 
 function MdLIstItemView*onDeleteBtnClick(comp, info, e)

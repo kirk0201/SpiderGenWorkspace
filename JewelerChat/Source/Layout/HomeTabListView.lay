@@ -1,0 +1,26 @@
+<div data-base="AView" data-class="HomeTabListView" class="AView-Style" style="left: 0px; top: 0px; width: 100%; height: 100%; background-color: rgb(255, 255, 255); position: relative; margin-left: 0px;" data-browser-width="480" data-browser-height="1067" data-class-map="{&quot;afc&quot;:[&quot;AView&quot;,&quot;AFlexLayout&quot;,&quot;AButton&quot;,&quot;AListView&quot;]}">
+    <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: 100%; height: auto; position: relative; left: 0px; top: 0px; justify-content: space-between; border-bottom: 1px solid rgb(0, 0, 0);">
+        <div style="position: relative; box-sizing: border-box; flex: 0.7 1 auto; align-self: auto;">
+            <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; margin-left: 20px; margin-top: 20px; margin-bottom: 20px;" id="HomeTabListView--header_menu" data-group="상단 메뉴 버튼">
+                <img src="Assets/MainHome/img_menu.png">
+            </button>
+        </div>
+        <div style="position: relative; box-sizing: border-box; flex: 0.3 1 auto; align-self: auto;">
+            <div data-base="AView" data-class="AView" class="AView-Style" style="width: 100%; height: 100%; position: relative; top: 0px; background-color: rgb(255, 255, 255); text-align: right;">
+                <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; margin-right: 20px;" id="HomeTabListView--header_search" data-group="상단 검색 버튼">
+                    <img src="Assets/MainHome/img_search.png">
+                </button>
+                <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: auto; height: auto; position: relative; margin-right: 20px; margin-top: 20px; margin-bottom: 20px;" id="HomeTabListView--header_noti" data-group="상단 알림 버튼">
+                    <img src="Assets/MainHome/img_notification.png">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div data-base="AListView" data-class="AListView" class="AListView-Style" data-selectable="true" style="width: auto; height: 93%; position: relative; background-color: rgb(255, 255, 255);" data-iteminfo-539041="0,Source/Layout/Items/HomeTabListItemView.lay,539041" data-iteminfo-545222="1,Source/Layout/Items/HomeTabListItemView.lay,545222" data-iteminfo-660664="2,Source/Layout/Items/HomeTabListItemView.lay,660664" data-iteminfo-662867="3,Source/Layout/Items/HomeTabListItemView.lay,662867" data-sgap-height="2">
+        <div class="listview-row" style=""></div>
+        <div class="listview-row" style=""></div>
+        <div class="listview-row" style=""></div>
+        <div class="listview-row" style=""></div>
+    </div>
+    <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 67px; height: 67px; position: absolute; right: 50px; bottom: 30px; background-color: rgba(0, 0, 0, 0); background-image: url(&quot;Assets/MainHome/img_add_67.png&quot;);"></button>
+</div>

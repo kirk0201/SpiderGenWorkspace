@@ -6,9 +6,9 @@ Util = {
 // type = "default" subTitle 문자 형식
 // type = "date" subTitle 날짜 형식
 Util.addListItem = (type, title, subTitle, listView, url, arr) => {
-	switch(type) 
-	{
-		case "default":
+// 	switch(type) 
+// 	{
+// 		case "default":
 			// Data 객체로 전달될 name, grade
 			var firstValue = title;
 			var secValue = subTitle;
@@ -22,8 +22,9 @@ Util.addListItem = (type, title, subTitle, listView, url, arr) => {
 				
 			var dataObj = 
 			{
-				name: firstValue,
-				subName: secValue,
+				type: type,
+				firstValue: type === "default" ? firstValue : secValue,
+				secValue: type === "default" ? secValue : firstValue,
 				index: count,
 			};
 		
@@ -31,8 +32,8 @@ Util.addListItem = (type, title, subTitle, listView, url, arr) => {
 			arr.push(dataObj);
 			listView.addItem(url, arr);
 				
-			console.log(arr);
-	}
+			console.log(arr);			
+// 	}
 };
 
 // 제거 함수를 사용하기 위해 사용할 뷰에서 this._item, owner 컨테이너와, owner의 RootView를 받아온다 
