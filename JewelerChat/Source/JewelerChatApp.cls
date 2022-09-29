@@ -50,6 +50,11 @@ function JewelerChatApp*onReady()
 	theApp.navi.registerPage("Source/MoreEduView.lay", "MoreEduView");
 	theApp.navi.registerPage("Source/MoreExpView.lay", "MoreExpView");
 	theApp.navi.registerPage("Source/MoreDetailView.lay", "MoreDetailView");
+	theApp.navi.registerPage("Source/MainHomeView.lay", "MainHomeView");
+	theApp.navi.registerPage("Source/DetailHomeItemView.lay", "DetailHomeItemView");
+	theApp.navi.registerPage("Source/NewAddItemView.lay", "NewAddItemView");
+	theApp.navi.registerPage("Source/KeywordNotiView.lay", "KeywordNotiView");
+	theApp.navi.registerPage("Source/RoadRegistItemView.lay", "RoadRegistItemView");
 	theApp.navi.goPage('MainView');
 	
 	//TODO:edit here

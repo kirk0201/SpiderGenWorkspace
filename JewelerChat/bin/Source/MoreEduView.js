@@ -98,3 +98,10 @@ MoreEduView.prototype.onRadioBtnClick = function(comp, info, e)
 	comp.setValue(1);
 
 };
+
+MoreEduView.prototype.onSkipBtnClick = function(comp, info, e)
+{
+	theApp.navi.goPage("MoreExpView");
+	//TODO:edit here
+
+};

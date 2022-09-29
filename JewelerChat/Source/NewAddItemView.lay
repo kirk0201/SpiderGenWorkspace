@@ -1,4 +1,4 @@
-<div data-base="AView" data-class="NewAddItemView" class="AView-Style" style="left: 0px; top: 0px; width: 100%; height: 100%; background-color: rgb(255, 255, 255); position: relative; margin-left: 0px; padding-left: 20px; padding-right: 20px; overflow: auto;" data-browser-width="480" data-browser-height="2000" data-class-map="{&quot;afc&quot;:[&quot;AView&quot;,&quot;AFlexLayout&quot;,&quot;AButton&quot;,&quot;ALabel&quot;,&quot;ATextField&quot;,&quot;AListView&quot;,&quot;ACheckBox&quot;,&quot;ATextArea&quot;],&quot;mdfc&quot;:[&quot;ACalendarPicker&quot;]}">
+<div data-base="AView" data-class="NewAddItemView" class="AView-Style" style="left: 0px; top: 0px; width: 100%; height: 100%; background-color: rgb(255, 255, 255); position: relative; margin-left: 0px; padding-left: 20px; padding-right: 20px; overflow: auto; z-index: 0; backface-visibility: hidden;" data-browser-width="480" data-browser-height="2000" data-class-map="{&quot;afc&quot;:[&quot;AView&quot;,&quot;AFlexLayout&quot;,&quot;AButton&quot;,&quot;ALabel&quot;,&quot;ATextField&quot;,&quot;AListView&quot;,&quot;ACheckBox&quot;,&quot;ATextArea&quot;],&quot;mdfc&quot;:[&quot;ACalendarPicker&quot;]}">
     <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: 100%; height: auto; position: absolute; left: 0px; top: 0px; background-color: rgb(255, 255, 255); border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0); justify-content: space-between; align-items: center;">
         <div style="position: relative; box-sizing: border-box;">
             <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 30px; height: 30px; position: relative; left: 0px; background-color: rgb(255, 255, 255); margin-top: 20px; margin-left: 20px; margin-bottom: 20px;">
@@ -17,13 +17,13 @@
         <input data-base="ATextField" data-class="ATextField" type="text" value="" class="ATextField-Style" autocomplete="off" style="width: 100%; height: 40px; position: relative; left: 0px; top: 0px; background-color: rgb(255, 255, 255); border-radius: 5px; border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0); padding-left: 20px; font-weight: bold; font-size: 14px; margin-bottom: 20px;" placeholder="제목을 입력하세요">
         <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px;">보유기술</label>
         <input data-base="ATextField" data-class="ATextField" type="text" value="" class="ATextField-Style" autocomplete="off" style="width: 100%; height: 40px; position: relative; background-color: rgb(255, 255, 255); border-radius: 5px; border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0); padding-left: 20px; font-weight: bold; font-size: 14px; margin-bottom: 20px;" placeholder="보유 기술을 입력하세요">
-        <div data-base="AListView" data-class="AListView" class="AListView-Style" data-selectable="true" style="width: 100%; height: auto; position: relative; left: 0px; top: 0px; background-color: rgba(0, 0, 0, 0); margin-bottom: 20px;" data-direction="horizontal" data-default-url="Source/Layout/Items/AddSkillItemView.lay" data-iteminfo-860617="2,Source/Layout/Items/AddSkillItemView.lay,860617" data-iteminfo-856236="0,Source/Layout/Items/AddSkillItemView.lay,856236" data-iteminfo-147447="3,Source/Layout/Items/AddSkillItemView.lay,147447" data-iteminfo-149870="4,Source/Layout/Items/AddSkillItemView.lay,149870" data-iteminfo-151298="5,Source/Layout/Items/AddSkillItemView.lay,151298" data-iteminfo-859024="1,Source/Layout/Items/AddSkillItemView.lay,859024" data-wrap="true">
-            <div class="listview-row" style="height: 120px;"></div>
-            <div class="listview-row" style="height: 120px;"></div>
-            <div class="listview-row" style="height: 120px;"></div>
-            <div class="listview-row" style="height: 120px;"></div>
-            <div class="listview-row" style="height: 120px;"></div>
-            <div class="listview-row" style="height: 120px;"></div>
+        <div data-base="AListView" data-class="AListView" class="AListView-Style" data-selectable="true" style="width: 100%; height: auto; position: relative; left: 0px; top: 0px; background-color: rgba(0, 0, 0, 0); margin-bottom: 20px; overflow: visible;" data-direction="horizontal" data-default-url="Source/Layout/Items/AddSkillItemView.lay" data-iteminfo-860617="2,Source/Layout/Items/AddSkillItemView.lay,860617" data-iteminfo-856236="0,Source/Layout/Items/AddSkillItemView.lay,856236" data-iteminfo-147447="3,Source/Layout/Items/AddSkillItemView.lay,147447" data-iteminfo-149870="4,Source/Layout/Items/AddSkillItemView.lay,149870" data-iteminfo-151298="5,Source/Layout/Items/AddSkillItemView.lay,151298" data-iteminfo-859024="1,Source/Layout/Items/AddSkillItemView.lay,859024" data-wrap="true">
+            <div class="listview-row" style=""></div>
+            <div class="listview-row" style=""></div>
+            <div class="listview-row" style=""></div>
+            <div class="listview-row" style=""></div>
+            <div class="listview-row" style=""></div>
+            <div class="listview-row" style=""></div>
         </div>
         <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px;">근무지</label>
         <input data-base="ATextField" data-class="ATextField" type="text" value="" class="ATextField-Style" autocomplete="off" style="width: 100%; height: 40px; position: relative; background-color: rgb(255, 255, 255); border-radius: 5px; border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0); padding-left: 20px; font-weight: bold; font-size: 14px; margin-bottom: 20px;" placeholder="근무지를 입력하세요">
@@ -41,31 +41,31 @@
                 <div data-base="ACalendarPicker" data-class="ACalendarPicker" class="ACalendarPicker-Style" style="position: relative; left: 0px; top: 0px; width: 100%; height: 26px; text-align: center;">
                     <div style="width:100%; height:100%">
                         <div data-base="AView" class="AView-Style ACalendarPicker-Style" data-class="ACalendarPickerItem" data-day-mode="0" data-multi-mode="0" data-format="yyyy-MM-dd" style="width: 100%; height: 100%; left: 0px; top: 0px; border: 1px solid rgb(187, 187, 187);" data-work-size="60px|40px|325px|32px" data-class-map="{&quot;afc&quot;:[&quot;AView&quot;,&quot;ATextField&quot;,&quot;AButton&quot;]}" data-fullview="true">
-                            <input data-listener-change="ACalendarPickerItem:onChange" data-listener-blur="ACalendarPickerItem:onBlur" data-listener-keyup="ACalendarPickerItem:onKeyup" data-base="ATextField" data-class="ATextField" class="ATextField-Style" data-listener-focus="ACalendarPickerItem:onFocus" pattern="" type="text" value="2022-09-28" autocomplete="off" style="text-align: center;">
+                            <input data-listener-change="ACalendarPickerItem:onChange" data-listener-blur="ACalendarPickerItem:onBlur" data-listener-keyup="ACalendarPickerItem:onKeyup" data-base="ATextField" data-class="ATextField" class="ATextField-Style" data-listener-focus="ACalendarPickerItem:onFocus" pattern="" type="text" value="2022-09-29" autocomplete="off" style="text-align: center;">
                             <button class="AButton-Style Calendar_Button Calendar_Button_Down" data-base="AButton" data-class="AButton" data-listener-click="ACalendarPickerItem:onClickCal"></button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div style="position: relative; box-sizing: border-box; flex: 0.5 1 auto; align-self: auto;">
-                <span data-base="ACheckBox" data-class="ACheckBox" class="ACheckBox-Style" tabindex="0" style="width: auto; height: 20px; position: relative; justify-content: flex-start; margin-left: 10px;" data-check-value="0">협의제외</span>
+            <div style="position: relative; box-sizing: border-box; flex-shrink: 1; flex-basis: auto; align-self: auto;">
+                <span data-base="ACheckBox" data-class="ACheckBox" class="ACheckBox-Style" tabindex="0" style="width: auto; height: 20px; position: relative; justify-content: flex-end; margin-left: 10px; padding-left: 20px; padding-right: 0px; background-position: left center;" data-check-value="0">협의제외</span>
             </div>
         </div>
-        <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: 100%; height: auto; position: relative; left: 0px; top: 0px; justify-content: space-between; margin-bottom: 20px;">
+        <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: 100%; height: auto; position: relative; left: 0px; top: 0px; justify-content: space-between; margin-bottom: 20px;" id="NewAddItemView--period_tabgroup">
             <div style="position: relative; box-sizing: border-box;">
-                <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 100px; height: 40px; position: relative; left: 0px; top: 0px; background-color: rgb(204, 221, 239); border-width: 1px; border-style: solid; border-color: rgb(204, 221, 239); border-radius: 10px; font-size: 14px; font-weight: bold;" id="NewAddItemView--period_tab1">1개월~3개월</button>
+                <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 100px; height: 40px; position: relative; left: 0px; top: 0px; background-color: rgb(204, 221, 239); border-width: 1px; border-style: solid; border-color: rgb(204, 221, 239); border-radius: 10px; font-size: 14px; font-weight: bold;" id="NewAddItemView--period_tab1" data-style-disable="BlueRadioClicked" data-listener-click="NewAddItemView:onTabBtnClick" data-group="group" name="name">1개월~3개월</button>
             </div>
             <div style="position: relative; box-sizing: border-box;">
-                <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 100px; height: 40px; position: relative; left: 0px; top: 0px; background-color: rgb(204, 221, 239); border-width: 1px; border-style: solid; border-color: rgb(204, 221, 239); border-radius: 10px; font-size: 14px; font-weight: bold;" id="NewAddItemView--period_tab2">3개월~6개월</button>
+                <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 100px; height: 40px; position: relative; left: 0px; top: 0px; background-color: rgb(204, 221, 239); border-width: 1px; border-style: solid; border-color: rgb(204, 221, 239); border-radius: 10px; font-size: 14px; font-weight: bold; margin-left: 0px;" id="NewAddItemView--period_tab2" data-style-disable="BlueRadioClicked" data-listener-click="NewAddItemView:onTabBtnClick">3개월~6개월</button>
             </div>
             <div style="position: relative; box-sizing: border-box;">
-                <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 100px; height: 40px; position: relative; left: 0px; top: 0px; background-color: rgb(204, 221, 239); border-width: 1px; border-style: solid; border-color: rgb(204, 221, 239); border-radius: 10px; font-size: 14px; font-weight: bold;" id="NewAddItemView--period_tab3" data-group="">6개월~12개월</button>
+                <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 100px; height: 40px; position: relative; left: 0px; top: 0px; background-color: rgb(204, 221, 239); border-width: 1px; border-style: solid; border-color: rgb(204, 221, 239); border-radius: 10px; font-size: 14px; font-weight: bold;" id="NewAddItemView--period_tab3" data-group="" data-style-disable="BlueRadioClicked" data-listener-click="NewAddItemView:onTabBtnClick">6개월~12개월</button>
             </div>
             <div style="position: relative; box-sizing: border-box;">
-                <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 100px; height: 40px; position: relative; left: 0px; top: 0px; background-color: rgb(204, 221, 239); border-width: 1px; border-style: solid; border-color: rgb(204, 221, 239); border-radius: 10px; font-size: 14px; font-weight: bold;" id="NewAddItemView--period_tab4" data-group="">1년 이상</button>
+                <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 100px; height: 40px; position: relative; left: 0px; top: 0px; background-color: rgb(204, 221, 239); border-width: 1px; border-style: solid; border-color: rgb(204, 221, 239); border-radius: 10px; font-size: 14px; font-weight: bold;" id="NewAddItemView--period_tab4" data-group="" data-style-disable="BlueRadioClicked" data-listener-click="NewAddItemView:onTabBtnClick">1년 이상</button>
             </div>
         </div>
-        <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: 100%; height: auto; position: relative; left: 0px; top: 0px; font-size: 14px; font-weight: bold;">
+        <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: 100%; height: auto; position: relative; left: 0px; top: 0px; font-size: 14px; font-weight: bold; justify-content: space-between;">
             <div style="position: relative; box-sizing: border-box;">
                 <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; font-size: 14px; font-weight: bold; display: inline-block; margin-bottom: 20px;">고용형태 :</label>
             </div>
@@ -73,15 +73,15 @@
                 <span data-base="ACheckBox" data-class="ACheckBox" class="ACheckBox-Style" tabindex="0" style="width: 100px; height: 20px; position: relative; left: 0px; top: 0px; font-size: 14px; font-weight: bold;" data-check-value="0">협의제외</span>
             </div>
         </div>
-        <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: 100%; height: auto; position: relative; justify-content: space-between; margin-bottom: 20px;">
+        <div data-base="AFlexLayout" data-class="AFlexLayout" class="AFlexLayout-Style" style="width: 100%; height: auto; position: relative; justify-content: space-between; margin-bottom: 20px;" id="NewAddItemView--type_tabgroup">
             <div style="position: relative; box-sizing: border-box;">
-                <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 100px; height: 40px; position: relative; left: 0px; top: 0px; background-color: rgb(204, 221, 239); border-width: 1px; border-style: solid; border-color: rgb(204, 221, 239); border-radius: 10px; font-size: 14px; font-weight: bold;" id="">계약직</button>
+                <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 100px; height: 40px; position: relative; left: 0px; top: 0px; background-color: rgb(204, 221, 239); border-width: 1px; border-style: solid; border-color: rgb(204, 221, 239); border-radius: 10px; font-size: 14px; font-weight: bold;" data-listener-click="NewAddItemView:onTabBtnClick" id="NewAddItemView--type_tab1" data-style-disable="BlueRadioClicked">계약직</button>
             </div>
             <div style="position: relative; box-sizing: border-box;">
-                <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 100px; height: 40px; position: relative; left: 0px; top: 0px; background-color: rgb(204, 221, 239); border-width: 1px; border-style: solid; border-color: rgb(204, 221, 239); border-radius: 10px; font-size: 14px; font-weight: bold;" id="">정규직</button>
+                <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 100px; height: 40px; position: relative; left: 0px; top: 0px; background-color: rgb(204, 221, 239); border-width: 1px; border-style: solid; border-color: rgb(204, 221, 239); border-radius: 10px; font-size: 14px; font-weight: bold;" id="NewAddItemView--type_tab2" data-listener-click="NewAddItemView:onTabBtnClick" data-style-disable="BlueRadioClicked">정규직</button>
             </div>
             <div style="position: relative; box-sizing: border-box;">
-                <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 100px; height: 40px; position: relative; left: 0px; top: 0px; background-color: rgb(204, 221, 239); border-width: 1px; border-style: solid; border-color: rgb(204, 221, 239); border-radius: 10px; font-size: 14px; font-weight: bold;" id="" data-group="">프리랜서</button>
+                <button data-base="AButton" data-class="AButton" class="AButton-Style" style="width: 100px; height: 40px; position: relative; left: 0px; top: 0px; background-color: rgb(204, 221, 239); border-width: 1px; border-style: solid; border-color: rgb(204, 221, 239); border-radius: 10px; font-size: 14px; font-weight: bold;" id="NewAddItemView--type_tab3" data-group="" data-listener-click="NewAddItemView:onTabBtnClick" data-style-disable="BlueRadioClicked">프리랜서</button>
             </div>
         </div>
         <label data-base="ALabel" data-class="ALabel" class="ALabel-Style" style="width: auto; height: auto; position: relative; left: 0px; top: 0px; font-size: 14px; font-weight: bold; margin-bottom: 5px; display: block;">키워드 포함</label>

@@ -6,6 +6,10 @@
 	text-size-adjust: none !important;
 
 }
+._global_style_ *:focus
+{
+   outline:none !important;
+}
 
 .global_resp
 {

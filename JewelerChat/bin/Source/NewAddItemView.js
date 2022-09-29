@@ -6,7 +6,7 @@ Do not call Function in Constructor.
 function NewAddItemView()
 {
 	AView.call(this);
-
+	this.tabComp = null;
 	//TODO:edit here
 
 }
@@ -24,8 +24,11 @@ NewAddItemView.prototype.init = function(context, evtListener)
 NewAddItemView.prototype.onInitDone = function()
 {
 	AView.prototype.onInitDone.call(this);
-	this.rbm = new RadioBtnManager(this);
-	this.onTabClick(this.tab1);
+	
+	this.periodRbm = new RadioBtnManager(this);
+	this.typeRbm = new RadioBtnManager(this);
+	this.onTabBtnClick(this.period_tab1);
+	this.onTabBtnClick(this.type_tab1);
 	//TODO:edit here
 
 };
@@ -36,4 +39,14 @@ NewAddItemView.prototype.onActiveDone = function(isFirst)
 
 	//TODO:edit here
 
+};
+
+NewAddItemView.prototype.onTabBtnClick = function(comp, info, e)
+{
+	console.log(comp);
+	console.log(comp.owner.compId);
+	var tabGroupId = comp.owner.compId;
+	this.tabComp = tabGroupId;
+	if (tabGroupId === "period_tabgroup") this.periodRbm.selectButton(comp);
+	else if(tabGroupId === "type_tabgroup") this.typeRbm.selectButton(comp);
 };

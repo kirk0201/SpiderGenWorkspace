@@ -170,3 +170,10 @@ function DetailUserView*isFiledTF()
 	} else return true;
 
 };
+
+function DetailUserView*onSkipBtn(comp, info, e)
+{
+	// 상세페이지 -> 최종학력 페이지
+	theApp.navi.goPage("MoreEduView");
+	
+};

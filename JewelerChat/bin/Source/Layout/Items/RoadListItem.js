@@ -3,17 +3,17 @@
 Constructor
 Do not call Function in Constructor.
 */
-function NewAddItemView()
+function RoadListItem()
 {
 	AView.call(this);
 
 	//TODO:edit here
 
 }
-afc.extendsClass(NewAddItemView, AView);
+afc.extendsClass(RoadListItem, AView);
 
 
-NewAddItemView.prototype.init = function(context, evtListener)
+RoadListItem.prototype.init = function(context, evtListener)
 {
 	AView.prototype.init.call(this, context, evtListener);
 
@@ -21,7 +21,7 @@ NewAddItemView.prototype.init = function(context, evtListener)
 
 };
 
-NewAddItemView.prototype.onInitDone = function()
+RoadListItem.prototype.onInitDone = function()
 {
 	AView.prototype.onInitDone.call(this);
 
@@ -29,7 +29,7 @@ NewAddItemView.prototype.onInitDone = function()
 
 };
 
-NewAddItemView.prototype.onActiveDone = function(isFirst)
+RoadListItem.prototype.onActiveDone = function(isFirst)
 {
 	AView.prototype.onActiveDone.call(this, isFirst);
 
