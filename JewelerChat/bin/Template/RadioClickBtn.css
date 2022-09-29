@@ -12,3 +12,13 @@
 	border-right-width: 0px !important;
 }
 
+.BlueRadioClicked
+{
+	border-width: 1px !important;
+	border-style: solid !important;
+	border-color: rgb(204, 221, 239) !important;
+	background-color: rgb(255, 255, 255) !important;
+	border-radius: 10px !important;
+	outline: 0 !important;
+}
+

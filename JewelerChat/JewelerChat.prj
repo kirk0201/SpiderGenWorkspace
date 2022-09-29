@@ -501,6 +501,54 @@
                 "comment": "홈 탭 리스트 뷰"
               },
               {
+                "type": 2,
+                "name": "RoadRegistItemView.cls",
+                "action": 5,
+                "relType": 1,
+                "path": "Source\\",
+                "comment": "불러오기 뷰"
+              },
+              {
+                "type": 3,
+                "name": "RoadRegistItemView.lay",
+                "action": 6,
+                "relType": 1,
+                "path": "Source\\",
+                "comment": "불러오기 뷰"
+              },
+              {
+                "type": 2,
+                "name": "KeywordNotiView.cls",
+                "action": 5,
+                "relType": 1,
+                "path": "Source\\",
+                "comment": "키워드 알림 설정 뷰"
+              },
+              {
+                "type": 3,
+                "name": "KeywordNotiView.lay",
+                "action": 6,
+                "relType": 1,
+                "path": "Source\\",
+                "comment": "키워드 알림 설정 뷰"
+              },
+              {
+                "type": 2,
+                "name": "NoticeView.cls",
+                "action": 5,
+                "relType": 1,
+                "path": "Source\\Layout\\",
+                "comment": "알림 뷰"
+              },
+              {
+                "type": 3,
+                "name": "NoticeView.lay",
+                "action": 6,
+                "relType": 1,
+                "path": "Source\\Layout\\",
+                "comment": "알림 뷰"
+              },
+              {
                 "type": 1,
                 "name": "Items",
                 "children": [
@@ -606,7 +654,7 @@
                     "action": 5,
                     "relType": 1,
                     "path": "Source\\Layout\\Items\\",
-                    "comment": ""
+                    "comment": "기술 추가 버튼"
                   },
                   {
                     "type": 3,
@@ -614,7 +662,23 @@
                     "action": 6,
                     "relType": 1,
                     "path": "Source\\Layout\\Items\\",
-                    "comment": ""
+                    "comment": "기술 추가 버튼"
+                  },
+                  {
+                    "type": 2,
+                    "name": "RoadListItem.cls",
+                    "action": 5,
+                    "relType": 1,
+                    "path": "Source\\Layout\\Items\\",
+                    "comment": "상품 불러오기 아이템"
+                  },
+                  {
+                    "type": 3,
+                    "name": "RoadListItem.lay",
+                    "action": 6,
+                    "relType": 1,
+                    "path": "Source\\Layout\\Items\\",
+                    "comment": "상품 불러오기 아이템"
                   }
                 ]
               }

@@ -1,6 +1,7 @@
 {
   "styleName": "RadioClickBtn",
   "items": {
-    "RadioBtnClick": "\n.RadioBtnClick\n{\n\t/* TODO:edit here */\n\n\tborder-width: 1px;\n\tborder-bottom-width: 5px;\n\tborder-bottom-style: solid;\n\tborder-bottom-color: rgb(0, 0, 0);\n\tborder-left-width: 0px;\n\tborder-top-width: 0px;\n\tborder-right-width: 0px;\n}\n"
+    "RadioBtnClick": "\n.RadioBtnClick\n{\n\t/* TODO:edit here */\n\n\tborder-width: 1px;\n\tborder-bottom-width: 5px;\n\tborder-bottom-style: solid;\n\tborder-bottom-color: rgb(0, 0, 0);\n\tborder-left-width: 0px;\n\tborder-top-width: 0px;\n\tborder-right-width: 0px;\n}\n",
+    "BlueRadioClicked": ".BlueRadioClicked\n{\n\tborder-width: 1px;\n\tborder-style: solid;\n\tborder-color: rgb(204, 221, 239);\n\tbackground-color: rgb(255, 255, 255);\n\tborder-radius: 10px;\n\toutline: 0;\n}\n\n"
   }
 }

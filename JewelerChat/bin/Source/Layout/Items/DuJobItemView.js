@@ -51,7 +51,8 @@ DuJobItemView.prototype.onCoverButtonClick = function(comp, info, e)
 	console.log("owner",this.owner.getRootView());
 
 	const wnd = new AWindow('DetailUserAccView');
-	wnd.setData({id:'aaaa'});
+// 	wnd.setData({id:'aaaa'});
+	wnd.setData("data");
 	wnd.setResultCallback((result, data) => {
 		var jobIdx = this.owner.indexOfItem(this._item);
 		this.owner.getRootView().jobList[jobIdx] = data.name;

@@ -98,3 +98,10 @@ function MoreEduView*onRadioBtnClick(comp, info, e)
 	comp.setValue(1);
 
 };
+
+function MoreEduView*onSkipBtnClick(comp, info, e)
+{
+	theApp.navi.goPage("MoreExpView");
+	//TODO:edit here
+
+};

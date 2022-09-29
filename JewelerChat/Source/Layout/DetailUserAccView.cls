@@ -26,6 +26,7 @@ function DetailUserAccView*onInitDone()
 	
 	super.onInitDone();
 	console.log("this>>", this.getContainer().getData());
+	
 	var data = this.getContainer().getData();
 	
 	var itCategory = [
@@ -65,13 +66,6 @@ function DetailUserAccView*onActiveDone(isFirst)
 {
 	super.onActiveDone(isFirst);
 
-	//TODO:edit here
-
-};
-
-function DetailUserAccView*setData(data)
-{
-	console.log("testData", data);
 	//TODO:edit here
 
 };

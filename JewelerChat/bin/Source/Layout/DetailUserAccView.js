@@ -26,6 +26,7 @@ DetailUserAccView.prototype.onInitDone = function()
 	
 	AView.prototype.onInitDone.call(this);
 	console.log("this>>", this.getContainer().getData());
+	
 	var data = this.getContainer().getData();
 	
 	var itCategory = [
@@ -65,13 +66,6 @@ DetailUserAccView.prototype.onActiveDone = function(isFirst)
 {
 	AView.prototype.onActiveDone.call(this, isFirst);
 
-	//TODO:edit here
-
-};
-
-DetailUserAccView.prototype.setData = function(data)
-{
-	console.log("testData", data);
 	//TODO:edit here
 
 };
