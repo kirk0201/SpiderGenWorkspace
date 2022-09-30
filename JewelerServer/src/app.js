@@ -4,8 +4,9 @@ const app = express();
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 
-const indexRouter = require("../routes/index");
-const userRouter = require("../routes/users.js");
+// const indexRouter = require("../routes/index");
+// const userRouter = require("../routes/users.js");
+const userRouter = require("../routes/user/userRoute");
 
 const http = require("http");
 const db = require("../controller/db");
@@ -16,8 +17,9 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.use("/", indexRouter);
-app.use("/users", userRouter);
+app.use("/", userRouter);
+// app.use("/", indexRouter);
+// app.use("/users", userRouter);
 
 // db.query(
 //   `INSERT INTO user (uid, password) VALUES(?,?)`,

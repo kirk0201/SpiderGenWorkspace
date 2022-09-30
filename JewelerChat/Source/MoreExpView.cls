@@ -6,7 +6,7 @@ Do not call Function in Constructor.
 class MoreExpView()
 {
 	super();
-
+	this.expObj = {};
 	//TODO:edit here
 
 }
@@ -47,18 +47,35 @@ function MoreExpView*onActiveDone(isFirst)
 
 function MoreExpView*onNextBtnClick(comp, info, e)
 {
-	console.log(this.in_company.getDate());
-	console.log(this.out_company.getDate());
+	var name = this.tf_name.getText();
+	var isCheck = this.onIsCheckClick();
+	var inCompany = this.in_company.getDate();
+	var outCompany = this.out_company.getDate();
+	var content = this.exp_content.getText();
+	
+	this.expObj = 
+	{
+		name,
+		isCheck,
+		inCompany,
+		outCompany,
+		content
+	};
+	
+	console.log(this.expObj);
 };
 
-function MoreExpView*onIsCheck(comp, info, e)
+function MoreExpView*onIsCheckClick(comp, info, e)
 {
 	let isClicked = this.is_job.getCheck();
 	
-	console.log(isClicked ? this.is_job.setValue(1) : this.is_job.setValue(0));
+	if (isClicked) this.is_job.setValue(1);
+	else this.is_job.setValue(0);
 	
-	/*console.log(comp);
-	console.log(info);
-	console.log(this.is_job.getCheck());*/
-	
+	return this.is_job.getValue();
+};
+
+function MoreExpView*onSkipBtnClick(comp, info, e)
+{
+	theApp.navi.goPage("MoreDetailView");
 };

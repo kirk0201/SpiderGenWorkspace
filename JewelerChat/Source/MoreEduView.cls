@@ -6,7 +6,8 @@ Do not call Function in Constructor.
 class MoreEduView()
 {
 	super();
-
+	this.eduArr = [];
+	this.eduObj = {};
 	//TODO:edit here
 
 }
@@ -40,7 +41,26 @@ function MoreEduView*onActiveDone(isFirst)
 
 function MoreEduView*onNextButtonClick(comp, info, e)
 {
-	var thisObj = this;
+	var thisObj = this;	
+	var name = this.tf_name.getText();
+	var major = this.tf_major.getText();
+	var degree = this.tf_degree.getText();
+	var admission = this.cp_admission.getDate();
+	var graduate = this.cp_graduate.getDate();
+	var current = this.is_current.getValue();
+	// 	this.getEduDate = null;
+	
+	this.eduObj = 
+	{
+		name,
+		major,
+		degree,
+		admission,
+		graduate,
+		current
+	};
+	console.log(this.eduObj);
+	
 // 	if(!this.isFiledTF()) return ;
 	if(theApp.uObj) 
 	{
@@ -49,7 +69,8 @@ function MoreEduView*onNextButtonClick(comp, info, e)
 			queryData.printQueryData();
 			var blockData = queryData.getBlockData('InBlock1');
 			console.log(theApp.uObj);
-			blockData[0].id = theApp.uObj.id;			
+			blockData[0].id = theApp.uObj.id;
+			blockData[0].dataObj = thisObj.eduObj;
 // 			console.log("BlockData",blockData);
 		}, 	
 		(queryData) => {
@@ -89,7 +110,9 @@ function MoreEduView*onTestClick(comp, info, e)
 
 	//TODO:edit here
 // 	console.log(this.cp_admission.getDate());
-	console.log(this.is_current.getValue());
+// 	console.log(this.is_current.getValue());
+	console.log(this.cp_admission.getDate());
+	console.log(this.cp_graduate.getDate());
 // 	this.is_current.setSelect(false);
 };
 

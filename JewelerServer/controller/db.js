@@ -7,5 +7,6 @@ var db = mysql.createConnection({
   database: "jewelerdb",
   port: "3306",
 });
+db.connect();
 
 module.exports = db;
